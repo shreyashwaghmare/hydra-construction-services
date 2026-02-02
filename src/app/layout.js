@@ -1,5 +1,5 @@
 import './globals.css'
-// TEMPORARY - we'll create these files next
+import { Analytics } from "@vercel/analytics/next"
 import Navbar from '@/components/Navbar' 
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
       <body className="font-sans antialiased">
         <Navbar />
         <main className="min-h-screen bg-gray-50">{children}</main>
+        <Analytics/>
         <Footer />
         <WhatsAppButton />
       </body>
