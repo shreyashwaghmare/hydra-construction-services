@@ -113,7 +113,8 @@ export default function Contact() {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">Service Needed *</label>
+                                <label htmlFor="service" className="block text-sm font-bold text-gray-700 mb-2">Service Needed *</label>
+                                
                                 <select
                                     name="service"
                                     required
