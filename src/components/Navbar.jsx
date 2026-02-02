@@ -65,6 +65,9 @@ export default function Navbar() {
               <a href="/services" className="block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200" onClick={() => setMobileOpen(false)}>
                 Services
               </a>
+              <a href="/about" className="block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200" onClick={() => setMobileOpen(false)}>
+                About
+              </a>
               <a href="/contact" className="block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200" onClick={() => setMobileOpen(false)}>
                 Contact
               </a>
