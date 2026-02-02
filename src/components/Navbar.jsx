@@ -15,7 +15,7 @@ export default function Navbar() {
             <div className="w-40 h-16 sm:w-52 sm:h-20 lg:w-64 lg:h-24 xl:w-72 xl:h-28 flex shrink-0">
               <a href="/" className="block w-full h-full">
                 <Image
-                  src="/images/hydra-logo-no-bg.png"
+                  src="/images/hydra-logo-no-bg.webp"
                   alt='hydra-logo'
                   width={200}    // Logo width in px
                   height={60}    // Logo height in px  

@@ -11,7 +11,7 @@ export default function Portfolio() {
     { id: 6, category: 'Waterproofing', title: 'Terrace Complete', img: '/images/terrace-gazebo.jpg' },
     { id: 7, category: 'Kitchen', title: 'Baner Island Kitchen', img: '/images/island-kitchen.webp'  },
     { id: 8, category: 'AMC', title: 'Society Repairs', img: '/images/building-repairs.jpg' },
-    { id: 9, category: 'Bathroom', title: 'Luxury Shower', img: '/images/luxury-showers.jpg'  },
+    { id: 9, category: 'Bathroom', title: 'Luxury Shower', img: '/images/luxury-showers.webp'  },
     { id: 10, category: 'Interior', title: 'Painting Complete', img: '/images/fresh-painted-house.jpg' },
     { id: 11, category: 'Bungalow', title: 'Roof Casting', img: '/images/rcc-roof- casting.jpg'  },
     { id: 12, category: 'Waterproofing', title: 'Basement Fix', img: '/images/basement-work.jpg' },
