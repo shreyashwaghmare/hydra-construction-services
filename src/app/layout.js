@@ -29,9 +29,31 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ConstructionCompany",
+    "name": "Hydra Corporation",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "MH",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91 96979 85597",
+    "url": "https://hydraconstruction.vercel.app",
+    "description": "MH/2026/001 Licensed Bungalow Construction in Pune"
+  }
   return (
+    
     <html lang="en">
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          async
+          src=" "
+          key="hydra-schema"  // Prevents duplicates
+        />
         <Navbar />
         <main className="min-h-screen bg-gray-50">{children}</main>
         <Analytics />
