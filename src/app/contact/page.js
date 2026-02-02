@@ -116,6 +116,7 @@ export default function Contact() {
                                 <label htmlFor="service" className="block text-sm font-bold text-gray-700 mb-2">Service Needed *</label>
                                 
                                 <select
+                                    id="service"
                                     name="service"
                                     required
                                     className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-indigo-200 focus:border-indigo-500 transition-all duration-300 text-lg text-gray-900"
