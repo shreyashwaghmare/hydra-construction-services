@@ -13,7 +13,7 @@ export const metadata = {
   description: 'MH/2026/001 licensed Pune builders. 15+ years creating dream bungalows in Koregaon Park, Hinjewadi, Baner. Free site visits.',
   keywords: ['Pune builders', 'bungalow construction', 'bathroom remodeling', 'kitchen design', 'MH/2026/001'],
   verification: {
-    google: "googlec5a2d05fc0b0bf32"
+    google: "mzx_EHywhshcQxd7E-34_-rFcproFcTvTAcqnloMlo0"
   },
   openGraph: {
     type: 'website',
