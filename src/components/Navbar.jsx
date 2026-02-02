@@ -13,11 +13,11 @@ export default function Navbar() {
             {/* Logo Image */}
             <div className="w-40 h-16 sm:w-52 sm:h-20 lg:w-64 lg:h-24 xl:w-72 xl:h-28 flex shrink-0">
               <a href="/" className="block w-full h-full">
-                <img 
-  src="/images/hydra-logo-no-bg.png"
-  className="w-full h-full object-contain scale-150 origin-center"  // 50% BIGGER!
-  style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
-/>
+                <img
+                  src="/images/hydra-logo-no-bg.png"
+                  className="w-full h-full object-contain scale-150 origin-center"  // 50% BIGGER!
+                  style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
+                />
               </a>
             </div>
 
@@ -26,21 +26,13 @@ export default function Navbar() {
 
 
           {/* Desktop Menu - High contrast */}
-          <div className="hidden md:flex items-center space-x-2 lg:space-x-8">
-            <a href="/" className="px-4 py-2 text-lg font-semibold text-white/90 hover:text-yellow-400 hover:bg-white/10 rounded-xl transition-all duration-300 group">
-              <span className="group-hover:translate-x-1 transition-transform">Home</span>
-            </a>
-            <a href="/portfolio" className="px-4 py-2 text-lg font-semibold text-white/90 hover:text-yellow-400 hover:bg-white/10 rounded-xl transition-all duration-300 group">
-              <span className="group-hover:translate-x-1 transition-transform">Portfolio</span>
-            </a>
-            <a href="/services" className="px-4 py-2 text-lg font-semibold text-white/90 hover:text-yellow-400 hover:bg-white/10 rounded-xl transition-all duration-300 group">
-              <span className="group-hover:translate-x-1 transition-transform">Services</span>
-            </a>
-            <a href="/contact" className="px-4 py-2 text-lg font-semibold text-white/90 hover:text-yellow-400 hover:bg-white/10 rounded-xl transition-all duration-300 group">
-              <span className="group-hover:translate-x-1 transition-transform">Contact</span>
-            </a>
+          <div className="hidden md:flex items-center gap-2 lg:gap-4"> {/* Tighter gap */}
+            <a href="/" className="px-2 py-2 text-sm lg:text-base font-semibold text-white/90 hover:text-yellow-400 rounded-lg transition-all">Home</a>
+            <a href="/services" className="px-2 py-2 text-sm lg:text-base font-semibold text-white/90 hover:text-yellow-400 rounded-lg transition-all">Services</a>
+            <a href="/portfolio" className="px-2 py-2 text-sm lg:text-base font-semibold text-white/90 hover:text-yellow-400 rounded-lg transition-all">Portfolio</a>
+            <a href="/about" className="px-2 py-2 text-sm lg:text-base font-semibold text-white/90 hover:text-yellow-400 rounded-lg transition-all">About</a>
+            <a href="/contact" className="px-2 py-2 text-sm lg:text-base font-semibold text-white/90 hover:text-yellow-400 rounded-lg transition-all">Contact Us</a>
           </div>
-
           {/* Desktop CTA - Prominent */}
           <div className="hidden md:flex items-center gap-3">
             <a href="https://wa.me/919697985597" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-emerald-400/50">

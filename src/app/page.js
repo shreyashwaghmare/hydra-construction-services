@@ -143,7 +143,7 @@ export default function Home() {
                 alt="Hydra Construction" />
             </div>
             <div className="bg-gray-100 h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-            <img
+              <img
                 src="/images/service-interior.jpg"
                 alt="Hydra Construction" />
             </div>
@@ -153,111 +153,111 @@ export default function Home() {
 
       {/* 3. WHY CHOOSE US */}
       <section className="py-24 bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white overflow-hidden">
-  <div className="max-w-6xl mx-auto px-6">
-    {/* Animated background */}
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent),radial-gradient(circle_at_80%_80%,rgba(120,119,198,0.2),transparent)] pointer-events-none"></div>
-    
-    <div className="relative z-10 text-center mb-20">
-      <div className="inline-flex items-center gap-3 bg-yellow-400/10 border-2 border-yellow-400/30 px-6 py-3 rounded-full mb-8">
-        <span className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></span>
-        <span className="text-yellow-400 font-bold text-lg tracking-wide">MH/2026/001 LICENSED</span>
-      </div>
-      <h2 className="text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 bg-clip-text text-transparent mb-8 leading-tight">
-        Why Pune's Smart Homeowners<br/>Choose <span className="text-white drop-shadow-2xl">Hydra</span>
-      </h2>
-      <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-        15+ Years • 50+ Projects • Kharadi, Koregaon Park & Ahilyanagar
-      </p>
-    </div>
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Animated background */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent),radial-gradient(circle_at_80%_80%,rgba(120,119,198,0.2),transparent)] pointer-events-none"></div>
 
-    {/* Stats Grid */}
-    <div className="grid lg:grid-cols-3 gap-8 mb-20">
-      {/* License Card */}
-      <div className="group relative bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-yellow-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-        <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-        <div className="relative">
-          <div className="w-20 h-20 bg-yellow-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">📋</div>
-          <h3 className="text-3xl font-black text-yellow-400 mb-4 text-center">MH/2026/001</h3>
-          <p className="text-gray-300 text-lg text-center">Government Licensed</p>
+          <div className="relative z-10 text-center mb-20">
+            <div className="inline-flex items-center gap-3 bg-yellow-400/10 border-2 border-yellow-400/30 px-6 py-3 rounded-full mb-8">
+              <span className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></span>
+              <span className="text-yellow-400 font-bold text-lg tracking-wide">MH/2026/001 LICENSED</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 bg-clip-text text-transparent mb-8 leading-tight">
+              Why Pune's Smart Homeowners<br />Choose <span className="text-white drop-shadow-2xl">Hydra</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              15+ Years • 50+ Projects • Kharadi, Koregaon Park & Ahilyanagar
+            </p>
+          </div>
+
+          {/* Stats Grid */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-20">
+            {/* License Card */}
+            <div className="group relative bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-yellow-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <div className="relative">
+                <div className="w-20 h-20 bg-yellow-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">📋</div>
+                <h3 className="text-3xl font-black text-yellow-400 mb-4 text-center">MH/2026/001</h3>
+                <p className="text-gray-300 text-lg text-center">Government Licensed</p>
+              </div>
+            </div>
+
+            {/* Experience Card */}
+            <div className="group relative bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400/20 to-teal-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt delay-200"></div>
+              <div className="relative">
+                <div className="w-20 h-20 bg-emerald-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">🔧</div>
+                <h3 className="text-3xl font-black text-emerald-400 mb-4 text-center">15+</h3>
+                <p className="text-gray-300 text-lg text-center">Years Pune Experience</p>
+              </div>
+            </div>
+
+            {/* Projects Card */}
+            <div className="group relative bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400/20 to-indigo-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt delay-400"></div>
+              <div className="relative">
+                <div className="w-20 h-20 bg-blue-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">🏠</div>
+                <h3 className="text-3xl font-black text-blue-400 mb-4 text-center">50+</h3>
+                <p className="text-gray-300 text-lg text-center">Projects Delivered</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Grid */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
+            <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-xl p-10 rounded-3xl border border-yellow-400/20 hover:shadow-2xl transition-all duration-300">
+              <h4 className="text-2xl font-black text-yellow-400 mb-6 flex items-center gap-3">
+                <span className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></span>
+                Wakad, Baner, Koregaon Park
+              </h4>
+              <ul className="space-y-3 text-lg text-gray-200">
+                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-emerald-400 rounded-full"></span>50+ Pune projects delivered</li>
+                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-emerald-400 rounded-full"></span>2 year structural warranty</li>
+                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-emerald-400 rounded-full"></span>WhatsApp weekly updates</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-xl p-10 rounded-3xl border border-emerald-400/20 hover:shadow-2xl transition-all duration-300">
+              <h4 className="text-2xl font-black text-emerald-400 mb-6 flex items-center gap-3">
+                <span className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></span>
+                100% Client Satisfaction
+              </h4>
+              <ul className="space-y-3 text-lg text-gray-200">
+                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>Transparent pricing</li>
+                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>Family-owned since 2010</li>
+                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>No surprise costs</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Mega CTA */}
+          {/* Mobile-First Mega CTA */}
+          <div className="text-center">
+            <div className="max-w-md mx-auto mb-8">
+              {/* Primary WhatsApp - Always prominent */}
+              <a href="https://wa.me/919697985597?text=Hi%20Hydra%2C%20ready%20to%20start%20my%20project"
+                className="w-full block bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-3xl hover:-translate-y-2 transform transition-all duration-300 mb-4 flex items-center justify-center gap-3">
+                <span className="text-2xl">📱</span>
+                Start Project Today
+              </a>
+
+              {/* Secondary - Smaller on mobile */}
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="/contact"
+                  className="flex-1 bg-white/20 backdrop-blur-xl border-2 border-white/50 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center">
+                  Free Quote →
+                </a>
+                <a href="tel:+919697985597"
+                  className="flex-1 bg-emerald-500/90 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all duration-300 text-center flex items-center justify-center gap-2">
+                  <span>📞</span> Call Now
+                </a>
+              </div>
+            </div>
+            <p className="text-gray-400 text-lg">Trusted by Pune homeowners since 2010</p>
+          </div>
+
         </div>
-      </div>
-
-      {/* Experience Card */}
-      <div className="group relative bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-        <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400/20 to-teal-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt delay-200"></div>
-        <div className="relative">
-          <div className="w-20 h-20 bg-emerald-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">🔧</div>
-          <h3 className="text-3xl font-black text-emerald-400 mb-4 text-center">15+</h3>
-          <p className="text-gray-300 text-lg text-center">Years Pune Experience</p>
-        </div>
-      </div>
-
-              {/* Projects Card */}
-      <div className="group relative bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
-        <div className="absolute -inset-1 bg-gradient-to-r from-blue-400/20 to-indigo-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt delay-400"></div>
-        <div className="relative">
-          <div className="w-20 h-20 bg-blue-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">🏠</div>
-          <h3 className="text-3xl font-black text-blue-400 mb-4 text-center">50+</h3>
-          <p className="text-gray-300 text-lg text-center">Projects Delivered</p>
-        </div>
-      </div>
-    </div>
-
-    {/* Trust Grid */}
-    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
-      <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-xl p-10 rounded-3xl border border-yellow-400/20 hover:shadow-2xl transition-all duration-300">
-        <h4 className="text-2xl font-black text-yellow-400 mb-6 flex items-center gap-3">
-          <span className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></span>
-          Wakad, Baner, Koregaon Park
-        </h4>
-        <ul className="space-y-3 text-lg text-gray-200">
-          <li className="flex items-center gap-3"><span className="w-2 h-2 bg-emerald-400 rounded-full"></span>50+ Pune projects delivered</li>
-          <li className="flex items-center gap-3"><span className="w-2 h-2 bg-emerald-400 rounded-full"></span>2 year structural warranty</li>
-          <li className="flex items-center gap-3"><span className="w-2 h-2 bg-emerald-400 rounded-full"></span>WhatsApp weekly updates</li>
-        </ul>
-      </div>
-      
-      <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-xl p-10 rounded-3xl border border-emerald-400/20 hover:shadow-2xl transition-all duration-300">
-        <h4 className="text-2xl font-black text-emerald-400 mb-6 flex items-center gap-3">
-          <span className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></span>
-          100% Client Satisfaction
-        </h4>
-        <ul className="space-y-3 text-lg text-gray-200">
-          <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>Transparent pricing</li>
-          <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>Family-owned since 2010</li>
-          <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>No surprise costs</li>
-        </ul>
-      </div>
-    </div>
-
-    {/* Mega CTA */}
-    {/* Mobile-First Mega CTA */}
-<div className="text-center">
-  <div className="max-w-md mx-auto mb-8">
-    {/* Primary WhatsApp - Always prominent */}
-    <a href="https://wa.me/919697985597?text=Hi%20Hydra%2C%20ready%20to%20start%20my%20project" 
-       className="w-full block bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-3xl hover:-translate-y-2 transform transition-all duration-300 mb-4 flex items-center justify-center gap-3">
-      <span className="text-2xl">📱</span>
-      Start Project Today
-    </a>
-    
-    {/* Secondary - Smaller on mobile */}
-    <div className="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="/contact" 
-         className="flex-1 bg-white/20 backdrop-blur-xl border-2 border-white/50 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center">
-        Free Quote →
-      </a>
-      <a href="tel:+919697985597" 
-         className="flex-1 bg-emerald-500/90 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all duration-300 text-center flex items-center justify-center gap-2">
-        <span>📞</span> Call Now
-      </a>
-    </div>
-  </div>
-  <p className="text-gray-400 text-lg">Trusted by Pune homeowners since 2010</p>
-</div>
-
-  </div>
-</section>
+      </section>
 
 
       {/* 4. CTA SECTION */}

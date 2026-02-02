@@ -2,20 +2,69 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Complete construction solutions for Pune homes
-          </p>
+        <div className="relative min-h-[80vh] bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="container mx-auto h-full flex items-center px-6 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 mt-8 lg:mt-12 rounded-2xl border border-white/30">
+                  <div className="w-3 h-3 bg-green-400  rounded-full animate-pulse"></div>
+                  <span className="text-white font-bold text-lg">MH/2026/001 Licensed</span>
+                </div>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight">
+                  Pune's <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">Trusted</span>
+                  <br />Builders
+                </h1>
+                <div className="grid md:grid-cols-3 gap-6 max-w-2xl bg-white/10 backdrop-blur-sm p-6 rounded-3xl">
+                  <div className="text-center">
+                    <div className="text-3xl font-black text-yellow-400">4.9★</div>
+                    <div className="text-white/90 text-sm">Google Rating</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-black text-white">15+</div>
+                    <div className="text-white/90 text-sm">Years Experience</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-black text-emerald-400">100%</div>
+                    <div className="text-white/90 text-sm">On Budget</div>
+                  </div>
+                </div>
+                <div className="pb-12 lg:pb-20">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/919697985597?text=Free%20site%20visit" className="bg-white text-gray-900 py-4 px-8 rounded-2xl font-black text-lg shadow-2xl hover:shadow-3xl hover:-translate-y-1 transition-all duration-300 flex-1 text-center">
+                      📍 Free Site Visit
+                    </a>
+                    <a href="/portfolio" className="border-2 border-white text-white py-4 px-8 rounded-2xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+                      View Portfolio
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="relative hidden lg:block">
+                <div className="w-full h-96 rounded-3xl shadow-2xl overflow-hidden group hover:scale-105 transition-all duration-700 animate-float">
+                  <img
+                    src="/images/PCMC-false-ceiling.jpeg"
+                    alt="Hydra Construction Project"
+                    className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
+        <div className="h-24 lg:h-32 bg-gradient-to-b from-gray-900 to-gray-50"></div>
 
         {/* 6 Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 -mt-12 lg:-mt-20">
           {/* Bungalow Construction */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+          <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl 
+hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] hover:bg-white transition-all 
+duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabbing">
+            <div className="w-16 h-16 group-hover:scale-125 group-hover:rotate-12 
+  bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto 
+  transition-all duration-500 group-hover:shadow-2xl">
               🏠
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Bungalow Construction</h3>
@@ -25,15 +74,19 @@ export default function Services() {
               <li>• MH/2026/001 licensed</li>
               <li>• Starting ₹75 Lac</li>
             </ul>
-            <a href="https://wa.me/919697985597?text=Bungalow%20quote" 
-               className="w-full z-20 relative bg-blue-500 hover:bg-blue-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-blue-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
+            <a href="https://wa.me/919697985597?text=Bungalow%20quote"
+              className="w-full z-20 relative bg-blue-500 hover:bg-blue-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-blue-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
               Get Quote →
             </a>
           </div>
 
           {/* Kitchen Remodeling */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-visible">
-            <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+          <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl 
+hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] hover:bg-white transition-all 
+duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabbing">
+            <div className="w-16 h-16 group-hover:scale-125 group-hover:rotate-12 
+  bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto 
+  transition-all duration-500 group-hover:shadow-2xl">
               🍳
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Kitchen Remodeling</h3>
@@ -43,15 +96,19 @@ export default function Services() {
               <li>• Pune granite specialist</li>
               <li>• ₹3-8 Lac range</li>
             </ul>
-            <a href="https://wa.me/919697985597?text=Kitchen%20quote" 
-               className="w-full z-20 relative bg-yellow-500 hover:bg-yellow-600 text-gray-900 py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-yellow-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
+            <a href="https://wa.me/919697985597?text=Kitchen%20quote"
+              className="w-full z-20 relative bg-yellow-500 hover:bg-yellow-600 text-gray-900 py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-yellow-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
               Get Quote →
             </a>
           </div>
 
           {/* Bathroom Design */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-visible">
-            <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+          <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl 
+hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] hover:bg-white transition-all 
+duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabbing">
+            <div className="w-16 h-16 group-hover:scale-125 group-hover:rotate-12 
+  bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto 
+  transition-all duration-500 group-hover:shadow-2xl">
               🛁
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Bathroom Design</h3>
@@ -61,15 +118,19 @@ export default function Services() {
               <li>• Premium fittings</li>
               <li>• ₹2.5-6 Lac range</li>
             </ul>
-            <a href="https://wa.me/919697985597?text=Bathroom%20quote" 
-               className="w-full z-20 relative bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-green-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
+            <a href="https://wa.me/919697985597?text=Bathroom%20quote"
+              className="w-full z-20 relative bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-green-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
               Get Quote →
             </a>
           </div>
 
           {/* Full Interior */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-visible">
-            <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+          <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl 
+hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] hover:bg-white transition-all 
+duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabbing">
+            <div className="w-16 h-16 group-hover:scale-125 group-hover:rotate-12 
+  bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto 
+  transition-all duration-500 group-hover:shadow-2xl">
               🛋️
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Full Interior</h3>
@@ -79,15 +140,19 @@ export default function Services() {
               <li>• Wardrobes + TV units</li>
               <li>• ₹800/sqft</li>
             </ul>
-            <a href="https://wa.me/919697985597?text=Interior%20quote" 
-               className="w-full z-20 relative bg-purple-500 hover:bg-purple-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-purple-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
+            <a href="https://wa.me/919697985597?text=Interior%20quote"
+              className="w-full z-20 relative bg-purple-500 hover:bg-purple-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-purple-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
               Get Quote →
             </a>
           </div>
 
           {/* Building AMC */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-visible">
-            <div className="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+          <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl 
+hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] hover:bg-white transition-all 
+duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabbing">
+            <div className="w-16 h-16 group-hover:scale-125 group-hover:rotate-12 
+  bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto 
+  transition-all duration-500 group-hover:shadow-2xl">
               🔧
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Building AMC</h3>
@@ -97,15 +162,19 @@ export default function Services() {
               <li>• Society contracts</li>
               <li>• ₹25k/year</li>
             </ul>
-            <a href="https://wa.me/919697985597?text=AMC%20quote" 
-               className="w-full z-20 relative bg-indigo-500 hover:bg-indigo-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-indigo-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
+            <a href="https://wa.me/919697985597?text=AMC%20quote"
+              className="w-full z-20 relative bg-indigo-500 hover:bg-indigo-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-indigo-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
               Get Quote →
             </a>
           </div>
 
           {/* Waterproofing */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-visible">
-            <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">
+          <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl 
+hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] hover:bg-white transition-all 
+duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabbing">
+            <div className="w-16 h-16 group-hover:scale-125 group-hover:rotate-12 
+  bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto 
+  transition-all duration-500 group-hover:shadow-2xl">
               💧
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Waterproofing</h3>
@@ -115,8 +184,8 @@ export default function Services() {
               <li>• 10-year warranty</li>
               <li>• ₹45/sqft</li>
             </ul>
-            <a href="https://wa.me/919697985597?text=Waterproofing%20quote" 
-               className="w-full z-20 relative bg-teal-500 hover:bg-teal-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-teal-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
+            <a href="https://wa.me/919697985597?text=Waterproofing%20quote"
+              className="w-full z-20 relative bg-teal-500 hover:bg-teal-600 text-white py-4 px-6 rounded-xl font-bold text-center block shadow-xl hover:shadow-2xl border-2 border-teal-400 mt-4 flex items-center justify-center gap-2 transition-all duration-300">
               Get Quote →
             </a>
           </div>
@@ -205,12 +274,12 @@ export default function Services() {
             Free site visits • MH/2026/001 licensed • 10-year warranty • Pune's most trusted builders
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <a href="https://wa.me/919697985597?text=Free%20site%20visit%20please" 
-               className="bg-white text-gray-900 py-5 px-10 rounded-2xl font-black text-lg shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 flex items-center justify-center">
+            <a href="https://wa.me/919697985597?text=Free%20site%20visit%20please"
+              className="bg-white text-gray-900 py-5 px-10 rounded-2xl font-black text-lg shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 flex items-center justify-center">
               📍 Free Site Visit
             </a>
-            <a href="services" 
-               className="border-3 border-white text-white py-5 px-10 rounded-2xl font-black text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+            <a href="services"
+              className="border-3 border-white text-white py-5 px-10 rounded-2xl font-black text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
               View All Services
             </a>
           </div>
