@@ -21,6 +21,7 @@ export default function Navbar() {
                   height={60}    // Logo height in px  
                   className="w-full h-full object-contain scale-150 origin-center"  // 50% BIGGER!
                   style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
+                  priority
                 />
               </a>
             </div>
