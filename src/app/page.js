@@ -178,7 +178,7 @@ export default function Home() {
               <span className="text-yellow-400 font-bold text-lg tracking-wide">MH/2026/001 LICENSED</span>
             </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 bg-clip-text text-transparent mb-8 leading-tight">
-              Why Pune's Smart Homeowners<br />Choose <span className="text-white drop-shadow-2xl">Hydra</span>
+              Why Pune's Smart Homeowners<br />Choose <span className="text-white drop-shadow-2xl">Hydra Corporation</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               15+ Years • 50+ Projects • Kharadi, Koregaon Park & Ahilyanagar
