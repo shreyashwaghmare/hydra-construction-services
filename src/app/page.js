@@ -1,3 +1,4 @@
+import Image from "next/image"
 export default function Home() {
   return (
     <>
@@ -42,10 +43,17 @@ export default function Home() {
           </a>
         </div>
 
-        <img
-          src="/images/hero-bungalow.jpg"
-          alt="Hydra Construction"
-          className="absolute inset-0 w-full h-full object-cover brightness-50"
+        <Image
+          src="/images/hero-bungalow.webp"
+          alt="baner-construction-bungalow"
+          fill
+          className="object-cover"
+          style={{
+            filter: 'brightness(0.5)',  // ← Exact CSS match to original
+            WebkitFilter: 'brightness(0.5)'
+          }}
+          sizes="100vw"
+          priority
         />
       </section>
 

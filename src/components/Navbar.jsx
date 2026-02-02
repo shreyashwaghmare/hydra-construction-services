@@ -15,6 +15,7 @@ export default function Navbar() {
               <a href="/" className="block w-full h-full">
                 <img
                   src="/images/hydra-logo-no-bg.png"
+                  alt='hydra-logo'
                   className="w-full h-full object-contain scale-150 origin-center"  // 50% BIGGER!
                   style={{ transform: 'scale(1.5)', transformOrigin: 'center' }}
                 />
