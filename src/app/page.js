@@ -141,19 +141,26 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gray-100 h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
               {/* Add your phone photos */}
-              <img
+              <Image
                 src="/images/duplex-wakad.webp"
-                alt="Hydra Construction" />
+                alt="Hydra Construction"
+                width={400}
+                height={300} />
             </div>
             <div className="bg-gray-100 h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              <img
+              <Image
                 src="/images/island-kitchen.webp"
-                alt="Hydra Construction" />
+                alt="Hydra Construction"
+                width={400}
+                height={300} />
             </div>
             <div className="bg-gray-100 h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              <img
+              <Image
                 src="/images/service-interior.jpg"
-                alt="Hydra Construction" />
+                alt="Hydra Construction"
+                width={400}
+                height={300} />
+
             </div>
           </div>
         </div>
