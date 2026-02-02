@@ -205,7 +205,7 @@ export default function Services() {
             Free site visits • MH/2026/001 licensed • 10-year warranty • Pune's most trusted builders
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <a href="https://wa.me/919876543210?text=Free%20site%20visit%20please" 
+            <a href="https://wa.me/919697985597?text=Free%20site%20visit%20please" 
                className="bg-white text-gray-900 py-5 px-10 rounded-2xl font-black text-lg shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 flex items-center justify-center">
               📍 Free Site Visit
             </a>
