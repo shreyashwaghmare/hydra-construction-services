@@ -44,7 +44,7 @@ export default function Contact() {
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Call Anytime</h3>
                             <p className="text-3xl font-black text-blue-600 text-center mb-2">+91 969798 5597</p>
                             <p className="text-gray-500 text-center">24/7 Emergency Support</p>
-                            <a href="tel:+919697985597" className="block w-full bg-blue-500 hover:bg-blue-600 text-white py-4 px-6 rounded-xl font-bold text-center mt-6 transition-all duration-300">
+                            <a href="tel:+919697985597" className="block w-full bg-blue-600 hover:bg-blue-600 text-white/95 py-4 px-6 rounded-xl font-bold text-center mt-6 transition-all duration-300">
                                 Call Now →
                             </a>
                         </div>
@@ -55,7 +55,7 @@ export default function Contact() {
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">WhatsApp Quote</h3>
                             <p className="text-xl font-bold text-center mb-6">Instant Response</p>
                             <a href="https://wa.me/919697985597?text=Hi%2C%20need%20construction%20quote"
-                                className="block w-full bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-xl font-bold text-center shadow-xl hover:shadow-2xl transition-all duration-300">
+                                className="block w-full bg-green-600 hover:bg-green-600 text-white/95 py-4 px-6 rounded-xl font-bold text-center shadow-xl hover:shadow-2xl transition-all duration-300">
                                 Send Message →
                             </a>
                         </div>
