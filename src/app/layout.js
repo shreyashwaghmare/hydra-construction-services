@@ -7,7 +7,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 export const metadata = {
   metadataBase: new URL('https://hydra-construction-services.vercel.app'),
   title: {
-    default: 'Best Interior Designer & Real Estate Developer in Pune | Hydra Construction',
+    default: 'Best Interior Designer & Real Estate Developer in Pune | Hydra Corporation',
     template: '%s | MH/2026/001 Licensed Pune Builders'
   },
   description: '🏆 Top interior designer in Pune. MH/2026/001 licensed builders creating dream bungalows, luxury interiors, kitchens & bathrooms in Baner, Koregaon Park, Hinjewadi. 50+ projects. Free quote: 919697985597',
@@ -36,11 +36,11 @@ export const metadata = {
     }
   },
   openGraph: {
-    title: 'Best Interior Designer & Real Estate Developer in Pune | Hydra Construction',
+    title: 'Best Interior Designer & Real Estate Developer in Pune | Hydra Corporation',
     description: 'MH/2026/001 licensed. 50+ dream bungalows in Pune. Free site visit.',
     type: 'website',
     locale: 'en_IN',
-    siteName: 'Hydra Construction',
+    siteName: 'Hydra Corporation',
     images: [
       {
         url: '/images/hero-bungalow.jpg',
