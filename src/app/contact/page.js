@@ -30,7 +30,7 @@ export default function Contact() {
                         Contact Us
                     </h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Get your free site visit in Pune & Ahilyanagar.<br/>
+                        Get your free site visit in Pune & Ahilyanagar.<br />
                         Licensed builders ready to help.
                     </p>
                 </div>
@@ -44,9 +44,12 @@ export default function Contact() {
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Call Anytime</h3>
                             <p className="text-3xl font-black text-blue-600 text-center mb-2">+91 969798 5597</p>
                             <p className="text-gray-500 text-center">24/7 Emergency Support</p>
-                            <a href="tel:+919697985597" className="block w-full bg-blue-600 hover:bg-blue-600 text-white/95 py-4 px-6 rounded-xl font-bold text-center mt-6 transition-all duration-300">
-                                Call Now →
+                            <a href="tel:+919697985597"
+                                className="block w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-xl shadow-xl hover:shadow-3xl hover:-translate-y-1 transition-all duration-300 
+   focus:outline-none focus:ring-4 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-gray-900 text-center no-underline mt-6">
+                                ☎️ Call Now →
                             </a>
+
                         </div>
 
                         {/* WhatsApp */}
@@ -55,8 +58,9 @@ export default function Contact() {
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">WhatsApp Quote</h3>
                             <p className="text-xl font-bold text-center mb-6">Instant Response</p>
                             <a href="https://wa.me/919697985597?text=Hi%2C%20need%20construction%20quote"
-                                className="block w-full bg-green-600 hover:bg-green-600 text-white/95 py-4 px-6 rounded-xl font-bold text-center shadow-xl hover:shadow-2xl transition-all duration-300">
-                                Send Message →
+                                className="block w-full bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 text-white font-bold py-4 px-6 rounded-xl shadow-xl hover:shadow-3xl hover:-translate-y-1 transition-all duration-300 
+   focus:outline-none focus:ring-4 focus:ring-emerald-500/50 focus:ring-offset-2 focus:ring-offset-gray-900 text-center no-underline">
+                                📱 Send Message →
                             </a>
                         </div>
 
@@ -114,7 +118,7 @@ export default function Contact() {
 
                             <div>
                                 <label htmlFor="service" className="block text-sm font-bold text-gray-700 mb-2">Service Needed *</label>
-                                
+
                                 <select
                                     id="service"
                                     name="service"
@@ -154,30 +158,30 @@ export default function Contact() {
 
                 {/* Quick Links */}
                 {/* Quick Links - TABLET PERFECT */}
-<div className="mt-24 grid md:grid-cols-3 gap-8 text-center overflow-hidden">
-  <a href="https://wa.me/919697985597" className="group">
-    <div className="w-20 h-20 bg-green-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
-      💬
-    </div>
-    <p className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors truncate">WhatsApp</p>
-  </a>
-  
-  <a href="tel:+919697985597" className="group">
-    <div className="w-20 h-20 bg-blue-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
-      📞
-    </div>
-    <p className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors truncate">Call Now</p>
-  </a>
-  
-  <a href="mailto:hydracorporation.in@gmail.com" className="group">
-    <div className="w-20 h-20 bg-purple-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
-      ✉️
-    </div>
-    <p className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors truncate md:block">
-      Email Us
-    </p>
-  </a>
-</div>
+                <div className="mt-24 grid md:grid-cols-3 gap-8 text-center overflow-hidden">
+                    <a href="https://wa.me/919697985597" className="group">
+                        <div className="w-20 h-20 bg-green-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
+                            💬
+                        </div>
+                        <p className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors truncate">WhatsApp</p>
+                    </a>
+
+                    <a href="tel:+919697985597" className="group">
+                        <div className="w-20 h-20 bg-blue-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
+                            📞
+                        </div>
+                        <p className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors truncate">Call Now</p>
+                    </a>
+
+                    <a href="mailto:hydracorporation.in@gmail.com" className="group">
+                        <div className="w-20 h-20 bg-purple-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
+                            ✉️
+                        </div>
+                        <p className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors truncate md:block">
+                            Email Us
+                        </p>
+                    </a>
+                </div>
 
             </div>
         </div>
