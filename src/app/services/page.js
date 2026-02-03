@@ -1,7 +1,7 @@
 export default function Services() {
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto">
         <div className="relative min-h-[80vh] bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto h-full flex items-center px-6 relative z-10">
@@ -190,6 +190,69 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
             </a>
           </div>
         </div>
+        {/*Best Interior designer in Pune */}
+        
+<div className="relative -mt-20 lg:-mt-32 pt-40 pb-20 lg:pt-52 overflow-hidden">
+  {/* Multi-layer gradient that starts TRANSPARENT from white services above */}
+  <div className="absolute inset-0 bg-gradient-to-b from-gray-50/0 via-blue-900 to-indigo-600" />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900 to-blue-900" />
+  
+  <div className="max-w-6xl mx-auto px-4 lg:px-6 relative z-10">
+    {/* Header with drop shadow for readability */}
+            <div className="text-center mb-20">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-center mx-auto max-w-full px-6 sm:px-8 leading-none tracking-tight [-webkit-line-clamp:1]">
+                <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-xl block w-full hyphens-auto">
+                  Pune Homeowners' #1 Choice
+                </span>
+              </h1>
+      <div className="inline-block bg-gradient-to-r from-white via-white/90 to-white/70 backdrop-blur-sm px-8 py-4 rounded-3xl border border-white/50 shadow-2xl">
+        <p className="text-lg md:text-xl font-semibold text-gray-900 tracking-wide">
+          MH/2026/001 Licensed • Free Site Visits • 15+ Years Pune Experience
+        </p>
+      </div>
+    </div>
+    
+    {/* Cards - Enhanced glassmorphism */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {/* Card 1 - Interior Designer */}
+      <a href="/services/best-interior-designer-pune" className="group block p-10 lg:p-12 bg-white/5 backdrop-blur-3xl border border-white/20 hover:border-yellow-400/70 rounded-3xl hover:shadow-2xl hover:bg-white/15 transition-all duration-700 hover:-translate-y-3">
+        <div className="w-24 h-24 lg:w-28 lg:h-28 mx-auto mb-8 group-hover:scale-110 transition-transform duration-500 rounded-3xl bg-gradient-to-br from-purple-400/90 to-pink-400/90 flex items-center justify-center text-4xl shadow-2xl border-4 border-white/40 group-hover:border-white/70">
+          🏆
+        </div>
+        <h2 className="text-3xl lg:text-4xl font-black text-white mb-6 text-center group-hover:text-yellow-300 transition-all duration-300 drop-shadow-2xl">
+          Best Interior Designer in Pune
+        </h2>
+        <p className="text-white/85 text-lg lg:text-xl leading-relaxed mb-8 text-center drop-shadow-lg">
+          Luxury kitchens, bathrooms, false ceilings. 50+ projects completed in Baner, Koregaon Park.
+        </p>
+        <div className="pt-6 border-t-2 border-white/20 text-center">
+          <span className="text-yellow-300 font-black text-xl group-hover:text-yellow-200 transition-all duration-300 inline-flex items-center gap-2 hover:gap-4">
+            Start Your Project → 
+          </span>
+        </div>
+      </a>
+      
+      {/* Card 2 - Ahilyanagar */}
+      <a href="/services/ahilyanagar-land-developer" className="group block p-10 lg:p-12 bg-white/5 backdrop-blur-3xl border border-white/20 hover:border-yellow-400/70 rounded-3xl hover:shadow-2xl hover:bg-white/15 transition-all duration-700 hover:-translate-y-3">
+        <div className="w-24 h-24 lg:w-28 lg:h-28 mx-auto mb-8 group-hover:scale-110 transition-transform duration-500 rounded-3xl bg-gradient-to-br from-teal-400/90 to-emerald-500/90 flex items-center justify-center text-4xl shadow-2xl border-4 border-white/40 group-hover:border-white/70">
+          🏠
+        </div>
+        <h2 className="text-3xl lg:text-4xl font-black text-white mb-6 text-center group-hover:text-yellow-300 transition-all duration-300 drop-shadow-2xl">
+          Ahilyanagar's Premium Land Developer
+        </h2>
+        <p className="text-white/85 text-lg lg:text-xl leading-relaxed mb-8 text-center drop-shadow-lg">
+          Premium bungalows & complete interiors. MH/2026/001 licensed quality guaranteed.
+        </p>
+        <div className="pt-6 border-t-2 border-white/20 text-center">
+          <span className="text-yellow-300 font-black text-xl group-hover:text-yellow-200 transition-all duration-300 inline-flex items-center gap-2 hover:gap-4">
+            View Portfolio → 
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
         {/* NEW: Trust Signals */}
         <div className="mt-24 text-center">
           <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent mb-12">

@@ -13,6 +13,18 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://hydra-construction-services.vercel.app/services/best-interior-designer-pune',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://hydra-construction-services.vercel.app/services/ahilyanagar-land-developer',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://hydra-construction-services.vercel.app/about',
       lastModified: new Date(),
       changeFrequency: 'monthly',
