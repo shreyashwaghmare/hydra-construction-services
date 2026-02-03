@@ -254,7 +254,7 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
 </div>
 
         {/* NEW: Trust Signals */}
-        <div className="mt-24 text-center">
+        <div className="mt-24 text-center px-4">
           <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent mb-12">
             Why Pune Trusts Us
           </h2>
@@ -329,7 +329,7 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
           </div>
         </div>
         {/* NEW: Hero CTA */}
-        <div className=" text-center bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white py-20 rounded-1xl shadow-2xl">
+        <div className=" text-center bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white py-20 px-4 rounded-1xl shadow-2xl">
           <h2 className="text-4xl md:text-6xl font-black mb-6 drop-shadow-2xl">
             Ready For Your Dream Home?
           </h2>
