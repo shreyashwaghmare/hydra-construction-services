@@ -153,28 +153,32 @@ export default function Contact() {
                 </div>
 
                 {/* Quick Links */}
-                <div className="mt-24 grid md:grid-cols-3 gap-8 text-center">
-                    <a href="https://wa.me/919697985597" className="group">
-                        <div className="w-20 h-20 bg-green-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
-                            💬
-                        </div>
-                        <p className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">WhatsApp</p>
-                    </a>
-                    <a href="tel:+919697985597" className="group">
-                        <div className="w-20 h-20 bg-blue-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
-                            📞
-                        </div>
-                        <p className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Call</p>
-                    </a>
-                    <a href="mailto:hydracorporation.in@gmail.com" className="group">
-                        <div className="w-20 h-20 bg-purple-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
-                            ✉️
-                        </div>
-                        <p className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
-                            hydracorporation.in@gmail.com
-                        </p>
-                    </a>
-                </div>
+                {/* Quick Links - TABLET PERFECT */}
+<div className="mt-24 grid md:grid-cols-3 gap-8 text-center overflow-hidden">
+  <a href="https://wa.me/919697985597" className="group">
+    <div className="w-20 h-20 bg-green-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
+      💬
+    </div>
+    <p className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors truncate">WhatsApp</p>
+  </a>
+  
+  <a href="tel:+919697985597" className="group">
+    <div className="w-20 h-20 bg-blue-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
+      📞
+    </div>
+    <p className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors truncate">Call Now</p>
+  </a>
+  
+  <a href="mailto:hydracorporation.in@gmail.com" className="group">
+    <div className="w-20 h-20 bg-purple-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
+      ✉️
+    </div>
+    <p className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors truncate md:block">
+      Email Us
+    </p>
+  </a>
+</div>
+
             </div>
         </div>
     )
