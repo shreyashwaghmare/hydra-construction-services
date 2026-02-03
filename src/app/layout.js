@@ -7,13 +7,18 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 export const metadata = {
   metadataBase: new URL('https://hydra-construction-services.vercel.app'),
   title: {
-    default: 'Best Interior Designer & Real Estate Developer in Pune | Hydra Corporation',
+    default: 'Hydra Corporation | Best Interior Designer & Real Estate Developer in Pune & Ahilyanagar',
     template: '%s | MH/2026/001 Licensed Pune Builders'
   },
-  description: '🏆 Top interior designer in Pune. MH/2026/001 licensed builders creating dream bungalows, luxury interiors, kitchens & bathrooms in Baner, Koregaon Park, Hinjewadi. 50+ projects. Free quote: 919697985597',
+  description: '🏆 Top interior designer in Pune. MH/2026/001 licensed builders creating dream bungalows, luxury interiors, kitchens & bathrooms in Ahilyanagar, Baner, Koregaon Park, Hinjewadi. 50+ projects. Free quote: +919697985597',
   keywords: [
-    'best interior designer pune', 
+    'best interior designer pune',
+    'land litigation expert pune',
+    'land litigation expert Ahilyanagar',
+    'best interior designer Ahilyanagar', 
+    'best land developers Ahilyanagar',
     'real estate developer pune',
+    'real estate consultant',
     'bungalow construction pune',
     'luxury interiors pune',
     'kitchen designer pune',
