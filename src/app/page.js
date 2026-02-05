@@ -2,54 +2,81 @@ import Image from "next/image"
 export default function Home() {
   return (
     <>
-      {/* Safe spacer div - invisible */}
 
       <section className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900/50 to-black relative overflow-hidden pb-24">
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent" />
 
+        {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-6 py-20 flex flex-col justify-center text-white text-center min-h-[70vh]">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 drop-shadow-2xl leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 drop-shadow-2xl leading-tight font-['Oswald',sans-serif] tracking-[0.05em] animate-fade-in-up"
+            style={{ animationDelay: '0.3s' }}>
             FROM ORDINARY HOMES
           </h1>
 
-          <div className="text-5xl md:text-7xl lg:text-8xl font-black text-yellow-400 drop-shadow-2xl mb-8 tracking-widest">
+          <div className="text-5xl md:text-7xl lg:text-8xl font-black text-yellow-400 drop-shadow-2xl mb-8 tracking-[0.15em] font-['Montserrat',sans-serif] animate-bounce-slow"
+            style={{ animationDelay: '0.8s' }}>
             TO
           </div>
 
-          <div className="text-4xl md:text-6xl lg:text-7xl font-black mb-12 drop-shadow-2xl leading-tight text-yellow-400">
+          <div className="text-4xl md:text-6xl lg:text-7xl font-black mb-16 drop-shadow-2xl leading-tight text-yellow-400 font-['Oswald',sans-serif] tracking-[0.08em] animate-fade-in-up"
+            style={{ animationDelay: '1.2s' }}>
             DREAM BUNGALOWS
           </div>
+        </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 opacity-90 max-w-4xl mx-auto">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                <span className="font-bold text-xl">🏠</span>
-              </div>
-              <span className="text-lg md:text-xl font-bold">50+ Pune Projects</span>
+        {/* Stats Cards */}
+        <div className="relative z-20 flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 opacity-95 max-w-4xl mx-auto px-4">
+          {/* 50+ Pune Projects */}
+          <div className="flex items-center space-x-4 p-6 bg-black/20 backdrop-blur-sm rounded-2xl border border-white/10 group hover:bg-white/5 transition-all duration-300 min-w-[200px]">
+            <div className="w-16 h-16 bg-yellow-400/90 hover:bg-yellow-400 group-hover:scale-110 rounded-2xl flex items-center justify-center shadow-xl transition-transform duration-300 flex-shrink-0">
+              <span className="font-bold text-2xl drop-shadow-md">🏠</span>
             </div>
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center">
-                <span className="font-bold text-xl">⏱️</span>
+            <div>
+              <span className="text-sm font-medium text-yellow-300 tracking-wide block">Projects Delivered</span>
+              <div className="text-2xl md:text-3xl lg:text-4xl font-black text-white font-['Oswald',sans-serif] leading-tight">
+                50+
               </div>
-              <span className="text-lg md:text-xl font-bold">15+ Years</span>
+              <span className="text-yellow-400 text-xs font-bold tracking-wider uppercase">PUNE</span>
             </div>
           </div>
 
+          {/* 15+ Years Experience */}
+          <div className="flex items-center space-x-4 p-6 bg-black/20 backdrop-blur-sm rounded-2xl border border-white/10 group hover:bg-white/5 transition-all duration-300 min-w-[200px]">
+            <div className="w-16 h-16 bg-green-400/90 hover:bg-green-400 group-hover:scale-110 rounded-2xl flex items-center justify-center shadow-xl transition-transform duration-300 flex-shrink-0">
+              <span className="font-bold text-2xl drop-shadow-md">⏱️</span>
+            </div>
+            <div>
+              <span className="text-sm font-medium text-green-300 tracking-wide block">Proven Expertise</span>
+              <div className="text-2xl md:text-3xl lg:text-4xl font-black text-white font-['Oswald',sans-serif] leading-tight">
+                15+
+              </div>
+              <span className="text-green-400 text-xs font-bold tracking-wider uppercase">YEARS</span>
+            </div>
+          </div>
+        </div>
+
+        {/* WhatsApp CTA - Centered */}
+        <div className="relative z-20 flex justify-center mb-12 px-6">
           <a
             href="https://wa.me/919697985597"
-            className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 px-10 py-5 md:px-16 md:py-6 rounded-full font-black text-lg md:text-xl shadow-2xl hover:shadow-yellow-500/50 transform hover:scale-105 transition-all duration-300 inline-block border-4 border-white/20 mx-auto"
+            className="group relative bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:to-orange-500 text-gray-900 px-12 py-6 md:px-20 md:py-7 rounded-2xl font-black text-xl md:text-2xl shadow-2xl hover:shadow-3xl hover:shadow-yellow-500/30 transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 inline-block border-4 border-white/30 backdrop-blur-sm font-['Montserrat',sans-serif] tracking-[0.05em] after:absolute after:inset-0 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-500 after:rounded-2xl after:scale-110 after:blur-xl after:opacity-0 after:group-hover:opacity-100 after:transition-all after:duration-500 max-w-full"
           >
-            GET FREE QUOTE NOW
+            <span className="relative z-10 flex items-center justify-center space-x-3">
+              <span>📱</span>
+              <span>GET FREE QUOTE NOW</span>
+            </span>
           </a>
         </div>
 
+        {/* Background Image */}
         <Image
           src="/images/hero-bungalow.webp"
-          alt="baner-construction-bungalow"
+          alt="Pune Dream Bungalow Construction"
           fill
           className="object-cover"
           style={{
-            filter: 'brightness(0.5)',  // ← Exact CSS match to original
+            filter: 'brightness(0.5)',
             WebkitFilter: 'brightness(0.5)'
           }}
           sizes="100vw"
@@ -57,74 +84,132 @@ export default function Home() {
         />
       </section>
 
-      {/* 1. SERVICES GRID */}
       {/* 1. PROFESSIONAL 6-SERVICES GRID */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">Complete Building Solutions</h2>
-          <p className="text-xl text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            One contractor for all your Pune property needs
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-center mb-20 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4 font-['Oswald',sans-serif] leading-tight">Complete Building Solutions</h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              One contractor for all your Pune property needs
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* 1. Bungalow Construction */}
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
-              <div className="w-20 h-20 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center text-2xl">
-                🏠
+              {/* 1. Bungalow Construction */}
+              <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-blue-200/50 animate-slide-up"
+                style={{ animationDelay: '0.4s' }} tabIndex={0}>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-blue-400/5 to-blue-600/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
+                <div className="relative z-10 text-center p-10">
+                  <div className="w-24 h-24 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-blue-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-blue-200/50 group-hover/card:border-blue-400/75">
+                    🏠
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-blue-600 transition-all duration-500">
+                    Bungalow Construction
+                  </h3>
+                  <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
+                    3BHK/4BHK from foundation to finishout
+                  </p>
+                  <span className="inline-block bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 text-blue-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-blue-500/50 group-hover/card:bg-blue-200/80 border-2 border-blue-200/50 transition-all duration-400">
+                    Starting ₹75 Lac
+                  </span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Bungalow Construction</h3>
-              <p className="text-gray-600 mb-4">3BHK/4BHK from foundation to finishout</p>
-              <span className="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full font-medium">Starting ₹75 Lac</span>
-            </div>
+              {/* 2. Bathroom Design */}
+              <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-indigo-200/50 animate-slide-up"
+                style={{ animationDelay: '0.5s' }} tabIndex={0}>
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-indigo-400/5 to-indigo-600/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
+                <div className="relative z-10 text-center p-10">
+                  <div className="w-24 h-24 bg-gradient-to-br from-indigo-100 via-indigo-200 to-indigo-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-indigo-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-indigo-200/50 group-hover/card:border-indigo-400/75">
+                    🛁
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-indigo-600 transition-all duration-500">
+                    Bathroom Design
+                  </h3>
+                  <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
+                    Modular + luxury wet room solutions
+                  </p>
+                  <span className="inline-block bg-gradient-to-r from-indigo-100 via-indigo-200 to-indigo-300 text-indigo-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-indigo-500/50 group-hover/card:bg-indigo-200/80 border-2 border-indigo-200/50 transition-all duration-400">
+                    ₹2.5-6 Lac
+                  </span>
+                </div>
+              </div>
+              {/* 3. Kitchen Remodeling */}
+              <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-yellow-200/50 animate-slide-up"
+                style={{ animationDelay: '0.6s' }} tabIndex={0}>
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-yellow-400/5 to-yellow-600/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
+                <div className="relative z-10 text-center p-10">
+                  <div className="w-24 h-24 bg-gradient-to-br from-yellow-100 via-yellow-200 to-yellow-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-yellow-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-yellow-200/50 group-hover/card:border-yellow-400/75">
+                    🍳
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-yellow-600 transition-all duration-500">
+                    Kitchen Remodeling
+                  </h3>
+                  <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
+                    L-Shape, Island, Modular Pune kitchens
+                  </p>
+                  <span className="inline-block bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300 text-yellow-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-yellow-500/50 group-hover/card:bg-yellow-200/80 border-2 border-yellow-200/50 transition-all duration-400">
+                    ₹3-8 Lac
+                  </span>
+                </div>
+              </div>
 
-            {/* 2. Bathroom Design */}
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
-              <div className="w-20 h-20 bg-indigo-100 rounded-2xl mx-auto mb-6 flex items-center justify-center text-2xl">
-                🛁
+              {/* 4. Interior Design */}
+              <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-purple-200/50 animate-slide-up"
+                style={{ animationDelay: '0.7s' }} tabIndex={0}>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-purple-400/5 to-purple-600/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
+                <div className="relative z-10 text-center p-10">
+                  <div className="w-24 h-24 bg-gradient-to-br from-purple-100 via-purple-200 to-purple-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-purple-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-purple-200/50 group-hover/card:border-purple-400/75">
+                    🛋️
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-purple-600 transition-all duration-500">
+                    Full Interior
+                  </h3>
+                  <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
+                    Furniture + false ceiling + painting
+                  </p>
+                  <span className="inline-block bg-gradient-to-r from-purple-100 via-purple-200 to-purple-300 text-purple-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-purple-500/50 group-hover/card:bg-purple-200/80 border-2 border-purple-200/50 transition-all duration-400">
+                    ₹800/sqft
+                  </span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Bathroom Design</h3>
-              <p className="text-gray-600 mb-4">Modular + luxury wet room solutions</p>
-              <span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full font-medium">₹2.5-6 Lac</span>
-            </div>
+              {/* 5. Building AMC */}
+              <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-green-200/50 animate-slide-up"
+                style={{ animationDelay: '0.8s' }} tabIndex={0}>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-green-400/5 to-green-600/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
+                <div className="relative z-10 text-center p-10">
+                  <div className="w-24 h-24 bg-gradient-to-br from-green-100 via-green-200 to-green-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-green-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-green-200/50 group-hover/card:border-green-400/75">
+                    🔧
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-green-600 transition-all duration-500">
+                    Building AMC
+                  </h3>
+                  <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
+                    Annual maintenance + repairs contract
+                  </p>
+                  <span className="inline-block bg-gradient-to-r from-green-100 via-green-200 to-green-300 text-green-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-green-500/50 group-hover/card:bg-green-200/80 border-2 border-green-200/50 transition-all duration-400">
+                    ₹25k/year
+                  </span>
+                </div>
+              </div>
+              {/* 6. Waterproofing */}
+              <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-teal-200/50 animate-slide-up"
+                style={{ animationDelay: '0.9s' }} tabIndex={0}>
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 via-teal-400/5 to-teal-600/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
+                <div className="relative z-10 text-center p-10">
+                  <div className="w-24 h-24 bg-gradient-to-br from-teal-100 via-teal-200 to-teal-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-teal-500/25  active:scale-105 transition-all duration-500 shadow-2xl border-4 border-teal-200/50 group-hover/card:border-teal-400/75">
+                    💧
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-teal-600 transition-all duration-500">
+                    Waterproofing
+                  </h3>
+                  <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
+                    Terrace, bathroom, sinking foundation
+                  </p>
+                  <span className="inline-block bg-gradient-to-r from-teal-100 via-teal-200 to-teal-300 text-teal-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-teal-500/50 group-hover/card:bg-teal-200/80 border-2 border-teal-200/50 transition-all duration-400">
+                    ₹45/sqft
+                  </span>
+                </div>
+              </div>
 
-            {/* 3. Kitchen Remodeling */}
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
-              <div className="w-20 h-20 bg-yellow-100 rounded-2xl mx-auto mb-6 flex items-center justify-center text-2xl">
-                🍳
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Kitchen Remodeling</h3>
-              <p className="text-gray-600 mb-4">L-Shape, Island, Modular Pune kitchens</p>
-              <span className="inline-block bg-yellow-100 text-yellow-800 text-sm px-3 py-1 rounded-full font-medium">₹3-8 Lac</span>
-            </div>
-
-            {/* 4. Interior Design */}
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
-              <div className="w-20 h-20 bg-purple-100 rounded-2xl mx-auto mb-6 flex items-center justify-center text-2xl">
-                🛋️
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Full Interior</h3>
-              <p className="text-gray-600 mb-4">Furniture + false ceiling + painting</p>
-              <span className="inline-block bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full font-medium">₹800/sqft</span>
-            </div>
-
-            {/* 5. Building AMC */}
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
-              <div className="w-20 h-20 bg-green-100 rounded-2xl mx-auto mb-6 flex items-center justify-center text-2xl">
-                🔧
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Building AMC</h3>
-              <p className="text-gray-600 mb-4">Annual maintenance + repairs contract</p>
-              <span className="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full font-medium">₹25k/year</span>
-            </div>
-
-            {/* 6. Waterproofing */}
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100">
-              <div className="w-20 h-20 bg-teal-100 rounded-2xl mx-auto mb-6 flex items-center justify-center text-2xl">
-                💧
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Waterproofing</h3>
-              <p className="text-gray-600 mb-4">Terrace, bathroom, sinking foundation</p>
-              <span className="inline-block bg-teal-100 text-teal-800 text-sm px-3 py-1 rounded-full font-medium">₹45/sqft</span>
             </div>
           </div>
         </div>
@@ -132,7 +217,7 @@ export default function Home() {
 
 
       {/* 2. RECENT PROJECTS */}
-      <section className="py-24 bg-white">
+      <section className="pt-0 pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Recent Work</h2>
           <p className="text-xl text-center text-gray-600 mb-16 max-w-2xl mx-auto">
