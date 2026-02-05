@@ -8,13 +8,13 @@ export default function Footer() {
             HYDRA CORPORATION
           </div>
           <p className="text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
-            15+ Years Building Dream Homes Across Pune
+            15+ Years Building Dream Homes Across Pune & Ahilyanagar
           </p>
           
           {/* License Badge */}
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-xl border-2 border-yellow-400/30 px-8 py-4 rounded-2xl mb-12">
             <span className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></span>
-            <span className="text-yellow-400 font-black text-xl tracking-wide">MH/2026/001 LICENSED</span>
+            <span className="text-yellow-400 font-black text-xl tracking-wide">Quality Construction • Thoughtful Interiors • Transparent Pricing</span>
           </div>
         </div>
 
@@ -26,7 +26,7 @@ export default function Footer() {
               🏠
             </div>
             <h4 className="text-2xl font-bold text-white mb-4">Pune Locations</h4>
-            <p className="text-gray-300 text-lg leading-relaxed">Baner • Koregaon Park & Ahilyanagar</p>
+            <p className="text-gray-300 text-lg leading-relaxed">Baner • Koregaon Park • Viman Nagar </p>
           </div>
 
           {/* Phone */}
@@ -45,9 +45,9 @@ export default function Footer() {
             <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center text-2xl mb-4 mx-auto md:mx-0 shadow-xl">
               📋
             </div>
-            <h4 className="text-2xl font-bold text-white mb-4">Licensed Contractor</h4>
+            <h4 className="text-2xl font-bold text-white mb-4">Expert Engineering Team</h4>
             <p className="text-yellow-400 text-xl font-semibold tracking-wide bg-yellow-400/10 px-4 py-2 rounded-xl inline-block">
-              MH/2026/001
+              Serving Pune Since 2010
             </p>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-6 py-20 flex flex-col justify-center text-white text-center min-h-[70vh]">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 drop-shadow-2xl leading-tight font-['Oswald',sans-serif] tracking-[0.05em] animate-fade-in-up"
             style={{ animationDelay: '0.3s' }}>
-            FROM ORDINARY HOMES
+            FROM LUXURY HOMES
           </h1>
 
           <div className="text-5xl md:text-7xl lg:text-8xl font-black text-yellow-400 drop-shadow-2xl mb-8 tracking-[0.15em] font-['Montserrat',sans-serif] animate-bounce-slow"
@@ -85,12 +85,12 @@ export default function Home() {
       </section>
 
       {/* 1. PROFESSIONAL 6-SERVICES GRID */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-24 pb-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4 font-['Oswald',sans-serif] leading-tight">Complete Building Solutions</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4 font-['Oswald',sans-serif] leading-tight">From strong foundations to stunning interiors</h2>
             <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              One contractor for all your Pune property needs
+              We don’t just build spaces — we craft experiences.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -277,8 +277,8 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
               <div className="relative">
                 <div className="w-20 h-20 bg-yellow-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">📋</div>
-                <h3 className="text-3xl font-black text-yellow-400 mb-4 text-center">MH/2026/001</h3>
-                <p className="text-gray-300 text-lg text-center">Government Licensed</p>
+                <h3 className="text-3xl font-black text-yellow-400 mb-4 text-center">Construction & Interiors</h3>
+                <p className="text-gray-300 text-lg text-center">End-to-End Execution</p>
               </div>
             </div>
 
@@ -324,8 +324,8 @@ export default function Home() {
               </h4>
               <ul className="space-y-3 text-lg text-gray-200">
                 <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>Transparent pricing</li>
-                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>Family-owned since 2010</li>
-                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>No surprise costs</li>
+                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>Client-First Approach</li>
+                <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400 rounded-full"></span>Zero Hidden Charges</li>
               </ul>
             </div>
           </div>

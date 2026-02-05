@@ -10,7 +10,7 @@ export default function InteriorExterior() {
                             <div className="space-y-8">
                                 <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 mt-8 lg:mt-12 rounded-2xl border border-white/30">
                                     <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-                                    <span className="text-white font-bold text-lg">MH/2026/001 Licensed</span>
+                                    <span className="text-white font-bold text-lg">Viman Nagar • Baner • Kothrud</span>
                                 </div>
                                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight">
                                     Pune's <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent">Top Interior</span>
@@ -183,14 +183,14 @@ export default function InteriorExterior() {
                         </div>
                         <div className="inline-block bg-white/95 backdrop-blur-md px-8 py-4 rounded-2xl border border-white/60 shadow-xl mx-6 translate-y-4">
                             <p className="text-lg md:text-xl font-semibold text-gray-900 tracking-wide">
-                                MH/2026/001 Licensed • Free Site Visits • 50+ Pune Projects Complete
+                                Expert Team Support • Free Site Visits • 50+ Pune Projects Complete
                             </p>
                         </div>
                     </div>
 
                     {/* Featured Areas */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto pb-16">
-                        <a href="/portfolio/baner" className="group block p-10 lg:p-12 bg-white/5 backdrop-blur-3xl border border-white/20 hover:border-emerald-400/70 rounded-3xl hover:shadow-2xl hover:bg-white/15 transition-all duration-700 hover:-translate-y-3">
+                        <a href="/portfolio" className="group block p-10 lg:p-12 bg-white/5 backdrop-blur-3xl border border-white/20 hover:border-emerald-400/70 rounded-3xl hover:shadow-2xl hover:bg-white/15 transition-all duration-700 hover:-translate-y-3">
                             <div className="w-24 h-24 lg:w-28 lg:h-28 mx-auto mb-8 group-hover:scale-110 transition-transform duration-500 rounded-3xl bg-gradient-to-br from-emerald-400/90 to-teal-500/90 flex items-center justify-center text-4xl shadow-2xl border-4 border-white/40 group-hover:border-white/70">
                                 🏙️
                             </div>
@@ -207,7 +207,7 @@ export default function InteriorExterior() {
                             </div>
                         </a>
 
-                        <a href="/portfolio/koregaon" className="group block p-10 lg:p-12 bg-white/5 backdrop-blur-3xl border border-white/20 hover:border-emerald-400/70 rounded-3xl hover:shadow-2xl hover:bg-white/15 transition-all duration-700 hover:-translate-y-3">
+                        <a href="/portfolio" className="group block p-10 lg:p-12 bg-white/5 backdrop-blur-3xl border border-white/20 hover:border-emerald-400/70 rounded-3xl hover:shadow-2xl hover:bg-white/15 transition-all duration-700 hover:-translate-y-3">
                             <div className="w-24 h-24 lg:w-28 lg:h-28 mx-auto mb-8 group-hover:scale-110 transition-transform duration-500 rounded-3xl bg-gradient-to-br from-amber-400/90 to-orange-500/90 flex items-center justify-center text-4xl shadow-2xl border-4 border-white/40 group-hover:border-white/70">
                                 🌳
                             </div>
@@ -224,7 +224,7 @@ export default function InteriorExterior() {
                             </div>
                         </a>
 
-                        <a href="https://wa.me/919697985597?text=Free%20design%20consultation" className="group block p-10 lg:p-12 bg-white/5 backdrop-blur-3xl border border-white/20 hover:border-emerald-400/70 rounded-3xl hover:shadow-2xl hover:bg-white/15 transition-all duration-700 hover:-translate-y-3">
+                        <a href="/contact" className="group block p-10 lg:p-12 bg-white/5 backdrop-blur-3xl border border-white/20 hover:border-emerald-400/70 rounded-3xl hover:shadow-2xl hover:bg-white/15 transition-all duration-700 hover:-translate-y-3">
                             <div className="w-24 h-24 lg:w-28 lg:h-28 mx-auto mb-8 group-hover:scale-110 transition-transform duration-500 rounded-3xl bg-gradient-to-br from-blue-400/90 to-indigo-500/90 flex items-center justify-center text-4xl shadow-2xl border-4 border-white/40 group-hover:border-white/70">
                                 🎨
                             </div>

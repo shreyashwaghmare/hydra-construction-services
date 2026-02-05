@@ -9,11 +9,11 @@ export default function Services() {
               <div className="space-y-8">
                 <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 mt-8 lg:mt-12 rounded-2xl border border-white/30">
                   <div className="w-3 h-3 bg-green-400  rounded-full animate-pulse"></div>
-                  <span className="text-white font-bold text-lg">MH/2026/001 Licensed</span>
+                  <span className="text-white font-bold text-lg">Trusted Since 2010 • 50+ Projects</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight">
-                  Pune's <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">Trusted</span>
-                  <br />Builders
+                  Pune's <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">Construction & Interior Design</span>
+                  <br /> Experts
                 </h1>
                 <div className="grid md:grid-cols-3 gap-6 max-w-2xl bg-white/10 backdrop-blur-sm p-6 rounded-3xl">
                   <div className="text-center">
@@ -40,12 +40,12 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <div className="relative hidden lg:block">
+              <div className="relative w-full block">
                 <div className="w-full h-96 rounded-3xl shadow-2xl overflow-hidden group hover:scale-105 transition-all duration-700 animate-float">
                   <img
                     src="/images/PCMC-false-ceiling.jpeg"
                     alt="Hydra Construction Project"
-                    className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-500"
+                    className="w-full h-full lg:h-[500px] object-cover group-hover:brightness-110 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
@@ -71,7 +71,7 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
             <ul className="space-y-3 text-gray-600 mb-8">
               <li>• 3BHK/4BHK complete builds</li>
               <li>• Foundation to finishout</li>
-              <li>• MH/2026/001 licensed</li>
+              <li>• Design for Every Budget</li>
               <li>• Starting ₹75 Lac</li>
             </ul>
             <a href="https://wa.me/919697985597?text=Bungalow%20quote"
@@ -202,12 +202,12 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
             <div className="text-center mb-20">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-center mx-auto max-w-full px-6 sm:px-8 leading-none tracking-tight [-webkit-line-clamp:1]">
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-xl block w-full hyphens-auto">
-                  Pune Homeowners' #1 Choice
+                  Pune Homeowners’ Trusted Choice for Construction & Interiors
                 </span>
               </h1>
       <div className="inline-block bg-gradient-to-r from-white via-white/90 to-white/70 backdrop-blur-sm px-8 py-4 rounded-3xl border border-white/50 shadow-2xl">
         <p className="text-lg md:text-xl font-semibold text-gray-900 tracking-wide">
-          MH/2026/001 Licensed • Free Site Visits • 15+ Years Pune Experience
+          Expert Team Support • Free Site Visits • 15+ Years Pune Experience
         </p>
       </div>
     </div>
@@ -223,7 +223,7 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
           Best Interior Designer in Pune
         </h2>
         <p className="text-white/85 text-lg lg:text-xl leading-relaxed mb-8 text-center drop-shadow-lg">
-          Luxury kitchens, bathrooms, false ceilings. 50+ projects completed in Baner, Koregaon Park.
+          Luxury kitchens, bathrooms, false ceilings. 50+ projects completed in Kothrud, Baner, Koregaon Park.
         </p>
         <div className="pt-6 border-t-2 border-white/20 text-center">
           <span className="text-yellow-300 font-black text-xl group-hover:text-yellow-200 transition-all duration-300 inline-flex items-center gap-2 hover:gap-4">
@@ -241,7 +241,7 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
           Ahilyanagar's Premium Land Developer
         </h2>
         <p className="text-white/85 text-lg lg:text-xl leading-relaxed mb-8 text-center drop-shadow-lg">
-          Premium bungalows & complete interiors. MH/2026/001 licensed quality guaranteed.
+          Premium bungalows & complete interiors. Design & Execution experts quality guaranteed.
         </p>
         <div className="pt-6 border-t-2 border-white/20 text-center">
           <span className="text-yellow-300 font-black text-xl group-hover:text-yellow-200 transition-all duration-300 inline-flex items-center gap-2 hover:gap-4">
@@ -261,8 +261,8 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="flex flex-col items-center space-y-3 p-6">
               <div className="w-20 h-20 bg-green-100 rounded-3xl flex items-center justify-center text-3xl shadow-lg">📋</div>
-              <h3 className="text-xl font-bold text-gray-900">MH/2026/001</h3>
-              <p className="text-sm text-gray-500">Licensed Builder</p>
+              <h3 className="text-xl font-bold text-gray-900">Since 2010</h3>
+              <p className="text-sm text-gray-500">Trusted Building Partner</p>
             </div>
             <div className="flex flex-col items-center space-y-3 p-6">
               <div className="w-20 h-20 bg-yellow-100 rounded-3xl flex items-center justify-center text-3xl shadow-lg">⭐</div>
@@ -334,7 +334,7 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
             Ready For Your Dream Home?
           </h2>
           <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed">
-            Free site visits • MH/2026/001 licensed • 10-year warranty • Pune's most trusted builders
+            Free site visits • Expert Engineering Team • 10-years warranty • Smart Designs • On-Time Delivery
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <a href="https://wa.me/919697985597?text=Free%20site%20visit%20please"
