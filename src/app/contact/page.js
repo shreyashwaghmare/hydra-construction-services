@@ -1,7 +1,7 @@
 'use client'
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-
+import { FaWhatsapp } from "react-icons/fa";
 export default function Contact() {
     const form = useRef();
     const [loading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ export default function Contact() {
             .finally(() => setLoading(false));
     };
     return (
-        <div className="min-h-screen bg-gray-50 py-20">
+        <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100 py-20">
             <div className="max-w-4xl mx-auto px-6">
                 {/* Hero Header */}
                 <div className="text-center mb-20">
@@ -54,7 +54,7 @@ export default function Contact() {
 
                         {/* WhatsApp */}
                         <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                            <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto text-white">💬</div>
+                            <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto text-white"><FaWhatsapp className="w-8 h-8 md:w-10 md:h-10" /></div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">WhatsApp Quote</h3>
                             <p className="text-xl font-bold text-center mb-6">Instant Response</p>
                             <a href="https://wa.me/919697985597?text=Hi%2C%20need%20construction%20quote"

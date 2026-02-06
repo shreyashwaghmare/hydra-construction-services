@@ -1,5 +1,5 @@
 'use client'
-
+import { FaWhatsapp } from "react-icons/fa";
 export default function WhatsAppButton() {
   return (
     <>
@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        💬
+        <FaWhatsapp className="w-8 h-8 md:w-10 md:h-10" />
       </a>
     </>
   )

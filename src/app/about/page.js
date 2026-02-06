@@ -1,7 +1,7 @@
 'use client'
 export default function About() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50/50">
+        <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100">
             {/* HERO STORY START */}
             <section className="relative pt-22 pb-10 overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-200/30 via-transparent to-transparent" />
