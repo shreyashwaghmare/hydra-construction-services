@@ -3,6 +3,29 @@ import Image from "next/image"
 import { motion } from "framer-motion";
 
 export default function Home() {
+  const recentProjects = [
+  {
+    title: 'Baner 4BHK Bungalow',
+    desc: 'Modular Kitchen, Walk-in Wardrobes & Smart Lighting',
+    date: 'Delivered Dec 2025',
+    src: '/images/duplex-wakad.webp',
+    alt: 'Baner 4BHK Bungalow Modular Kitchen'
+  },
+  {
+    title: 'Island Kitchen Renovation',
+    desc: 'Modern Island Kitchen with Smart Storage',
+    date: 'Delivered Nov 2025',
+    src: '/images/island-kitchen.webp',
+    alt: 'Island Kitchen Renovation – Wakad'
+  },
+  {
+    title: 'Luxury Living Room Interior',
+    desc: 'Designer Sofa, TV Unit & Ambient Lighting',
+    date: 'Delivered Oct 2025',
+    src: '/images/service-interior.jpg',
+    alt: 'Luxury Living Room Interior – Pune'
+  }
+];
   return (
     <>
       <section className="relative w-full min-h-screen overflow-hidden">
@@ -279,39 +302,53 @@ export default function Home() {
 
 
       {/* 2. RECENT PROJECTS */}
-      <section className="pt-0 pb-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Recent Work</h2>
-          <p className="text-xl text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Baner 4BHK Bungalow - Delivered Dec 2025
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gray-100 h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              {/* Add your phone photos */}
-              <Image
-                src="/images/duplex-wakad.webp"
-                alt="Hydra Construction"
-                width={400}
-                height={300} />
-            </div>
-            <div className="bg-gray-100 h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              <Image
-                src="/images/island-kitchen.webp"
-                alt="Hydra Construction"
-                width={400}
-                height={300} />
-            </div>
-            <div className="bg-gray-100 h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              <Image
-                src="/images/service-interior.jpg"
-                alt="Hydra Construction"
-                width={400}
-                height={300} />
+      <section className="pt-10 pb-22 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Headline */}
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-4 font-['Oswald',sans-serif]">
+          Recent Interior & Renovation Projects in Pune
+        </h2>
+        <p className="text-lg md:text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto font-['Montserrat',sans-serif]">
+          Showcasing our work from modular kitchens to complete 4BHK home transformations – transparency, quality, and style in every project.
+        </p>
 
-            </div>
-          </div>
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {recentProjects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+            >
+              {/* Image */}
+              <Image
+                src={project.src}
+                alt={project.alt}
+                width={400}
+                height={300}
+                className="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 rounded-3xl">
+                <h3 className="text-white text-2xl font-black font-['Oswald',sans-serif] mb-1">
+                  {project.title}
+                </h3>
+                <p className="text-gray-200 text-sm mb-1 font-['Montserrat',sans-serif]">
+                  {project.desc}
+                </p>
+                <span className="text-yellow-400 font-bold text-xs uppercase font-['Montserrat',sans-serif]">
+                  {project.date}
+                </span>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* 3. WHY CHOOSE US */}
       <section className="py-24 bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white overflow-hidden">
@@ -322,7 +359,7 @@ export default function Home() {
           <div className="relative z-10 text-center mb-20">
             <div className="inline-flex items-center gap-3 bg-yellow-400/10 border-2 border-yellow-400/30 px-6 py-3 rounded-full mb-8">
               <span className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></span>
-              <span className="text-yellow-400 font-bold text-lg tracking-wide">MH/2026/001 LICENSED</span>
+              <span className="text-yellow-400 font-bold text-lg tracking-wide">Verified Professionals • Transparent Pricing • End‑to‑End Execution</span>
             </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 bg-clip-text text-transparent mb-8 leading-tight">
               Why Pune's Smart Homeowners<br />Choose <span className="text-white drop-shadow-2xl">Hydra Corporation</span>
@@ -370,7 +407,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-xl p-10 rounded-3xl border border-yellow-400/20 hover:shadow-2xl transition-all duration-300">
               <h4 className="text-2xl font-black text-yellow-400 mb-6 flex items-center gap-3">
                 <span className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></span>
-                Wakad, Baner, Koregaon Park
+                Kothrud, Baner, Koregaon Park
               </h4>
               <ul className="space-y-3 text-lg text-gray-200">
                 <li className="flex items-center gap-3"><span className="w-2 h-2 bg-emerald-400 rounded-full"></span>50+ Pune projects delivered</li>
