@@ -4,28 +4,28 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const recentProjects = [
-  {
-    title: 'Baner 4BHK Bungalow',
-    desc: 'Modular Kitchen, Walk-in Wardrobes & Smart Lighting',
-    date: 'Delivered Dec 2025',
-    src: '/images/duplex-wakad.webp',
-    alt: 'Baner 4BHK Bungalow Modular Kitchen'
-  },
-  {
-    title: 'Island Kitchen Renovation',
-    desc: 'Modern Island Kitchen with Smart Storage',
-    date: 'Delivered Nov 2025',
-    src: '/images/island-kitchen.webp',
-    alt: 'Island Kitchen Renovation – Wakad'
-  },
-  {
-    title: 'Luxury Living Room Interior',
-    desc: 'Designer Sofa, TV Unit & Ambient Lighting',
-    date: 'Delivered Oct 2025',
-    src: '/images/service-interior.jpg',
-    alt: 'Luxury Living Room Interior – Pune'
-  }
-];
+    {
+      title: 'Baner 4BHK Bungalow',
+      desc: 'Modular Kitchen, Walk-in Wardrobes & Smart Lighting',
+      date: 'Delivered Dec 2025',
+      src: '/images/duplex-wakad.webp',
+      alt: 'Baner 4BHK Bungalow Modular Kitchen'
+    },
+    {
+      title: 'Island Kitchen Renovation',
+      desc: 'Modern Island Kitchen with Smart Storage',
+      date: 'Delivered Nov 2025',
+      src: '/images/island-kitchen.webp',
+      alt: 'Island Kitchen Renovation – Wakad'
+    },
+    {
+      title: 'Luxury Living Room Interior',
+      desc: 'Designer Sofa, TV Unit & Ambient Lighting',
+      date: 'Delivered Oct 2025',
+      src: '/images/service-interior.jpg',
+      alt: 'Luxury Living Room Interior – Pune'
+    }
+  ];
   return (
     <>
       <section className="relative w-full min-h-screen overflow-hidden">
@@ -131,7 +131,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: 0.15,ease: "easeOut" }}
+                transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
                 <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-blue-200/50 animate-slide-up"
@@ -160,7 +160,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7,delay: 0.30, ease: "easeOut" }}
+                transition={{ duration: 0.7, delay: 0.30, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
                 <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-indigo-200/50 animate-slide-up"
@@ -188,7 +188,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7,delay: 0.45, ease: "easeOut" }}
+                transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
                 <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-yellow-200/50 animate-slide-up"
@@ -217,7 +217,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7,delay: 0.60, ease: "easeOut" }}
+                transition={{ duration: 0.7, delay: 0.60, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
                 <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-purple-200/50 animate-slide-up"
@@ -245,7 +245,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7,delay: 0.75, ease: "easeOut" }}
+                transition={{ duration: 0.7, delay: 0.75, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
                 <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-green-200/50 animate-slide-up"
@@ -273,7 +273,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7,delay: 0.90, ease: "easeOut" }}
+                transition={{ duration: 0.7, delay: 0.90, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
                 <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-teal-200/50 animate-slide-up"
@@ -303,52 +303,52 @@ export default function Home() {
 
       {/* 2. RECENT PROJECTS */}
       <section className="pt-10 pb-22 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Headline */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-yellow-600 text-center text-gray-700 mb-4 font-['Oswald',sans-serif]">
-          Recent Interior & Renovation Projects in Pune
-        </h2>
-        <p className="text-lg md:text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto font-['Montserrat',sans-serif]">
-          Showcasing our work from modular kitchens to complete 4BHK home transformations – transparency, quality, and style in every project.
-        </p>
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Headline */}
+          <h2 className="text-4xl md:text-5xl font-extrabold text-yellow-600 text-center  mb-4 font-['Oswald',sans-serif]">
+            Recent Interior & Renovation Projects in Pune
+          </h2>
+          <p className="text-lg md:text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto font-['Montserrat',sans-serif]">
+            Showcasing our work from modular kitchens to complete 4BHK home transformations – transparency, quality, and style in every project.
+          </p>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {recentProjects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer group"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-            >
-              {/* Image */}
-              <Image
-                src={project.src}
-                alt={project.alt}
-                width={400}
-                height={300}
-                className="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500"
-              />
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {recentProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer group"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+              >
+                {/* Image */}
+                <Image
+                  src={project.src}
+                  alt={project.alt}
+                  width={400}
+                  height={300}
+                  className="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500"
+                />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 rounded-3xl">
-                <h3 className="text-white text-2xl font-black font-['Oswald',sans-serif] mb-1">
-                  {project.title}
-                </h3>
-                <p className="text-gray-200 text-sm mb-1 font-['Montserrat',sans-serif]">
-                  {project.desc}
-                </p>
-                <span className="text-yellow-400 font-bold text-xs uppercase font-['Montserrat',sans-serif]">
-                  {project.date}
-                </span>
-              </div>
-            </motion.div>
-          ))}
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 rounded-3xl">
+                  <h3 className="text-white text-2xl font-black font-['Oswald',sans-serif] mb-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm mb-1 font-['Montserrat',sans-serif]">
+                    {project.desc}
+                  </p>
+                  <span className="text-yellow-400 font-bold text-xs uppercase font-['Montserrat',sans-serif]">
+                    {project.date}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* 3. WHY CHOOSE US */}
       <section className="py-24 bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white overflow-hidden">

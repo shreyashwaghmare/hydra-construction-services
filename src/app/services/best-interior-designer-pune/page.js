@@ -232,7 +232,7 @@ export default function InteriorExterior() {
                                 Free Design Consultation
                             </h2>
                             <p className="text-white/85 text-lg lg:text-xl leading-relaxed mb-8 text-center drop-shadow-lg">
-                                MH/2026/001 licensed experts ready for your dream home transformation
+                                Licensed experts ready for your dream home transformation
                             </p>
                             <div className="pt-6 border-t-2 border-white/20 text-center">
                                 <span className="text-emerald-300 font-black text-xl group-hover:text-emerald-200 transition-all duration-300 inline-flex items-center gap-2 hover:gap-4">
@@ -243,8 +243,6 @@ export default function InteriorExterior() {
                     </div>
                 </div>
             </div>
-
-            {/* Trust Signals + CTA - Keep your existing sections */}
 
         </div>
     )

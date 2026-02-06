@@ -282,7 +282,7 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
           </div>
         </div>
         {/* NEW: Testimonials */}
-        <div className="mt-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 rounded-3xl">
+        <div className="mt-10 bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 rounded-3xl">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-2 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
             Pune Homeowners Love Us
           </h2>
