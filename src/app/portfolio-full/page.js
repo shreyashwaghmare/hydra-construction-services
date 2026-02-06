@@ -35,10 +35,17 @@ export default function FullPortfolio() {
         <div className="min-h-screen bg-gray-50">
             {/* Hero */}
             <div className="bg-gradient-to-r from-gray-900 to-blue-900 text-white py-24 text-center">
-                <div className="max-w-4xl mx-auto px-4">
-                    <h1 className="text-5xl md:text-6xl font-black mb-6 antialiased">Full Portfolio</h1>
-                    <p className="text-xl md:text-2xl max-w-2xl mx-auto antialiased">
-                        50+ Pune bungalow projects • Before/after • Real photos
+                <div className="max-w-5xl mx-auto px-4">
+                    <h1 className="text-5xl md:text-6xl font-black mb-6 antialiased">Our Signature Bungalows & Home Interiors in Pune</h1>
+                    <p className="text-xl md:text-2xl max-w-2xl mx-auto text-white-700 antialiased mb-4">
+                        50+ Pune bungalow projects • Before & After • Real photos • Modular kitchens, wardrobes, bathrooms, and complete interiors
+                    </p>
+                    <div className="my-6 flex justify-center">
+                        <span className="w-24 h-1 bg-yellow-400 rounded-full"></span>
+                    </div>
+                    <p className="text-2xl md:text-2xl max-w-4xl mx-auto text-white-900  antialiased mb-12 leading-relaxed">
+                        Hydra Interiors & Construction showcases our most luxurious and thoughtfully designed homes across Pune.
+                        From <span className="font-semibold text-yellow-500">modular kitchens</span> to <span className="font-semibold text-emerald-500">complete bungalow interiors</span>, explore 50+ projects that blend <span className="italic">style, functionality, and modern living</span>.
                     </p>
                     <a href="https://wa.me/919697985597?text=Hi!%20Need%20full%20portfolio%20PDF"
                         className="mt-8 inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
@@ -55,8 +62,8 @@ export default function FullPortfolio() {
                             key={category}
                             onClick={() => setActiveFilter(category)}
                             className={`px-6 py-3 font-bold rounded-xl shadow-md transition-all duration-300 text-sm antialiased ${activeFilter === category
-                                    ? 'bg-blue-600 text-white shadow-blue-400 border-2 border-blue-500'
-                                    : 'bg-white text-gray-900 border-2 border-gray-300 hover:border-blue-400 hover:bg-blue-50 hover:shadow-lg'
+                                ? 'bg-blue-600 text-white shadow-blue-400 border-2 border-blue-500'
+                                : 'bg-white text-gray-900 border-2 border-gray-300 hover:border-blue-400 hover:bg-blue-50 hover:shadow-lg'
                                 }`}
                         >
                             {category}
@@ -88,7 +95,7 @@ export default function FullPortfolio() {
                                         Get Quote
                                     </a>
                                     <a
-                                        href={`/portfolio/${project.id}`}
+                                        href={`/contact`}
                                         className="px-6 py-3 bg-white text-gray-900 border-2 border-gray-200 hover:border-gray-400 hover:bg-gray-50 hover:shadow-lg rounded-xl font-bold text-lg transition-all duration-300 antialiased hover:-translate-y-0.5 hover:scale-[1.02]"
                                     >
                                         Details
@@ -107,6 +114,32 @@ export default function FullPortfolio() {
                     </p>
                 </div>
             </div>
+            <section className="py-16 bg-gray-50">
+  <div className="max-w-4xl mx-auto text-center px-6">
+    
+    <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6">
+      Want a dream interior for your Pune home?
+    </h2>
+    
+    <p className="text-xl md:text-2xl text-gray-700 mb-8">
+      📱 Get a free quote or site visit today!
+    </p>
+
+    <a
+      href="https://wa.me/919697985597"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-gray-900 font-bold text-xl rounded-2xl shadow-2xl hover:shadow-3xl hover:scale-105 transform transition-all duration-300"
+    >
+      💬 Contact Us Now
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+
+  </div>
+</section>
+
 
             <style jsx>{`
         * { 
