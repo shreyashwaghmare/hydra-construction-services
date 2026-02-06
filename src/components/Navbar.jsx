@@ -47,9 +47,7 @@ export default function Navbar() {
 
           {/* CTAs - unchanged */}
           <div className="hidden md:flex items-center gap-2">
-            <a href="https://wa.me/919697985597" className="px-4 py-2.5 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-sm rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all whitespace-nowrap">
-              📱 WhatsApp
-            </a>
+            
             <a href="/contact" className="px-5 py-2.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold text-sm rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all whitespace-nowrap">
               Free Quote
             </a>
@@ -87,9 +85,6 @@ export default function Navbar() {
               <div className="pt-4 border-t border-white/10 space-y-3">
                 <a href="/contact" className="block w-full py-4 px-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-black text-xl text-center rounded-2xl shadow-2xl hover:shadow-3xl hover:-translate-y-1 transition-all duration-300">
                   Free Quote
-                </a>
-                <a href="https://wa.me/919697985597" className="block w-full py-4 px-6 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-xl text-center rounded-2xl shadow-2xl hover:shadow-3xl hover:-translate-y-1 transition-all duration-300">
-                  📱 WhatsApp Now
                 </a>
               </div>
             </div>
