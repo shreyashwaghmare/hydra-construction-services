@@ -119,7 +119,7 @@ export default function Home() {
       <section className="pt-24 pb-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4 font-['Oswald',sans-serif] leading-tight">From strong foundations to stunning interiors</h2>
+            <h2 className="text-4xl md:text-4xl lg:text-5xl from-yellow-400 via-orange-400 to-yellow-500 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 font-extrabold font-['Oswald',sans-serif] leading-tight">From strong foundations to stunning interiors</h2>
             <p className="text-xl py-4 md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               We don’t just build spaces — we craft experiences.
             </p>
@@ -305,7 +305,7 @@ export default function Home() {
       <section className="pt-10 pb-22 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Headline */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-4 font-['Oswald',sans-serif]">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-yellow-600 text-center text-gray-700 mb-4 font-['Oswald',sans-serif]">
           Recent Interior & Renovation Projects in Pune
         </h2>
         <p className="text-lg md:text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto font-['Montserrat',sans-serif]">
