@@ -104,6 +104,9 @@ export default function About() {
                                     alt="Shreyash Waghmare – Founder Hydra Corporation Pune"
                                     fill
                                     priority
+                                    sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 50vw,
+         33vw"
                                     className="
         rounded-3xl shadow-2xl
         object-cover object-top
