@@ -78,87 +78,114 @@ export default function About() {
             </section>
             {/* ============ FOUNDER & TEAM CREDIBILITY ============ */}
 
-<section className="py-12 bg-gradient-to-b from-white to-blue-50/40">
-  <div className="max-w-6xl mx-auto px-6">
+            <section className="py-12 bg-gradient-to-b from-white to-blue-50/40">
+                <div className="max-w-6xl mx-auto px-6">
 
-    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-      {/* LEFT – PHOTO */}
-      <div className="relative group">
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-emerald-500/10 rounded-3xl blur-xl"></div>
+                        {/* LEFT – PHOTO */}
+                        <div className="relative group">
 
-        <Image
-  src="/images/Founder-image.webp"
-  alt="Shreyash Waghmare – Founder Hydra Corporation Pune"
-  width={800}
-  height={1000}
-  className="relative rounded-3xl shadow-2xl w-full h-[520px] object-cover 
-  group-hover:scale-[1.02] transition-all duration-700"
-/>
+                            {/* Glow background */}
+                            <div className="absolute inset-0 
+      bg-gradient-to-tr from-blue-900/10 to-emerald-500/10 
+      rounded-3xl blur-xl">
+                            </div>
+
+                            {/* Image Wrapper – responsive heights */}
+                            <div className="
+      relative w-full
+      h-[360px]        // phones
+      md:h-[460px]     // iPad
+      lg:h-[520px]     // laptop
+  ">
+                                <Image
+                                    src="/images/Founder-image.webp"
+                                    alt="Shreyash Waghmare – Founder Hydra Corporation Pune"
+                                    fill
+                                    priority
+                                    className="
+        rounded-3xl shadow-2xl
+        object-cover object-top
+        group-hover:scale-[1.02]
+        transition-all duration-700
+      "
+                                />
+                            </div>
+
+                            {/* Name Card */}
+                            <div className="
+      absolute -bottom-6 left-6
+      bg-white/90 backdrop-blur
+      shadow-xl px-6 py-4 rounded-2xl
+      border border-slate-100
+  ">
+                                <div className="font-bold text-[#0F2A44]">
+                                    Shreyash Waghmare
+                                </div>
+                                <div className="text-sm text-slate-600">
+                                    Founder – Hydra Corporation
+                                </div>
+                            </div>
+
+                        </div>
 
 
-        <div className="absolute -bottom-6 left-6 bg-white shadow-xl px-6 py-4 rounded-2xl">
-          <div className="font-bold text-[#0F2A44]">Shreyash Waghmare</div>
-          <div className="text-sm text-slate-600">Founder – Hydra Corporation</div>
-        </div>
-      </div>
+                        {/* RIGHT – STORY */}
+                        <div>
+
+                            <span className="inline-block mb-4 px-4 py-2 bg-blue-100 text-blue-900 rounded-xl text-sm font-semibold">
+                                Tech-Driven Construction Approach
+                            </span>
+
+                            <h2 className="text-4xl font-black text-[#0F2A44] mb-6">
+                                Built on Civil Roots.<br />
+                                Managed with Engineering Process.
+                            </h2>
+
+                            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+                                I come from a computer engineering background, but construction has always been in my ecosystem —
+                                my father is a civil engineer from Vikhe Patil, my brother is a civil diploma holder, and my closest
+                                circle includes structural and site engineers across Pune.
+                            </p>
+
+                            <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                                Hydra was built to bring <strong>IT-style transparency</strong> into construction:
+                                clear BOQs, planned timelines, documented quality checks and honest communication —
+                                something I felt Pune homeowners truly deserved.
+                            </p>
 
 
-      {/* RIGHT – STORY */}
-      <div>
+                            {/* HIGHLIGHTS */}
+                            <div className="grid sm:grid-cols-2 gap-4">
 
-        <span className="inline-block mb-4 px-4 py-2 bg-blue-100 text-blue-900 rounded-xl text-sm font-semibold">
-          Tech-Driven Construction Approach
-        </span>
+                                <div className="p-4 bg-white rounded-2xl shadow hover:-translate-y-1 transition-all">
+                                    <div className="font-bold text-[#0F2A44]">Process First</div>
+                                    <div className="text-sm text-slate-600">BOQ → Schedule → Stage Billing</div>
+                                </div>
 
-        <h2 className="text-4xl font-black text-[#0F2A44] mb-6">
-          Built on Civil Roots.<br />
-          Managed with Engineering Process.
-        </h2>
+                                <div className="p-4 bg-white rounded-2xl shadow hover:-translate-y-1 transition-all">
+                                    <div className="font-bold text-[#0F2A44]">Civil Backed Team</div>
+                                    <div className="text-sm text-slate-600">Licensed engineers on every site</div>
+                                </div>
 
-        <p className="text-lg text-slate-700 leading-relaxed mb-6">
-          I come from a computer engineering background, but construction has always been in my ecosystem —  
-          my father is a civil engineer from Vikhe Patil, my brother is a civil diploma holder, and my closest 
-          circle includes structural and site engineers across Pune.
-        </p>
+                                <div className="p-4 bg-white rounded-2xl shadow hover:-translate-y-1 transition-all">
+                                    <div className="font-bold text-[#0F2A44]">Founder Involved</div>
+                                    <div className="text-sm text-slate-600">Direct WhatsApp updates</div>
+                                </div>
 
-        <p className="text-lg text-slate-700 leading-relaxed mb-8">
-          Hydra was built to bring <strong>IT-style transparency</strong> into construction:  
-          clear BOQs, planned timelines, documented quality checks and honest communication —  
-          something I felt Pune homeowners truly deserved.
-        </p>
+                                <div className="p-4 bg-white rounded-2xl shadow hover:-translate-y-1 transition-all">
+                                    <div className="font-bold text-[#0F2A44]">Quality Network</div>
+                                    <div className="text-sm text-slate-600">Trusted vendors & contractors</div>
+                                </div>
 
+                            </div>
 
-        {/* HIGHLIGHTS */}
-        <div className="grid sm:grid-cols-2 gap-4">
+                        </div>
 
-          <div className="p-4 bg-white rounded-2xl shadow hover:-translate-y-1 transition-all">
-            <div className="font-bold text-[#0F2A44]">Process First</div>
-            <div className="text-sm text-slate-600">BOQ → Schedule → Stage Billing</div>
-          </div>
-
-          <div className="p-4 bg-white rounded-2xl shadow hover:-translate-y-1 transition-all">
-            <div className="font-bold text-[#0F2A44]">Civil Backed Team</div>
-            <div className="text-sm text-slate-600">Licensed engineers on every site</div>
-          </div>
-
-          <div className="p-4 bg-white rounded-2xl shadow hover:-translate-y-1 transition-all">
-            <div className="font-bold text-[#0F2A44]">Founder Involved</div>
-            <div className="text-sm text-slate-600">Direct WhatsApp updates</div>
-          </div>
-
-          <div className="p-4 bg-white rounded-2xl shadow hover:-translate-y-1 transition-all">
-            <div className="font-bold text-[#0F2A44]">Quality Network</div>
-            <div className="text-sm text-slate-600">Trusted vendors & contractors</div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
+                    </div>
+                </div>
+            </section>
 
 
             {/* ===== WHY CHOOSE US ===== */}
