@@ -47,11 +47,11 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-6 py-6 flex flex-col justify-center items-center text-center min-h-screen">
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug tracking-wide max-w-4xl mb-5">
+          <h1 className=" animate-slide-up text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug tracking-wide max-w-4xl mb-5">
             Interior Design & Renovation Experts in Pune & Ahilyanagar
           </h1>
 
-          <h2 className="text-lg md:text-xl lg:text-2xl text-yellow-300 max-w-3xl mx-auto mb-6 font-medium tracking-wide">
+          <h2 className=" animate-bounce-slow text-lg md:text-xl lg:text-2xl text-yellow-300 max-w-3xl mx-auto mb-6 font-medium tracking-wide">
             Modular Kitchens • Wardrobes • Bathroom Design • Smart Lighting • Turnkey Interiors
           </h2>
 
