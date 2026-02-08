@@ -2,6 +2,13 @@
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { FaWhatsapp } from "react-icons/fa";
+
+export const metadata = {
+  title: "Contact Hydra Corporation – Free Site Visit Pune",
+  description:
+    "Book free site visit for bungalow construction or interior work in Baner, Wakad, Hinjewadi, Kothrud, Viman Nagar.",
+}
+
 export default function Contact() {
     const form = useRef();
     const [loading, setLoading] = useState(false);

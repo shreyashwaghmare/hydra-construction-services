@@ -1,6 +1,15 @@
 'use client'
 import { useState } from "react"
 
+export const metadata = {
+  title: "Complete Work Gallery – Hydra Corporation Pune",
+  description:
+    "Full gallery of construction and interior projects by Hydra Corporation Pune – site progress, finished homes, renovation transformations.",
+alternates: {
+    canonical: "/portfolio",
+  }
+}
+
 export default function FullPortfolio() {
     const [activeFilter, setActiveFilter] = useState('All')
 

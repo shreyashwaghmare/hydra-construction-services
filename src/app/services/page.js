@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Construction Services in Pune – Bungalows & Interiors",
+  description:
+    "Bungalow construction, turnkey interiors, renovation, waterproofing & land development services in Pune – Baner, Wakad, Hinjewadi.",
+}
+
 export default function Services() {
   return (
     <div className="min-h-screen bg-gray-50">
