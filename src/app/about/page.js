@@ -88,7 +88,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-emerald-500/10 rounded-3xl blur-xl"></div>
 
         <Image
-  src="/images/Founder-image.png"
+  src="/images/Founder-image.webp"
   alt="Shreyash Waghmare – Founder Hydra Corporation Pune"
   width={800}
   height={1000}
