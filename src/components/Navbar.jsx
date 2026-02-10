@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation' // Add this import
 import Image from 'next/image'
+import Link from "next/link";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -9,23 +10,21 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-black/90 backdrop-blur-2xl shadow-2xl sticky top-0 z-50 border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center ">
-          {/* Logo - unchanged */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6">
+  <div className="flex justify-between items-center h-[68px] md:h-[72px]">
           <div className="flex shrink-0">
-            <a href="/" className="block">
-              <Image
-                src="/images/hydra-logo-no-bg.webp"
-                alt="Hydra Construction Logo"
-                width={200}
-                height={60}
-                className="w-36 h-11 sm:w-44 sm:h-14 md:w-48 md:h-16 lg:w-52 lg:h-18 object-contain"
-                style={{ width: 'auto', height: 'auto' }}
-                priority
-              />
-            </a>
-          </div>
+  <Link href="/" className="block">
+    <Image
+  src="/images/hydra-logo-horizontal-no-bg.png"
+  alt="Hydra Corporation – Construction & Interiors"
+  width={200}
+  height={60}
+  className="!w-[145px] !h-auto object-contain"
+  priority
+/>
 
+  </Link>
+</div>
           {/* Desktop Menu - ADD "active" className */}
           <div className="hidden md:flex items-center gap-1 lg:gap-2">
             <a href="/" className={`px-3 py-2 text-sm lg:text-base font-semibold text-white/90 hover:text-yellow-400 rounded-lg transition-all whitespace-nowrap ${pathname === '/' ? 'text-yellow-400 !important ' : ''}`}>

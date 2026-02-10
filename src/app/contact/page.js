@@ -102,7 +102,7 @@ export default function Contact() {
                                 <input
                                     type="text"
                                     name="user_name"
-                                    placeholder="Shreyash Waghmare"
+                                    placeholder="Your Name"
                                     required
                                     className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition-all duration-300 text-lg text-gray-900 placeholder-gray-400"
                                 />
@@ -113,7 +113,7 @@ export default function Contact() {
                                 <input
                                     type="tel"
                                     name="user_phone"
-                                    placeholder="969798 5597"
+                                    placeholder="Contact Number"
                                     required
                                     className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-green-200 focus:border-green-500 transition-all duration-300 text-lg text-gray-900 placeholder-gray-400"
                                 />
@@ -124,7 +124,7 @@ export default function Contact() {
                                 <input
                                     type="email"
                                     name="user_email"
-                                    placeholder="hydracorporation.in@gmail.com"
+                                    placeholder="Enter your email-"
                                     className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:ring-4 focus:ring-purple-200 focus:border-purple-500 transition-all duration-300 text-lg text-gray-900 placeholder-gray-400"
                                 />
                             </div>
@@ -140,6 +140,7 @@ export default function Contact() {
                                 >
                                     <option value="">Select a service</option>
                                     <option>Bungalow Construction</option>
+                                    <option>Land Development</option>
                                     <option>Kitchen Remodeling</option>
                                     <option>Bathroom Design</option>
                                     <option>Full Interior</option>

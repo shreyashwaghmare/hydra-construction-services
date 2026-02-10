@@ -210,25 +210,23 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
-                <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-blue-200/50 animate-slide-up"
-                  style={{ animationDelay: '0.4s' }} tabIndex={0}>
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-blue-50/10 to-blue-100/10
  scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
                   <div className="relative z-10 text-center p-10">
                     <div className="w-24 h-24 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-blue-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-blue-200/50 group-hover/card:border-blue-400/75">
                       🏠
                     </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-blue-600 transition-all duration-500">
+                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-blue-600 transition-all duration-300">
                       Bungalow Construction
                     </h3>
                     <p className="text-gray-600 mb-8 text-lg font-['Montserrat',sans-serif] font-normal leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
                       3BHK/4BHK from foundation to finishout
                     </p>
-                    <span className="inline-block bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 text-blue-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-blue-500/50 group-hover/card:bg-blue-200/80 border-2 border-blue-200/50 transition-all duration-400">
+                    <span className="inline-block bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 text-blue-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-blue-500/50 group-hover/card:bg-blue-200/80 border-2 border-blue-200/50 transition-all duration-300">
                       Starting ₹75 Lac
                     </span>
                   </div>
-                </div>
+                
               </motion.div>
               {/* 2. Bathroom Design */}
               <motion.div
@@ -239,8 +237,6 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.30, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
-                <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-indigo-200/50 animate-slide-up"
-                  style={{ animationDelay: '0.5s' }} tabIndex={0}>
                   <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/20 via-indigo-50/10 to-indigo-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
                   <div className="relative z-10 text-center p-10">
                     <div className="w-24 h-24 bg-gradient-to-br from-indigo-100 via-indigo-200 to-indigo-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-indigo-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-indigo-200/50 group-hover/card:border-indigo-400/75">
@@ -252,11 +248,11 @@ export default function Home() {
                     <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
                       Modular + luxury wet room solutions
                     </p>
-                    <span className="inline-block bg-gradient-to-r from-indigo-100 via-indigo-200 to-indigo-300 text-indigo-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-indigo-500/50 group-hover/card:bg-indigo-200/80 border-2 border-indigo-200/50 transition-all duration-400">
+                    <span className="inline-block bg-gradient-to-r from-indigo-100 via-indigo-200 to-indigo-300 text-indigo-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-indigo-500/50 group-hover/card:bg-indigo-200/80 border-2 border-indigo-200/50 transition-all duration-300">
                       ₹2.5-6 Lac
                     </span>
                   </div>
-                </div>
+                
               </motion.div>
               {/* 3. Kitchen Remodeling */}
               <motion.div
@@ -267,24 +263,22 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
-                <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-yellow-200/50 animate-slide-up"
-                  style={{ animationDelay: '0.6s' }} tabIndex={0}>
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/20 via-yellow-50/10 to-yellow-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
                   <div className="relative z-10 text-center p-10">
                     <div className="w-24 h-24 bg-gradient-to-br from-yellow-100 via-yellow-200 to-yellow-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-yellow-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-yellow-200/50 group-hover/card:border-yellow-400/75">
                       🍳
                     </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-yellow-600 transition-all duration-500">
+                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-yellow-600 transition-all duration-300">
                       Kitchen Remodeling
                     </h3>
                     <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
                       L-Shape, Island, Modular Pune kitchens
                     </p>
-                    <span className="inline-block bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300 text-yellow-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-yellow-500/50 group-hover/card:bg-yellow-200/80 border-2 border-yellow-200/50 transition-all duration-400">
+                    <span className="inline-block bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300 text-yellow-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-yellow-500/50 group-hover/card:bg-yellow-200/80 border-2 border-yellow-200/50 transition-all duration-300">
                       ₹3-8 Lac
                     </span>
                   </div>
-                </div>
+              
               </motion.div>
 
               {/* 4. Interior Design */}
@@ -296,24 +290,22 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.60, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
-                <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-purple-200/50 animate-slide-up"
-                  style={{ animationDelay: '0.7s' }} tabIndex={0}>
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 via-purple-50/10 to-purple-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
                   <div className="relative z-10 text-center p-10">
                     <div className="w-24 h-24 bg-gradient-to-br from-purple-100 via-purple-200 to-purple-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-purple-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-purple-200/50 group-hover/card:border-purple-400/75">
                       🛋️
                     </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-purple-600 transition-all duration-500">
+                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-purple-600 transition-all duration-300">
                       Full Interior
                     </h3>
                     <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
                       Furniture + false ceiling + painting
                     </p>
-                    <span className="inline-block bg-gradient-to-r from-purple-100 via-purple-200 to-purple-300 text-purple-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-purple-500/50 group-hover/card:bg-purple-200/80 border-2 border-purple-200/50 transition-all duration-400">
+                    <span className="inline-block bg-gradient-to-r from-purple-100 via-purple-200 to-purple-300 text-purple-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-purple-500/50 group-hover/card:bg-purple-200/80 border-2 border-purple-200/50 transition-all duration-300">
                       ₹800/sqft
                     </span>
                   </div>
-                </div>
+              
               </motion.div>
               {/* 5. Building AMC */}
               <motion.div
@@ -324,24 +316,22 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.75, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
-                <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-green-200/50 animate-slide-up"
-                  style={{ animationDelay: '0.8s' }} tabIndex={0}>
                   <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-green-50/10 to-green-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
                   <div className="relative z-10 text-center p-10">
                     <div className="w-24 h-24 bg-gradient-to-br from-green-100 via-green-200 to-green-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-green-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-green-200/50 group-hover/card:border-green-400/75">
                       🔧
                     </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-green-600 transition-all duration-500">
+                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-green-600 transition-all duration-300">
                       Building AMC
                     </h3>
                     <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
                       Annual maintenance + repairs contract
                     </p>
-                    <span className="inline-block bg-gradient-to-r from-green-100 via-green-200 to-green-300 text-green-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-green-500/50 group-hover/card:bg-green-200/80 border-2 border-green-200/50 transition-all duration-400">
+                    <span className="inline-block bg-gradient-to-r from-green-100 via-green-200 to-green-300 text-green-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-green-500/50 group-hover/card:bg-green-200/80 border-2 border-green-200/50 transition-all duration-300">
                       ₹25k/year
                     </span>
                   </div>
-                </div>
+                
               </motion.div>
               {/* 6. Waterproofing */}
               <motion.div
@@ -352,24 +342,21 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.90, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }} // optional tap effect for mobile
               >
-                <div className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-700 border border-white/50 hover:border-teal-200/50 animate-slide-up"
-                  style={{ animationDelay: '0.9s' }} tabIndex={0}>
                   <div className="absolute inset-0 bg-gradient-to-br from-teal-50/20 via-teal-50/10 to-teal-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
                   <div className="relative z-10 text-center p-10">
                     <div className="w-24 h-24 bg-gradient-to-br from-teal-100 via-teal-200 to-teal-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-teal-500/25  active:scale-105 transition-all duration-500 shadow-2xl border-4 border-teal-200/50 group-hover/card:border-teal-400/75">
                       💧
                     </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-teal-600 transition-all duration-500">
+                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-teal-600 transition-all duration-300">
                       Waterproofing
                     </h3>
                     <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
                       Terrace, bathroom, sinking foundation
                     </p>
-                    <span className="inline-block bg-gradient-to-r from-teal-100 via-teal-200 to-teal-300 text-teal-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-teal-500/50 group-hover/card:bg-teal-200/80 border-2 border-teal-200/50 transition-all duration-400">
+                    <span className="inline-block bg-gradient-to-r from-teal-100 via-teal-200 to-teal-300 text-teal-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-teal-500/50 group-hover/card:bg-teal-200/80 border-2 border-teal-200/50 transition-all duration-300">
                       ₹45/sqft
                     </span>
                   </div>
-                </div>
               </motion.div>
             </div>
           </div>
