@@ -1,10 +1,58 @@
-export const metadata = {
-  title: "Construction Services in Pune – Bungalows & Interiors",
-  description:
-    "Bungalow construction, turnkey interiors, renovation, waterproofing & land development services in Pune – Baner, Wakad, Hinjewadi.",
-}
-
+'use client'
+import { useState,useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+const testimonials = [
+  {
+    id: 1,
+    text: "Kitchen transformation exceeded all expectations. On time, on budget!",
+    name: "Rajesh Sharma",
+    location: "Koregaon Park",
+    initials: "RS",
+    bgGradient: "from-purple-400 to-pink-400"
+  },
+  {
+    id: 2,
+    text: "Waterproofing saved our bungalow. 10-year warranty gives total peace of mind.",
+    name: "Anita Patil",
+    location: "Viman Nagar",
+    initials: "AP",
+    bgGradient: "from-green-400 to-blue-400"
+  },
+  {
+    id: 3,
+    text: "Complete 4BHK build was flawless. Highly recommend for Pune!",
+    name: "Vikram K.",
+    location: "Baner",
+    initials: "VK",
+    bgGradient: "from-orange-400 to-red-400"
+  },
+  {
+    id: 4,
+    text: "Professional and timely work. Our home is now exactly how we imagined!",
+    name: "Sneha Deshmukh",
+    location: "Kothrud",
+    initials: "SD",
+    bgGradient: "from-indigo-400 to-purple-500"
+  },
+]
 export default function Services() {
+  const [current, setCurrent] = useState(0)
+  const total = testimonials.length
+
+  const next = () => setCurrent((current + 1) % total)
+  const prev = () => setCurrent((current - 1 + total) % total)
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next()
+    }, 5000) // 5000ms = 5 seconds
+
+    // Cleanup interval on unmount
+    return () => clearInterval(interval)
+  }, [current]) // current in dependency ensures it updates correctly
+
   return (
     <div className="min-h-screen bg-gra-50">
       <div className="max-w-7xl mx-auto">
@@ -382,51 +430,65 @@ transition-all duration-500 group-hover:shadow-2xl">
           </div>
         </div>
         {/* NEW: Testimonials */}
-        <div className="mt-10 bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 rounded-3xl">
+        <div className="mt-10 bg-gradient-to-br from-blue-100 via-white to-indigo-100 py-20 rounded-3xl relative">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-2 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent">
             Pune Homeowners Love Us
           </h2>
           <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
             Don't just take our word for it
           </p>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                "Kitchen transformation exceeded all expectations. On time, on budget!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl mr-4">RS</div>
-                <div>
-                  <p className="font-bold text-xl text-gray-900">Rajesh Sharma</p>
-                  <p className="text-gray-500">Koregaon Park</p>
-                </div>
+         <div className="max-w-3xl mx-auto relative">
+        <AnimatePresence initial={false} mode="wait">
+          <motion.div
+            key={testimonials[current].id}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5 }}
+            className={`p-8 rounded-3xl shadow-2xl text-center
+              bg-gradient-to-br ${testimonials[current].bgGradient} text-white`}
+          >
+            <div className="text-4xl mb-4 opacity-30">“</div>
+            <p className="text-lg mb-6 leading-relaxed font-medium">
+              "{testimonials[current].text}"
+            </p>
+            <div className="flex items-center justify-center mt-4">
+              <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-white font-bold text-xl mr-4">
+                {testimonials[current].initials}
+              </div>
+              <div>
+                <p className="font-bold text-xl text-gray-900">{testimonials[current].name}</p>
+                <p className="text-white-80">{testimonials[current].location}</p>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                "Waterproofing saved our bungalow. 10-year warranty gives total peace of mind."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-blue-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl mr-4">AP</div>
-                <div>
-                  <p className="font-bold text-xl text-gray-900">Anita Patil</p>
-                  <p className="text-gray-500">Viman Nagar</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                "Complete 4BHK build was flawless. Highly recommend for Pune!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl mr-4">VK</div>
-                <div>
-                  <p className="font-bold text-xl text-gray-900">Vikram K.</p>
-                  <p className="text-gray-500">Baner</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Arrows */}
+        <button
+          onClick={prev}
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full shadow p-2 hover:bg-white transition"
+        >
+          <ChevronLeftIcon className="w-6 h-6 text-gray-700" />
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full shadow p-2 hover:bg-white transition"
+        >
+          <ChevronRightIcon className="w-6 h-6 text-gray-700" />
+        </button>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center mt-8 gap-3">
+        {testimonials.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full ${current === index ? 'bg-gray-900' : 'bg-gray-300'}`}
+          />
+        ))}
+      </div>
         </div>
         {/* NEW: Hero CTA */}
         <div className=" text-center bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white py-20 px-4 rounded-1xl shadow-2xl">
