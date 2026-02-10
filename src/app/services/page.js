@@ -207,7 +207,7 @@ duration-700 hover:-translate-y-6 hover:rotate-1 cursor-grab active:cursor-grabb
     {/* Header with drop shadow for readability */}
             <div className="text-center mb-20">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-center mx-auto max-w-full px-6 sm:px-8 leading-none tracking-tight [-webkit-line-clamp:1]">
-                <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-xl block w-full hyphens-auto">
+                <span className="bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent drop-shadow-xl block w-full hyphens-auto">
                   Pune Homeowners’ Trusted Choice for Construction & Interiors
                 </span>
               </h1>
