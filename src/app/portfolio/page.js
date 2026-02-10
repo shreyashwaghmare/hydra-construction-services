@@ -276,7 +276,8 @@ export default function Portfolio() {
           {projects.map((project) => (
 
             <div key={project.id}
-              className="group bg-white rounded-2xl shadow-xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-200">
+              className="group bg-white rounded-2xl shadow-xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-blue-200
+  hover:border-blue-400 bg-gradient-to-b from-white to-blue-50/30">
 
               {/* IMAGE */}
               <div className="h-64 relative rounded-t-2xl overflow-hidden">
