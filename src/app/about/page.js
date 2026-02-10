@@ -96,10 +96,9 @@ export default function About() {
 
             <section className="py-24 bg-white">
                 <div className="max-w-6xl mx-auto px-6 ">
-
-                    <span className="inline-block mb-4 px-4 py-1.5 text-sm bg-blue-50 shadow rounded-full text-slate-700">
-                        Since 2010 • Pune Construction & Interiors
-                    </span>
+                    <span className="inline-block mb-4 px-4 py-2 bg-blue-100 text-blue-900 rounded-xl text-sm font-semibold">
+                                Since 2010 • Pune Construction & Interiors
+                            </span>
 
                     <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-emerald-900 bg-clip-text text-transparent text-center mb-6 leading-tight">
                         Construction Company in Pune
