@@ -1,8 +1,29 @@
 'use client';
 import Image from "next/image"
-import { motion } from "framer-motion";
+import { useEffect, useState ,useRef} from "react";
+import { motion,AnimatePresence } from "framer-motion";
 
 export default function Home() {
+  const [index, setIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const intervalRef = useRef(null);
+  const slides = [
+    {
+      image: "/images/hero-bungalow.webp",
+      title: "Interior Design & Renovation Experts in Pune & Ahilyanagar",
+      subtitle: "Modular Kitchens • Wardrobes • Bathroom Design • Smart Lighting • Turnkey Interiors",
+    },
+    {
+      image: "/images/service-interior.jpg",
+      title: "Luxury Interiors Crafted for Modern Living",
+      subtitle: "Premium Materials • Smart Storage • Vastu Friendly Layouts",
+    },
+    {
+      image: "/images/terrace-gazebo.jpg",
+      title: "End‑to‑End Renovation Without Stress",
+      subtitle: "Fixed Timelines • Transparent Pricing • On‑Site Supervision",
+    },
+  ];
   const recentProjects = [
     {
       title: 'Baner 4BHK Bungalow',
@@ -26,40 +47,117 @@ export default function Home() {
       alt: 'Luxury Living Room Interior – Pune'
     }
   ];
+  /* ─── PRELOAD NEXT IMAGE ──────────────────────── */
+  useEffect(() => {
+    const next = (index + 1) % slides.length;
+    const img = new window.Image();
+    img.src = slides[next].image;
+  }, [index]);
+
+  /* Timer driving both slide + ken burns */
+  useEffect(() => {
+    const duration = 6000;
+    const step = 50;
+    let elapsed = 0;
+
+
+    intervalRef.current && clearInterval(intervalRef.current);
+
+
+    intervalRef.current = setInterval(() => {
+      elapsed += step;
+      setProgress(Math.min(elapsed / duration, 1));
+
+
+      if (elapsed >= duration) {
+        setIndex((i) => (i + 1) % slides.length);
+        elapsed = 0;
+        setProgress(0);
+      }
+    }, step);
+
+
+    return () => clearInterval(intervalRef.current);
+  }, [index]);
+
   return (
     <>
       <section className="relative w-full min-h-screen overflow-hidden">
-
-        {/* Background Image + Overlay */}
-        <div className="absolute inset-0 w-full h-full">
-          <Image
-            src="/images/hero-bungalow.webp"
-            alt="Pune Dream Bungalow Construction"
-            fill
-            className="object-cover"
-            style={{ filter: 'brightness(0.45)' }}
-            sizes="100vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
+        <AnimatePresence initial={false} mode="sync">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full bg-black"
+            style={{ willChange: 'opacity', backfaceVisibility: 'hidden' }}
+          >
+            <Image
+              src={slides[index].image}
+              alt="Hydra Corporation Projects"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+              style={{ filter: "brightness(0.45)" }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+          </motion.div>
+        </AnimatePresence>
+        {/* Segmented Gold Story Indicator */}
+        <div className="absolute top-5 left-1/2 -translate-x-1/2 z-20 flex gap-2 w-[260px]">
+          {slides.map((_, i) => (
+            <div key={i} className="flex-1 h-[4px] bg-white/20 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-gradient-to-r from-yellow-300 to-yellow-500"
+                animate={{
+                  width:
+                    i < index
+                      ? "100%"
+                      : i === index
+                        ? `${progress * 100}%`
+                        : "0%",
+                }}
+                transition={{ ease: "linear" }}
+              />
+            </div>
+          ))}
         </div>
 
-        {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-6 py-6 flex flex-col justify-center items-center text-center min-h-screen">
+          <motion.h1
+            key={"title" + index}
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug tracking-wide max-w-4xl mb-5"
+          >
+            {slides[index].title}
+          </motion.h1>
 
-          <h1 className=" animate-slide-up text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug tracking-wide max-w-4xl mb-5">
-            Interior Design & Renovation Experts in Pune & Ahilyanagar
-          </h1>
 
-          <h2 className=" animate-bounce-slow text-lg md:text-xl lg:text-2xl text-yellow-300 max-w-3xl mx-auto mb-6 font-medium tracking-wide">
-            Modular Kitchens • Wardrobes • Bathroom Design • Smart Lighting • Turnkey Interiors
-          </h2>
+          <motion.h2
+            key={"sub" + index}
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-lg md:text-xl lg:text-2xl text-yellow-300 max-w-3xl mx-auto mb-6 font-medium tracking-wide"
+          >
+            {slides[index].subtitle}
+          </motion.h2>
 
-          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
+          >
             Thoughtfully designed homes with transparent pricing, on-site supervision and fixed timelines — from single rooms to complete 4BHK transformations.
-          </p>
+          </motion.p>
 
-          {/* Buttons */}
+
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
             <a href="/portfolio" className="bg-yellow-400 text-black px-8 py-3 rounded font-semibold hover:bg-yellow-300 transition">
               View Projects
@@ -69,38 +167,19 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Stats Cards */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-4xl mx-auto px-4 py-6">
-            {/* 50+ Projects */}
-            <div className="flex items-center space-x-4 p-6 bg-black/20 backdrop-blur-sm rounded-2xl border border-white/10 min-w-[200px]">
-              <div className="w-16 h-16 bg-yellow-400/90 rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0">
-                <span className="font-bold text-2xl drop-shadow-md">🏠</span>
-              </div>
-              <div>
-                <span className="text-sm font-medium text-yellow-300 tracking-wide block">Projects Delivered</span>
-                <div className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight">
-                  50+
-                </div>
-                <span className="text-yellow-400 text-xs font-bold tracking-wider uppercase">PUNE</span>
-              </div>
-            </div>
 
-            {/* 15+ Years */}
-            <div className="flex items-center space-x-4 p-6 bg-black/20 backdrop-blur-sm rounded-2xl border border-white/10 min-w-[200px]">
-              <div className="w-16 h-16 bg-green-400/90 rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0">
-                <span className="font-bold text-2xl drop-shadow-md">⏱️</span>
-              </div>
-              <div>
-                <span className="text-sm font-medium text-green-300 tracking-wide block">Proven Expertise</span>
-                <div className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight">
-                  15+
-                </div>
-                <span className="text-green-400 text-xs font-bold tracking-wider uppercase">YEARS</span>
-              </div>
-            </div>
+          <div className="flex gap-3 mt-4">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`h-2 rounded-full transition-all ${i === index ? "w-8 bg-yellow-400" : "w-3 bg-white/40"
+                  }`}
+              />
+            ))}
           </div>
 
-          {/* WhatsApp CTA */}
+
           <div className="mt-12">
             <a
               href="https://wa.me/919697985597"
@@ -109,11 +188,8 @@ export default function Home() {
               📱 GET FREE QUOTE NOW
             </a>
           </div>
-
         </div>
-
       </section>
-
 
       {/* 1. PROFESSIONAL 6-SERVICES GRID */}
       <section className="pt-24 pb-4 bg-gradient-to-b from-gray-50 to-white">
