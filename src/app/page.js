@@ -192,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* 1. PROFESSIONAL 6-SERVICES GRID */}
-      <section className="pt-24 pb-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-24 pb-4 bg-gradient-to-b from-blue-10 to-blue-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-4xl md:text-4xl lg:text-5xl from-yellow-400 via-orange-400 to-yellow-500 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 font-extrabold font-['Oswald',sans-serif] leading-tight">From strong foundations to stunning interiors</h2>

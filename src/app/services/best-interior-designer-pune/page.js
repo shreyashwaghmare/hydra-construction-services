@@ -60,7 +60,7 @@ export default function InteriorExterior() {
             </div>
 
             {/* Services Grid */}
-            <div className="max-w-7xl mx-auto px-6 -mt-12 lg:-mt-20 mb-24">
+            <div className="max-w-7xl mx-auto px-6 -mt-12 lg:-mt-20 mb-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     {/* Interior Design */}
@@ -168,18 +168,19 @@ export default function InteriorExterior() {
             </div>
 
             {/* Dark Section - Same Style */}
-            <div className="relative -mt-20 lg:-mt-32 pt-40 lg:pt-52 pb-20 overflow-hidden">
+            <div className="relative -mt-20 lg:-mt-32 pt-20 lg:pt-52 pb-20 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-50/0 via-blue-900 to-indigo-600" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900 to-blue-900" />
 
                 <div className="max-w-6xl mx-auto px-6 relative z-10">
                     <div className="text-center mb-24 pt-8">
                         <div className="mb-16">
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mx-auto max-w-full px-6 leading-[0.9] tracking-tight">
-                                <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-2xl block w-full">
+                            <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mx-auto max-w-[95%] sm:max-w-full px-4 sm:px-6 leading-[1.05] sm:leading-[0.95] tracking-tight">
+                                <span className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent drop-shadow-xl block w-full">
                                     Pune's #1 Interior & Exterior Designers
                                 </span>
                             </h1>
+
                         </div>
                         <div className="inline-block bg-white/95 backdrop-blur-md px-8 py-4 rounded-2xl border border-white/60 shadow-xl mx-6 translate-y-4">
                             <p className="text-lg md:text-xl font-semibold text-gray-900 tracking-wide">
