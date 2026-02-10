@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gra-50">
       <div className="max-w-7xl mx-auto">
         <div className="relative min-h-[80vh] bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
@@ -17,7 +17,7 @@ export default function Services() {
                   <div className="w-3 h-3 bg-green-400  rounded-full animate-pulse"></div>
                   <span className="text-white font-bold text-lg">Trusted Since 2010 • 50+ Projects</span>
                 </div>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
                   Pune's <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">Construction & Interior Design</span>
                   <br /> Experts
                 </h1>

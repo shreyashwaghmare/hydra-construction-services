@@ -27,14 +27,26 @@ export default function Contact() {
             <div className="max-w-4xl mx-auto px-6">
                 {/* Hero Header */}
                 <div className="text-center mb-20">
-                    <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent mb-6">
-                        Contact Us
+
+                    <h1 className="
+    text-3xl sm:text-4xl md:text-6xl py-2
+    font-black
+    bg-gradient-to-r from-gray-900 to-blue-900
+    bg-clip-text text-transparent
+    mb-4 sm:mb-6
+  ">
+                        Contact <span className="bg-gradient-to-r from-amber-500 to-yellow-500 bg-clip-text text-transparent">
+                            Hydra Corporation
+                        </span> – Pune & Ahilyanagar
                     </h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Get your free site visit in Pune & Ahilyanagar.<br />
-                        Licensed builders ready to help.
+
+                    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                        Get a <strong>free site visit</strong> for construction, interior design & land development in <strong>Pune & Ahilyanagar</strong>.
+                        Licensed builders • Transparent quotes • On-time execution.
                     </p>
+
                 </div>
+
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Contact Info Cards */}
@@ -43,7 +55,7 @@ export default function Contact() {
                         <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                             <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">📞</div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Call Anytime</h3>
-                            <p className="text-3xl font-black text-blue-600 text-center mb-2">+91 969798 5597</p>
+                            <p className="text-xl sm:text-2xl md:text-3xl font-black text-blue-600 text-center mb-2">+91 969798 5597</p>
                             <p className="text-gray-500 text-center">24/7 Emergency Support</p>
                             <a href="tel:+919697985597"
                                 className="block w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-xl shadow-xl hover:shadow-3xl hover:-translate-y-1 transition-all duration-300 
@@ -70,7 +82,7 @@ export default function Contact() {
                             <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto">📍</div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Pune Office</h3>
                             <div className="space-y-2 text-gray-600 text-sm">
-                                <p>MH/2026/001 Licensed</p>
+                                <p>Construction • Interiors • Land Development</p>
                                 <p>Shop No. 12, Godrej River Crest</p>
                                 <p>Kalyani Nagar, Pune 411045</p>
                                 <p>Maharashtra, India</p>

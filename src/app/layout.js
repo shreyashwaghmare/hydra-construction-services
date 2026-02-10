@@ -8,9 +8,9 @@ export const metadata = {
   metadataBase: new URL('https://hydra-construction-services.vercel.app'),
   title: {
     default: 'Hydra Corporation | Best Interior Designer & Real Estate Developer in Pune & Ahilyanagar',
-    template: '%s | MH/2026/001 Licensed Pune Builders'
+    template: '%s | Hydra Corporation – Licensed Builders in Pune & Ahilyanagar'
   },
-  description: '🏆 Top interior designer in Pune. MH/2026/001 licensed builders creating dream bungalows, luxury interiors, kitchens & bathrooms in Ahilyanagar, Baner, Koregaon Park, Hinjewadi. 50+ projects. Free quote: +919697985597',
+  description: '🏆 Top interior designer in Pune.  Licensed builders creating dream bungalows, luxury interiors, kitchens & bathrooms in Ahilyanagar, Baner, Koregaon Park, Hinjewadi. 50+ projects. Free quote: +919697985597',
   keywords: [
     'best interior designer pune',
     'land litigation expert pune',
@@ -22,7 +22,6 @@ export const metadata = {
     'bungalow construction pune',
     'luxury interiors pune',
     'kitchen designer pune',
-    'mh/2026/001',
     'baner builders',
     'koregaon park construction'
   ],
@@ -42,7 +41,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Best Interior Designer & Real Estate Developer in Pune | Hydra Corporation',
-    description: 'MH/2026/001 licensed. 50+ dream bungalows in Pune. Free site visit.',
+    description: 'Hydra Corporation – Licensed Builders in Pune & Ahilyanagar. 50+ dream bungalows in Pune. Free site visit.',
     type: 'website',
     locale: 'en_IN',
     siteName: 'Hydra Corporation',
@@ -57,7 +56,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Interior Designer & Real Estate Developer in Pune',
-    description: 'MH/2026/001 licensed Pune builders. 15+ years.',
+    description: 'Hydra Corporation – Licensed Builders in Pune & Ahilyanagar. 15+ years.',
     images: '/images/hero-bungalow.jpg',
   }
 }
@@ -69,7 +68,7 @@ export default function RootLayout({ children }) {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Hydra Construction - Best Interior Designer Pune",
-  "description": "🏆 MH/2026/001 Licensed. Best interior designer & bungalow builder in Pune. 50+ projects in Baner, Koregaon Park, Hinjewadi. Luxury kitchens, bathrooms, full interiors.",
+  "description": "🏆 Hydra Corporation – Licensed Builders in Pune & Ahilyanagar. Best interior designer & bungalow builder in Pune. 50+ projects in Baner, Koregaon Park, Hinjewadi. Luxury kitchens, bathrooms, full interiors.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Pune",

@@ -36,14 +36,14 @@ export default function FullPortfolio() {
             {/* Hero */}
             <div className="bg-gradient-to-r from-gray-900 to-blue-900 text-white py-24 text-center">
                 <div className="max-w-5xl mx-auto px-4">
-                    <h1 className="text-5xl md:text-6xl font-black mb-6 antialiased">Our Signature Bungalows & Home Interiors in Pune</h1>
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-6 antialiased">Our Signature Bungalows & Home Interiors in Pune</h1>
                     <p className="text-xl md:text-2xl max-w-2xl mx-auto text-white-700 antialiased mb-4">
                         50+ Pune bungalow projects • Before & After • Real photos • Modular kitchens, wardrobes, bathrooms, and complete interiors
                     </p>
                     <div className="my-6 flex justify-center">
                         <span className="w-24 h-1 bg-yellow-400 rounded-full"></span>
                     </div>
-                    <p className="text-2xl md:text-2xl max-w-4xl mx-auto text-white-900  antialiased mb-12 leading-relaxed">
+                    <p className="text-l md:text-2xl max-w-4xl mx-auto text-white-900  antialiased mb-12 leading-relaxed">
                         Hydra Interiors & Construction showcases our most luxurious and thoughtfully designed homes across Pune.
                         From <span className="font-semibold text-yellow-500">modular kitchens</span> to <span className="font-semibold text-emerald-500">complete bungalow interiors</span>, explore 50+ projects that blend <span className="italic">style, functionality, and modern living</span>.
                     </p>

@@ -7,10 +7,34 @@ export default function About() {
             <section className="relative pt-22 pb-10 overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-200/30 via-transparent to-transparent" />
                 <div className="relative max-w-6xl mx-auto px-6">
-                    <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-3xl shadow-2xl backdrop-blur-sm border border-white/20 mb-12 max-w-max mx-auto animate-float">
-                        <div className="w-4 h-4 bg-white/20 rounded-full animate-ping"></div>
-                        <span className="text-xl font-black tracking-wider">Pune’s Trusted Construction & Interior Design Firm • Since 2010</span>
+                    <div className="
+  inline-flex items-center gap-2 sm:gap-3
+  bg-gradient-to-r from-emerald-500 to-green-600
+  text-white
+
+  px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4
+  rounded-3xl
+  shadow-2xl
+  backdrop-blur-sm
+  border border-white/20
+
+  mb-8 sm:mb-10 md:mb-12
+  max-w-max mx-auto
+  animate-float
+">
+
+                        <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white/20 rounded-full"></div>
+
+                        <span className="
+    text-base sm:text-lg md:text-xl
+    font-black tracking-wide
+    text-center sm:text-left
+  ">
+                            Pune’s Trusted Construction & Interior Design Firm • Since 2010
+                        </span>
+
                     </div>
+
 
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
@@ -21,17 +45,37 @@ export default function About() {
                                 <br />
                                 TO LUXURY BUNGALOWS
                             </h1>
-                            <div className="text-xl text-gray-700 leading-relaxed space-y-6">
-                                <p>
-                                    <span className="text-3xl">👷‍♂️ 2010–Humble Beginnings in Kothrud:</span> Started with small renovation and bathroom repair projects, learning what Pune homeowners truly need — quality within budget.
-                                </p>
-                                <p>
-                                    <span className="text-3xl">🏠 2015–Growing into Bungalows:</span> Completed our first Baner bungalow project, expanding into full construction and interior design services.
-                                </p>
-                                <p>
-                                    <span className="text-3xl">🏗️ Trusted Across Pune:</span> 50+ residential projects, expert civil engineering partners, turnkey construction & interiors — with direct founder involvement on every site.
-                                </p>
+                            <div className="space-y-5">
+
+                                <div className="bg-gray-50 p-5 rounded-xl">
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-1">
+                                        👷‍♂️ 2010 – Humble Beginnings in Kothrud
+                                    </h3>
+                                    <p className="text-base sm:text-lg text-gray-700">
+                                        Started with small renovation and bathroom repair projects, learning what Pune homeowners truly need — quality within budget.
+                                    </p>
+                                </div>
+
+                                <div className="bg-gray-50 p-5 rounded-xl">
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-1">
+                                        🏠 2015 – Growing into Bungalows
+                                    </h3>
+                                    <p className="text-base sm:text-lg text-gray-700">
+                                        Completed our first Baner bungalow project, expanding into full construction and interior design services.
+                                    </p>
+                                </div>
+
+                                <div className="bg-gray-50 p-5 rounded-xl">
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-1">
+                                        🏗️ Trusted Across Pune
+                                    </h3>
+                                    <p className="text-base sm:text-lg text-gray-700">
+                                        50+ residential projects, expert civil engineering partners, turnkey construction & interiors — with direct founder involvement on every site.
+                                    </p>
+                                </div>
+
                             </div>
+
                         </div>
                         <div className="relative group">
                             {/* Remove the gradient overlay OR make it lighter */}

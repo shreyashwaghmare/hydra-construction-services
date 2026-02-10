@@ -104,7 +104,7 @@ export default function Home() {
           <div className="mt-12">
             <a
               href="https://wa.me/919697985597"
-              className="inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-gray-900 px-12 py-6 md:px-20 md:py-7 rounded-2xl font-black text-xl md:text-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105"
+              className="inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-gray-900 px-8 py-4 sm:px-10 sm:py-5 md:px-20 md:py-7 rounded-2xl font-black text-xl md:text-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105"
             >
               📱 GET FREE QUOTE NOW
             </a>
