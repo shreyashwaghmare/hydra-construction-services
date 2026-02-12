@@ -370,7 +370,7 @@ export default function Portfolio() {
         {/* CTA */}
         <div className="text-center mt-20 py-12">
           <h3 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Ready to see more?</h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">At Hydra Interiors & Construction, we deliver premium interiors across Pune — from Baner, Koregaon Park, Kothrud, Wakad, and more. Our portfolio showcases 50+ bungalow projects with modular kitchens, walk-in wardrobes, smart lighting, and turnkey interiors designed for modern lifestyles.</p>
+          <p className="text-l text-gray-600 mb-8 max-w-4xl mx-auto">At Hydra Interiors & Construction, we deliver premium interiors across Pune — from Baner, Koregaon Park, Kothrud, Wakad, and more. Our portfolio showcases 50+ bungalow projects with modular kitchens, walk-in wardrobes, smart lighting, and turnkey interiors designed for modern lifestyles.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <a

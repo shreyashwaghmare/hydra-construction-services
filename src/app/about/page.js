@@ -190,9 +190,7 @@ export default function About() {
                             </h2>
 
                             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                                I come from a computer engineering background, but construction has always been in my ecosystem —
-                                my father is a civil engineer from Vikhe Patil, my brother is a civil diploma holder, and my closest
-                                circle includes structural and site engineers across Pune.
+                                I come from a computer engineering background, but construction has always surrounded me. With a father who’s a civil engineer and a close network of structural and site engineers across Pune, I’ve seen the industry from the inside.
                             </p>
 
                             <p className="text-lg text-slate-700 leading-relaxed mb-8">
