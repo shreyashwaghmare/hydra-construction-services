@@ -16,7 +16,7 @@ const projects = [
         desc: "Central island unit. Modern & luxury look. Extra prep space + seating. Works best in spacious homes",
         location: "Kalyani Nagar",
         area: "280 sq.ft",
-        image: "/images/Island-kitchen-pune.webp"
+        image: "/images/Island-kitchen-Pune.webp"
     },
     {
         title: "Parallel / Galley Kitchen – Kothrud",
