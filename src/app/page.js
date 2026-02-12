@@ -10,7 +10,7 @@ export default function Home() {
   const slides = [
     {
       image: "/images/hero-bungalow.webp",
-      title: "Interior Design & Renovation Experts in Pune & Ahilyanagar",
+      title: "Pune's Construction & Interior Design Experts",
       subtitle: "Modular Kitchens • Wardrobes • Bathroom Design • Smart Lighting • Turnkey Interiors",
     },
     {

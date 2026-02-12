@@ -66,10 +66,13 @@ export default function Services() {
                   <span className="text-white font-bold text-lg">Trusted Since 2010 • 50+ Projects</span>
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
-                  Pune's <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">Construction & Interior Design</span>
-                  <br /> Experts
+                  Premium <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 bg-clip-text text-transparent">Construction & Interior Design Services</span>
+                  <br /> In Pune & Ahilyanagar
                 </h1>
-                <div className="grid md:grid-cols-3 gap-6 max-w-2xl bg-white/10 backdrop-blur-sm p-6 rounded-3xl">
+                <p className="text-white/90 text-lg max-w-xl">
+  From premium bungalows to modern interiors, we design and build spaces that increase property value and reflect your lifestyle.
+</p>
+                <div className="grid md:grid-cols-3 gap-6 max-w-2xl bg-white/5 border border-white/20 shadow-2xl hover:bg-white/10 transition-all duration-300 p-6 rounded-3xl">
                   <div className="text-center">
                     <div className="text-3xl font-black text-yellow-400">4.9★</div>
                     <div className="text-white/90 text-sm">Google Rating</div>
@@ -101,6 +104,9 @@ export default function Services() {
                     alt="Hydra Construction Project"
                     className="w-full h-full lg:h-[500px] object-cover group-hover:brightness-110 transition-all duration-500"
                   />
+                  <div className="absolute bottom-6 left-6 bg-white/90 text-gray-900 px-4 py-2 rounded-xl text-sm font-bold shadow-lg">
+  Completed Project – PCMC
+</div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
               </div>

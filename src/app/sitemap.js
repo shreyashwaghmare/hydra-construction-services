@@ -25,6 +25,12 @@ export default function sitemap() {
       priority: 0.85,
     },
     {
+      url: 'https://hydra-construction-services.vercel.app/services/bungalow-construction',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: 'https://hydra-construction-services.vercel.app/about',
       lastModified: new Date(),
       changeFrequency: 'monthly',
