@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { useEffect, useState ,useRef} from "react";
 import { motion,AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   const [index, setIndex] = useState(0);
@@ -24,6 +25,52 @@ export default function Home() {
       subtitle: "Fixed Timelines • Transparent Pricing • On‑Site Supervision",
     },
   ];
+
+  const services = [
+  {
+    icon: "🏠",
+    title: "Bungalow Construction",
+    description: "3BHK / 4BHK turnkey construction from foundation to finish.",
+    price: "Starting ₹75 Lac",
+    link: "/services/bungalow-construction"
+  },
+  {
+    icon: "🍳",
+    title: "Kitchen Remodeling",
+    description: "L-shape, Island & Modular kitchens built for durability.",
+    price: "₹3 – 8 Lac",
+    link: "/services/kitchen-remodeling"
+  },
+  {
+    icon: "🛁",
+    title: "Bathroom Design",
+    description: "Modern wet rooms & luxury modular solutions.",
+    price: "₹2.5 – 6 Lac",
+    link: "/services/bathroom-design"
+  },
+  {
+    icon: "🛋️",
+    title: "Full Interior",
+    description: "Furniture, false ceiling, painting & lighting.",
+    price: "₹800 / sqft",
+    link: "/services/full-interior"
+  },
+  {
+    icon: "🔧",
+    title: "Building AMC",
+    description: "Annual maintenance & structural repair contracts.",
+    price: "₹25k / year",
+    link: "/services/buildings-amc"
+  },
+  {
+    icon: "💧",
+    title: "Waterproofing",
+    description: "Terrace, bathrooms & foundation leak protection.",
+    price: "₹45 / sqft",
+    link: "/services/waterproofing"
+  }
+]
+
   const recentProjects = [
     {
       title: 'Baner 4BHK Bungalow',
@@ -82,293 +129,233 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative w-full min-h-screen overflow-hidden">
-        <AnimatePresence initial={false} mode="sync">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full bg-black"
-            style={{ willChange: 'opacity', backfaceVisibility: 'hidden' }}
-          >
-            <Image
-              src={slides[index].image}
-              alt="Hydra Corporation Projects"
-              fill
-              className="object-cover"
-              sizes="100vw"
-              priority
-              style={{ filter: "brightness(0.45)" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-          </motion.div>
-        </AnimatePresence>
-        {/* Segmented Gold Story Indicator */}
-        <div className="absolute top-5 left-1/2 -translate-x-1/2 z-20 flex gap-2 w-[260px]">
-          {slides.map((_, i) => (
-            <div key={i} className="flex-1 h-[4px] bg-white/20 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-gradient-to-r from-yellow-300 to-yellow-500"
-                animate={{
-                  width:
-                    i < index
-                      ? "100%"
-                      : i === index
-                        ? `${progress * 100}%`
-                        : "0%",
-                }}
-                transition={{ ease: "linear" }}
-              />
-            </div>
-          ))}
-        </div>
+<section className="relative w-full min-h-screen overflow-hidden bg-black">
+  <AnimatePresence initial={false} mode="wait">
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, scale: 1.05 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+      className="absolute inset-0"
+    >
+      <Image
+        src={slides[index].image}
+        alt="Hydra Corporation Construction and Interior Projects"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+        
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+    </motion.div>
+  </AnimatePresence>
 
-        <div className="relative z-10 container mx-auto px-6 py-6 flex flex-col justify-center items-center text-center min-h-screen">
-          <motion.h1
-            key={"title" + index}
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug tracking-wide max-w-4xl mb-5"
-          >
-            {slides[index].title}
-          </motion.h1>
+  {/* Top Story Progress Bar */}
+  <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 flex gap-2 w-[280px]">
+    {slides.map((_, i) => (
+      <div key={i} className="flex-1 h-[3px] bg-white/20 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-gradient-to-r from-yellow-400 to-yellow-600"
+          animate={{
+            width:
+              i < index
+                ? "100%"
+                : i === index
+                ? `${progress * 100}%`
+                : "0%",
+          }}
+          transition={{ ease: "linear" }}
+        />
+      </div>
+    ))}
+  </div>
 
+  <div className="relative z-10 container mx-auto px-6 flex flex-col justify-center items-center text-center min-h-screen pt-28 pb-16">
 
-          <motion.h2
-            key={"sub" + index}
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-lg md:text-xl lg:text-2xl text-yellow-300 max-w-3xl mx-auto mb-6 font-medium tracking-wide"
-          >
-            {slides[index].subtitle}
-          </motion.h2>
+    {/* Badge */}
+    <div className="mb-6 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20">
+      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+      <span className="text-sm text-gray-200 tracking-wide">
+        Pune’s Transparent Construction & Interior Design Partner
+      </span>
+    </div>
 
+    {/* Main Title */}
+    <motion.h1
+      key={"title" + index}
+      initial={{ y: 40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-4xl mb-6"
+    >
+      {slides[index].title}
+    </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
-            Thoughtfully designed homes with transparent pricing, on-site supervision and fixed timelines — from single rooms to complete 4BHK transformations.
-          </motion.p>
+    {/* Subtitle */}
+    <motion.h2
+      key={"sub" + index}
+      initial={{ y: 30, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.8 }}
+      className="text-lg md:text-xl lg:text-2xl text-yellow-400 max-w-3xl mx-auto mb-6 font-medium"
+    >
+      {slides[index].subtitle}
+    </motion.h2>
 
+    {/* Description */}
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.4 }}
+      className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
+    >
+      Transparent BOQs. Fixed timelines. On-site supervision.
+      From modular interiors to full bungalow construction — 
+      we build with clarity, quality, and commitment.
+    </motion.p>
 
-          <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
-            <a href="/portfolio" className="bg-yellow-400 text-black px-8 py-3 rounded font-semibold hover:bg-yellow-300 transition">
-              View Projects
-            </a>
-            <a href="/contact" className="border border-white text-white px-8 py-3 rounded hover:bg-white/10 transition">
-              Get Free Estimate
-            </a>
-          </div>
+    {/* CTA Buttons */}
+    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 w-full sm:w-auto">
+      <a
+        href="/portfolio"
+        className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
+      >
+        View Our Projects
+      </a>
+      <a
+        href="/contact"
+        className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition"
+      >
+        Get Free Estimate
+      </a>
+    </div>
 
+    {/* Trust Strip */}
+    <div className="flex flex-wrap justify-center gap-6 p-4 text-gray-100 text-sm md:text-base mb-10">
+      <span>✔ Transparent Pricing</span>
+      <span>✔ Quality Materials</span>
+      <span>✔ Dedicated Site Engineer</span>
+      <span>✔ Timeline Commitment</span>
+    </div>
 
-          <div className="flex gap-3 mt-4">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setIndex(i)}
-                className={`h-2 rounded-full transition-all ${i === index ? "w-8 bg-yellow-400" : "w-3 bg-white/40"
-                  }`}
-              />
-            ))}
-          </div>
+    {/* WhatsApp CTA */}
+    <a
+      href="https://wa.me/919697985597"
+      className="inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-gray-900 px-10 py-4 rounded-2xl font-bold text-lg md:text-xl shadow-2xl hover:scale-105 transition-transform"
+    >
+      📱 Get Free Consultation on WhatsApp
+    </a>
 
+    {/* Manual Dots */}
+    <div className="flex gap-3 mt-10">
+      {slides.map((_, i) => (
+        <button
+          key={i}
+          onClick={() => setIndex(i)}
+          className={`h-2 rounded-full transition-all ${
+            i === index ? "w-8 bg-yellow-400" : "w-3 bg-white/40"
+          }`}
+        />
+      ))}
+    </div>
 
-          <div className="mt-12">
-            <a
-              href="https://wa.me/919697985597"
-              className="inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-gray-900 px-8 py-4 sm:px-10 sm:py-5 md:px-20 md:py-7 rounded-2xl font-black text-xl md:text-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105"
-            >
-              📱 GET FREE QUOTE NOW
-            </a>
-          </div>
-        </div>
-      </section>
+  </div>
+</section>
+
 
       {/* 1. PROFESSIONAL 6-SERVICES GRID */}
-      <section className="pt-24 pb-4 bg-gradient-to-b from-blue-10 to-blue-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-4xl md:text-4xl lg:text-5xl from-yellow-400 via-orange-400 to-yellow-500 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-2 font-extrabold font-['Oswald',sans-serif] leading-tight">From strong foundations to stunning interiors</h2>
-            <p className="text-xl py-4 md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              We don’t just build spaces — we craft experiences.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="pt-28 pb-24 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
 
-              {/* 1. Bungalow Construction */}
-              <motion.div
-                className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl border border-white/30 p-4 transition-all duration-700"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-                whileTap={{ scale: 0.97 }} // optional tap effect for mobile
-              >
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-blue-50/10 to-blue-100/10
- scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
-                  <div className="relative z-10 text-center p-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-blue-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-blue-200/50 group-hover/card:border-blue-400/75">
-                      🏠
-                    </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-blue-600 transition-all duration-300">
-                      Bungalow Construction
-                    </h3>
-                    <p className="text-gray-600 mb-8 text-lg font-['Montserrat',sans-serif] font-normal leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
-                      3BHK/4BHK from foundation to finishout
-                    </p>
-                    <span className="inline-block bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 text-blue-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-blue-500/50 group-hover/card:bg-blue-200/80 border-2 border-blue-200/50 transition-all duration-300">
-                      Starting ₹75 Lac
-                    </span>
-                  </div>
-                
-              </motion.div>
-              {/* 2. Bathroom Design */}
-              <motion.div
-                className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl border border-white/30 p-4 transition-all duration-700"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: 0.30, ease: "easeOut" }}
-                whileTap={{ scale: 0.97 }} // optional tap effect for mobile
-              >
-                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/20 via-indigo-50/10 to-indigo-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
-                  <div className="relative z-10 text-center p-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-indigo-100 via-indigo-200 to-indigo-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-indigo-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-indigo-200/50 group-hover/card:border-indigo-400/75">
-                      🛁
-                    </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-indigo-600 transition-all duration-500">
-                      Bathroom Design
-                    </h3>
-                    <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
-                      Modular + luxury wet room solutions
-                    </p>
-                    <span className="inline-block bg-gradient-to-r from-indigo-100 via-indigo-200 to-indigo-300 text-indigo-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-indigo-500/50 group-hover/card:bg-indigo-200/80 border-2 border-indigo-200/50 transition-all duration-300">
-                      ₹2.5-6 Lac
-                    </span>
-                  </div>
-                
-              </motion.div>
-              {/* 3. Kitchen Remodeling */}
-              <motion.div
-                className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl border border-white/30 p-4 transition-all duration-700"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
-                whileTap={{ scale: 0.97 }} // optional tap effect for mobile
-              >
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/20 via-yellow-50/10 to-yellow-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
-                  <div className="relative z-10 text-center p-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-yellow-100 via-yellow-200 to-yellow-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-yellow-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-yellow-200/50 group-hover/card:border-yellow-400/75">
-                      🍳
-                    </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-yellow-600 transition-all duration-300">
-                      Kitchen Remodeling
-                    </h3>
-                    <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
-                      L-Shape, Island, Modular Pune kitchens
-                    </p>
-                    <span className="inline-block bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300 text-yellow-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-yellow-500/50 group-hover/card:bg-yellow-200/80 border-2 border-yellow-200/50 transition-all duration-300">
-                      ₹3-8 Lac
-                    </span>
-                  </div>
-              
-              </motion.div>
+    {/* Section Heading */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className="text-center mb-20"
+    >
+      <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">
+        From Strong Foundations to Stunning Interiors
+      </h2>
+      <p className="text-lg md:text-xl text-gray-800 max-w-2xl mx-auto">
+        End-to-end construction and interior solutions under one roof.
+      </p>
+    </motion.div>
 
-              {/* 4. Interior Design */}
-              <motion.div
-                className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl border border-white/30 p-4 transition-all duration-700"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: 0.60, ease: "easeOut" }}
-                whileTap={{ scale: 0.97 }} // optional tap effect for mobile
-              >
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 via-purple-50/10 to-purple-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
-                  <div className="relative z-10 text-center p-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-purple-100 via-purple-200 to-purple-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-purple-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-purple-200/50 group-hover/card:border-purple-400/75">
-                      🛋️
-                    </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-purple-600 transition-all duration-300">
-                      Full Interior
-                    </h3>
-                    <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
-                      Furniture + false ceiling + painting
-                    </p>
-                    <span className="inline-block bg-gradient-to-r from-purple-100 via-purple-200 to-purple-300 text-purple-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-purple-500/50 group-hover/card:bg-purple-200/80 border-2 border-purple-200/50 transition-all duration-300">
-                      ₹800/sqft
-                    </span>
-                  </div>
-              
-              </motion.div>
-              {/* 5. Building AMC */}
-              <motion.div
-                className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl border border-white/30 p-4 transition-all duration-700"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: 0.75, ease: "easeOut" }}
-                whileTap={{ scale: 0.97 }} // optional tap effect for mobile
-              >
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-green-50/10 to-green-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
-                  <div className="relative z-10 text-center p-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-green-100 via-green-200 to-green-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-green-500/25 active:scale-105 transition-all duration-500 shadow-2xl border-4 border-green-200/50 group-hover/card:border-green-400/75">
-                      🔧
-                    </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-green-600 transition-all duration-300">
-                      Building AMC
-                    </h3>
-                    <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
-                      Annual maintenance + repairs contract
-                    </p>
-                    <span className="inline-block bg-gradient-to-r from-green-100 via-green-200 to-green-300 text-green-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-green-500/50 group-hover/card:bg-green-200/80 border-2 border-green-200/50 transition-all duration-300">
-                      ₹25k/year
-                    </span>
-                  </div>
-                
-              </motion.div>
-              {/* 6. Waterproofing */}
-              <motion.div
-                className="group/card relative overflow-hidden bg-white rounded-3xl shadow-xl border border-white/30 p-4 transition-all duration-700"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: 0.90, ease: "easeOut" }}
-                whileTap={{ scale: 0.97 }} // optional tap effect for mobile
-              >
-                  <div className="absolute inset-0 bg-gradient-to-br from-teal-50/20 via-teal-50/10 to-teal-100/10 scale-0 group-hover/card:scale-100 transition-transform duration-700 origin-center" />
-                  <div className="relative z-10 text-center p-10">
-                    <div className="w-24 h-24 bg-gradient-to-br from-teal-100 via-teal-200 to-teal-300 rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl group-hover/card:scale-110 group-hover/card:shadow-teal-500/25  active:scale-105 transition-all duration-500 shadow-2xl border-4 border-teal-200/50 group-hover/card:border-teal-400/75">
-                      💧
-                    </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-['Oswald',sans-serif] leading-tight group-hover/card:text-teal-600 transition-all duration-300">
-                      Waterproofing
-                    </h3>
-                    <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-sm mx-auto group-hover/card:text-gray-700 transition-colors duration-300">
-                      Terrace, bathroom, sinking foundation
-                    </p>
-                    <span className="inline-block bg-gradient-to-r from-teal-100 via-teal-200 to-teal-300 text-teal-800 text-base px-6 py-3 rounded-2xl font-bold font-['Montserrat',sans-serif] tracking-wide shadow-lg group-hover/card:scale-110 group-hover/card:shadow-teal-500/50 group-hover/card:bg-teal-200/80 border-2 border-teal-200/50 transition-all duration-300">
-                      ₹45/sqft
-                    </span>
-                  </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Services Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      {services.map((service, i) => (
+        <motion.div
+  key={i}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.6, delay: i * 0.1 }}
+>
+  <Link
+    href={service.link}
+    className="group relative block bg-white rounded-3xl shadow-lg 
+    hover:shadow-2xl border border-neutral-200 
+    p-8 md:p-10 transition-all duration-500 
+    active:scale-[0.98]"
+  >
+
+    {/* Subtle Hover Background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-amber-100/30 opacity-0 group-hover:opacity-100 rounded-3xl transition duration-500" />
+
+    <div className="relative z-10">
+
+      {/* Icon */}
+      <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition duration-500">
+        {service.icon}
+      </div>
+
+      {/* Title */}
+      <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-3 group-hover:text-amber-500 transition">
+        {service.title}
+      </h3>
+
+      {/* Price */}
+      <div className="text-lg font-semibold text-blue-900 mb-3">
+        {service.price}
+      </div>
+
+      {/* Description */}
+      <p className="text-gray-800 text-sm md:text-base leading-relaxed">
+        {service.description}
+      </p>
+
+      {/* CTA */}
+      <div className="
+        mt-5 font-semibold text-amber-500
+        md:opacity-0 md:translate-y-4
+        md:group-hover:opacity-100
+        md:group-hover:translate-y-0
+        transition-all duration-500
+      ">
+        Explore Service →
+      </div>
+
+    </div>
+  </Link>
+</motion.div>
+      ))}
+
+    </div>
+  </div>
+</section>
+
 
 
       {/* 2. RECENT PROJECTS */}
       <section className="pt-10 pb-22 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           {/* Headline */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-yellow-600 text-center  mb-4 font-['Oswald',sans-serif]">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 text-center  mb-4 font-['Oswald',sans-serif]">
             Recent Interior & Renovation Projects in Pune
           </h2>
           <p className="text-lg md:text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto font-['Montserrat',sans-serif]">

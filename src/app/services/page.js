@@ -293,7 +293,7 @@ transition-all duration-500 group-hover:shadow-2xl">
             </ul>
 
             <div className="flex flex-col gap-3">
-              <a href="/services/building-amc"
+              <a href="/services/buildings-amc"
                 className="w-full text-indigo-600 hover:text-indigo-800 font-semibold text-center block underline">
                 Learn More →
               </a>
