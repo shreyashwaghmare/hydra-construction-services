@@ -68,11 +68,11 @@ export default function Navbar() {
               <a href="/" className={`block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200 ${pathname === '/' ? 'text-yellow-400 !important bg-white/20 ' : ''}`} onClick={() => setMobileOpen(false)}>
                 Home
               </a>
-              <a href="/portfolio" className={`block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200 ${pathname === '/portfolio' ? 'text-yellow-400 !important bg-white/20 ' : ''}`} onClick={() => setMobileOpen(false)}>
-                Portfolio
-              </a>
-              <a href="/services" className={`block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200 ${pathname === '/services' ? 'text-yellow-400 !important bg-white/20 ' : ''}`} onClick={() => setMobileOpen(false)}>
+              <a href="/services" className={`block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200 ${pathname === '/portfolio' ? 'text-yellow-400 !important bg-white/20 ' : ''}`} onClick={() => setMobileOpen(false)}>
                 Services
+              </a>
+              <a href="/portfolio" className={`block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200 ${pathname === '/services' ? 'text-yellow-400 !important bg-white/20 ' : ''}`} onClick={() => setMobileOpen(false)}>
+                Portfolio
               </a>
               <a href="/about" className={`block py-4 px-6 text-xl font-bold text-white hover:text-yellow-400 hover:bg-white/10 rounded-2xl transition-all duration-200 ${pathname === '/about' ? 'text-yellow-400 !important bg-white/20 ' : ''}`} onClick={() => setMobileOpen(false)}>
                 About

@@ -35,7 +35,75 @@ const testimonials = [
     initials: "SD",
     bgGradient: "from-indigo-400 to-purple-500"
   },
-]
+
+  // 🔥 Added More Below
+
+  {
+    id: 5,
+    text: "Hydra handled our society’s Building AMC professionally. Preventive maintenance really reduced unexpected expenses.",
+    name: "Prashant Kulkarni",
+    location: "Wakad",
+    initials: "PK",
+    bgGradient: "from-blue-400 to-cyan-400"
+  },
+  {
+    id: 6,
+    text: "Bathroom waterproofing was done neatly without unnecessary demolition. No more seepage issues!",
+    name: "Megha Joshi",
+    location: "Aundh",
+    initials: "MJ",
+    bgGradient: "from-teal-400 to-green-500"
+  },
+  {
+    id: 7,
+    text: "Our full interior project was delivered exactly as promised. Transparent costing and clear timelines.",
+    name: "Saurabh Mehta",
+    location: "Kalyani Nagar",
+    initials: "SM",
+    bgGradient: "from-pink-400 to-rose-500"
+  },
+  {
+    id: 8,
+    text: "Terrace waterproofing stopped recurring leaks completely. Highly structured execution.",
+    name: "Neha Raut",
+    location: "Hinjewadi",
+    initials: "NR",
+    bgGradient: "from-yellow-400 to-orange-500"
+  },
+  {
+    id: 9,
+    text: "From planning to execution, bungalow construction was smooth and stress-free.",
+    name: "Rohit Patwardhan",
+    location: "Pashan",
+    initials: "RP",
+    bgGradient: "from-violet-400 to-indigo-500"
+  },
+  {
+    id: 10,
+    text: "Electrical and plumbing maintenance under AMC has been consistent and reliable.",
+    name: "Manoj T.",
+    location: "Magarpatta",
+    initials: "MT",
+    bgGradient: "from-sky-400 to-blue-600"
+  },
+  {
+    id: 11,
+    text: "Their team identified hidden wall dampness that others missed. Proper diagnosis and permanent fix.",
+    name: "Priya Gokhale",
+    location: "Karve Nagar",
+    initials: "PG",
+    bgGradient: "from-emerald-400 to-teal-500"
+  },
+  {
+    id: 12,
+    text: "Clear BOQ, proper documentation, and quality checks at every stage. Very professional approach.",
+    name: "Amit Bansal",
+    location: "Balewadi",
+    initials: "AB",
+    bgGradient: "from-rose-400 to-pink-500"
+  }
+];
+
 export default function Services() {
   const [current, setCurrent] = useState(0)
   const total = testimonials.length
@@ -399,7 +467,7 @@ transition-all duration-500 group-hover:shadow-2xl">
                 </p>
                 <div className="pt-6 border-t-2 border-white/20 text-center">
                   <span className="text-yellow-300 font-black text-xl group-hover:text-yellow-200 transition-all duration-300 inline-flex items-center gap-2 hover:gap-4">
-                    View Portfolio →
+                    Start Your Project →
                   </span>
                 </div>
               </a>
