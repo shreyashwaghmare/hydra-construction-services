@@ -1,7 +1,10 @@
 // app/services/[service-slug]/page.js
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedCounter from "@/components/AnimateCounter";
+import {motion} from "framer-motion"
+import { useState } from "react";
 
 const projects = [
     {
@@ -82,6 +85,7 @@ const questions = [
 ]
 
 export default function ServicePage() {
+    const [active, setActive] = useState(null)
     return (
         <div className="w-full">
 
@@ -163,70 +167,135 @@ export default function ServicePage() {
 
 
             {/* ================= WHAT WE OFFER ================= */}
-            <section className="py-20 bg-blue-50">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-                            We don’t just construct houses — we build homes designed to stand strong for generations
-                        </h2>
-                        <p className="text-gray-800 mt-4">
-                            Our bungalow construction services cover complete turnkey solutions — including planning, 3D design visualization, structural engineering, material selection, project management, and high-quality finishing. Every project is executed with strict quality control, transparent timelines, and attention to detail.
-                        </p>
-                    </div>
+            <section className="py-28 bg-gradient-to-b from-blue-50 to-white">
+                <div className="max-w-6xl mx-auto px-6">
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {features.map((item, index) => (
-                            <div key={index} className="group text-blue-900 bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-transparent hover:border-amber-200">
-                                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                                <p className="text-gray-800">{item.desc}</p>
-                            </div>
-                        ))}
+                    <div className="grid lg:grid-cols-2 gap-20">
+
+                        {/* LEFT SIDE */}
+                        <div className="sticky top-32 h-fit max-w-lg">
+
+                            <div className="w-16 h-[3px] bg-amber-400 mb-6"></div>
+
+                            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-blue-900">
+                                What We Deliver <br />
+                                <span className="text-blue-700">From Foundation to Finish</span>
+                            </h2>
+
+                            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+                                Planned foundations. Transparent budgeting. Engineered structural integrity.
+                                Every stage is executed with long-term strength and performance in focus.
+                            </p>
+
+                        </div>
+
+                        {/* RIGHT SIDE */}
+                        <div className="relative space-y-16 pl-10">
+
+                            <div className="absolute left-2 top-0 w-[2px] h-full bg-blue-100"></div>
+
+                            {features.map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6 }}
+                                    viewport={{ once: true, amount: 0.3 }}
+                                    className="relative group bg-white p-10 rounded-3xl shadow-lg 
+            transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                                >
+
+                                    <div className="absolute -left-[26px] top-10 w-5 h-5 bg-amber-400 rounded-full border-4 border-white"></div>
+
+                                    <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                                        {item.title}
+                                    </h3>
+
+                                    <p className="text-gray-600 leading-relaxed">
+                                        {item.desc}
+                                    </p>
+
+                                </motion.div>
+                            ))}
+                        </div>
+
                     </div>
                 </div>
             </section>
 
 
+
             {/* ================= PROCESS SECTION ================= */}
-            <section className="py-20 bg-gradient-to-b from-white to-white-50">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+            <section className="py-14 bg-white">
+                <div className="max-w-6xl mx-auto px-6">
+
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl font-bold text-blue-900">
                             Our Process
                         </h2>
+                        <p className="text-gray-600 mt-4">
+                            A structured renovation workflow ensuring clarity at every stage.
+                        </p>
                     </div>
 
-                    <div className="grid md:grid-cols-5 gap-6">
-                        {process.map((item, index) => (
-                            <div key={index} className="text-center p-6 bg-blue-50 rounded-2xl shadow">
-                                <div className="text-3xl font-black text-amber-500 mb-3">
-                                    {index + 1}
-                                </div>
-                                <h3 className="font-semibold text-blue-900 text-lg">{item.step}</h3>
-                                <p className="text-gray-800 text-sm mt-2">{item.desc}</p>
-                            </div>
-                        ))}
+                    <div className="relative">
+                        <div className="absolute top-8 left-0 w-full h-[2px] bg-blue-100 rounded-full"></div>
+                        {/* Horizontal line */}
+                        <div className="hidden md:block absolute top-8 left-0 w-full h-[2px] bg-blue-100"></div>
+
+                        <div className="grid md:grid-cols-5 gap-10 relative">
+                            {process.map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="text-center relative"
+                                >
+
+                                    <div className="w-16 h-16 mx-auto flex items-center justify-center 
+            rounded-full bg-amber-400 text-white font-bold text-xl shadow-lg relative z-10">
+                                        {index + 1}
+                                    </div>
+
+                                    <h3 className="font-semibold text-blue-900 text-lg mt-6">
+                                        {item.step}
+                                    </h3>
+
+                                    <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                                        {item.desc}
+                                    </p>
+
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
 
             {/* ================= PROJECT SHOWCASE ================= */}
-            <section className="py-20 bg-blue-50">
-                <div className="max-w-7xl mx-auto px-6">
+            <section className="py-20 bg-gradient-to-b from-white to-blue-50">
+                <div className="max-w-6xl mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+                        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-blue-900">
                             Related Projects
                         </h2>
+                        <p className="text-gray-600 mt-4 leading-relaxed">
+                            Bungalows built across Pune — engineered for strength,
+                             designed for comfort, finished for longevity.
+                        </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {projects.map((project, index) => (
                             <div
                                 key={index}
-                                className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                            >
+                                className="group overflow-hidden rounded-3xl transition-all duration-700 ease-out hover:-translate-y-1">
                                 {/* IMAGE */}
-                                <div className="relative h-60 overflow-hidden">
+                                <div className="relative h-72 md:h-80 overflow-hidden">
+
                                     <Image
                                         src={project.image}
                                         alt={project.title}
@@ -234,83 +303,115 @@ export default function ServicePage() {
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                         className="object-cover group-hover:scale-110 transition duration-700"
                                     />
-                                    <div className="absolute top-4 left-4 bg-black/70 text-white text-xs px-3 py-1 rounded-full backdrop-blur">
-                                        {project.area}
+                                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700 ease-out">
+
+                                        <div className="absolute bottom-6 left-6 text-white">
+                                            <p className="text-sm font-medium tracking-wide">
+                                                {project.location}
+                                            </p>
+                                        </div>
+
                                     </div>
                                 </div>
 
                                 {/* CONTENT */}
-                                <div className="p-6 space-y-3">
-                                    <h3 className="font-semibold text-lg text-blue-900">
+                                <div className="p-8">
+
+                                    <h3 className="text-xl font-semibold tracking-tight text-blue-900">
                                         {project.title}
                                     </h3>
 
-                                    <p className="text-gray-800 text-sm">
+                                    <p className="text-gray-600 text-sm mt-3 leading-relaxed">
                                         {project.desc}
                                     </p>
 
-                                    <div className="flex items-center justify-between pt-3">
-                                        <span className="text-sm text-amber-600 font-medium">
-                                            📍 {project.location}
-                                        </span>
+                                    <div className="flex items-center justify-between mt-6 pt-5 border-t border-gray-100">
 
+                                        <span className="text-xs uppercase tracking-wider text-gray-800">
+                                            {project.area}
+                                        </span>
                                         <Link
                                             href="/portfolio"
-                                            className="text-sm font-semibold text-blue-700 hover:text-amber-600 transition"
+                                            className="text-sm font-semibold text-blue-800 hover:text-amber-500 transition-colors duration-300"
                                         >
-                                            View Details →
+                                            View Project →
                                         </Link>
+
                                     </div>
+
                                 </div>
+
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-
             {/* ================= FAQ SECTION ================= */}
-            <section className="py-10 bg-gradient-to-b from-blue-50 to-white">
+            <section className="py-24 bg-white aria-expanded">
                 <div className="max-w-4xl mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold  text-blue-900 text-center mb-12">
                         Frequently Asked Questions
                     </h2>
-                    <div className="space-y-6">
-
+                    <div className="space-y-2">
                         {questions.map((faq, index) => (
-                            <div key={index} className="group bg-white p-6 sm:p-8 rounded-3xl 
-shadow-md hover:shadow-2xl 
-border border-gray-100 
-hover:border-amber-200 
-transition-all duration-500">
-                                <h3 className="font-semibold text-lg text-blue-900 flex items-start justify-between">{faq.q}
-                                    <span className="text-amber-500 text-xl transition group-hover:rotate-45">
+                            <div key={index} className="border-b border-gray-200">
+
+                                <button
+                                    onClick={() => setActive(active === index ? null : index)}
+                                    className="w-full flex justify-between items-center py-6 text-left"
+                                >
+                                    <h3 className="text-lg font-semibold text-blue-900">
+                                        {faq.q}
+                                    </h3>
+
+                                    <span className={`text-amber-500 text-xl transition-transform duration-300 ${active === index ? "rotate-45" : ""
+                                        }`}>
                                         +
                                     </span>
-                                </h3>
-                                <p className="text-gray-700 mt-4 leading-relaxed">{faq.a}</p>
+                                </button>
+
+                                <div className={`overflow-hidden transition-all duration-500 ease-out ${active === index ? "max-h-96 pb-6" : "max-h-0"
+                                    }`}>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        {faq.a}
+                                    </p>
+                                </div>
+
                             </div>
                         ))}
                     </div>
+
                 </div>
             </section>
 
 
             {/* ================= FINAL CTA ================= */}
-            <section className="py-20 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white text-center">
-                <div className="max-w-3xl mx-auto px-6 space-y-6">
-                    <h2 className="text-3xl md:text-5xl font-black">
-                        Build Your Dream Bungalow with Hydra Construction
+            <div className="h-px bg-blue-800/40"></div>
+            <section className="py-28 bg-blue-900 text-white text-center">
+                <div className="max-w-3xl mx-auto px-6 space-y-8">
+
+                    <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
+                        Planning a Bungalow Construction in Pune?
                     </h2>
-                    <p className="text-white/90">
-                        Schedule a free consultation and site visit in Pune or Ahilyanagar today.
+
+                    <p className="text-white/80 text-lg leading-relaxed">
+                        Schedule a structured site assessment with Hydra.
+                        Get transparent costing, execution timelines, and expert guidance
+                        before you commit.
+                    </p>
+                    <p className="text-sm text-white/60 tracking-wide">
+                        Detailed BOQ • Clear Timelines • Quality-Checked Execution
                     </p>
                     <a
                         href="tel:+919697985597"
-                        className="inline-block bg-white text-gray-900 px-10 py-4 rounded-2xl font-bold shadow-xl hover:-translate-y-1 transition"
+                        className="inline-block bg-white text-blue-900 px-10 py-4 rounded-2xl 
+      font-semibold transition-all duration-500 
+      hover:-translate-y-1 hover:shadow-2xl"
                     >
-                        📞 Get Free Quote
+                        Schedule Free Site Visit
                     </a>
+
                 </div>
             </section>
 
