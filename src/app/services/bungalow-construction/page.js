@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedCounter from "@/components/AnimateCounter";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import { useState } from "react";
 
 const projects = [
@@ -103,9 +103,22 @@ export default function ServicePage() {
     border border-white/10 shadow-xl">
 
                         {/* Experience Badge */}
-                        <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 w-fit">
-                            <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
-                            <span className="text-sm font-medium">Trusted Construction Experts</span>
+                        <div className="flex items-center justify-between">
+
+                            <Link
+                                href="/services"
+                                className="inline-flex items-center gap-2 
+    text-white/60 hover:text-white 
+    text-sm font-medium transition"
+                            >
+                                ← All Services
+                            </Link>
+
+                            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
+                                <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
+                                <span className="text-sm font-medium">Trusted Construction Experts</span>
+                            </div>
+
                         </div>
 
                         {/* Stats Section */}
@@ -284,7 +297,7 @@ export default function ServicePage() {
                         </h2>
                         <p className="text-gray-600 mt-4 leading-relaxed">
                             Bungalows built across Pune — engineered for strength,
-                             designed for comfort, finished for longevity.
+                            designed for comfort, finished for longevity.
                         </p>
                     </div>
 

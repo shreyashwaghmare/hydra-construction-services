@@ -91,15 +91,29 @@ export default function ServicePage() {
 
             {/* ================= HERO SECTION ================= */}
             <section className="relative min-h-[80vh] bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center overflow-hidden">
+
                 <div className="absolute inset-0 bg-black/40" />
 
                 <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 py-10 sm:py-20 text-white">
 
                     <div className="w-full max-w-3xl mx-auto space-y-6 sm:space-y-8 bg-white/5 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl  border border-white/10 shadow-xl">
                         {/* Experience Badge */}
-                        <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 w-fit">
-                            <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
-                            <span className="text-sm font-medium">Trusted Construction Experts</span>
+                        <div className="flex items-center justify-between">
+
+                            <Link
+                                href="/services"
+                                className="inline-flex items-center gap-2 
+    text-white/60 hover:text-white 
+    text-sm font-medium transition"
+                            >
+                                ← All Services
+                            </Link>
+
+                            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
+                                <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
+                                <span className="text-sm font-medium">Trusted Construction Experts</span>
+                            </div>
+
                         </div>
 
                         {/* Stats Section */}
@@ -155,6 +169,7 @@ export default function ServicePage() {
 
                     </div>
                 </div>
+
             </section>
 
 
