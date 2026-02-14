@@ -148,7 +148,6 @@ export default function Home() {
         className="object-cover"
         
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
     </motion.div>
   </AnimatePresence>
 
@@ -175,9 +174,9 @@ export default function Home() {
   <div className="relative z-10 container mx-auto px-6 flex flex-col justify-center items-center text-center min-h-screen pt-28 pb-16">
 
     {/* Badge */}
-    <div className="mb-6 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20">
+    <div className="mb-6 inline-flex items-center gap-3 bg-black-90 backdrop-blur-md px-6 py-2 rounded-full border border-gray/20">
       <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-      <span className="text-sm text-gray-200 tracking-wide">
+      <span className="text-sm text-white tracking-wide">
         Pune’s Transparent Construction & Interior Design Partner
       </span>
     </div>
@@ -209,7 +208,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
-      className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
+      className="text-base md:text-lg text-white-900 max-w-2xl mx-auto mb-10 leading-relaxed"
     >
       Transparent BOQs. Fixed timelines. On-site supervision.
       From modular interiors to full bungalow construction — 
@@ -233,7 +232,7 @@ export default function Home() {
     </div>
 
     {/* Trust Strip */}
-    <div className="flex flex-wrap justify-center gap-6 p-4 text-gray-100 text-sm md:text-base mb-10">
+    <div className="flex flex-wrap justify-center gap-6 p-4 text-white text-sm md:text-base mb-10">
       <span>✔ Transparent Pricing</span>
       <span>✔ Quality Materials</span>
       <span>✔ Dedicated Site Engineer</span>
@@ -310,7 +309,7 @@ export default function Home() {
     <div className="relative z-10">
 
       {/* Icon */}
-      <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition duration-500">
+      <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-amber-200 transition duration-500">
         {service.icon}
       </div>
 
