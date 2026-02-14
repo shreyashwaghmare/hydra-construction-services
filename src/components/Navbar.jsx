@@ -12,7 +12,7 @@ const navLinks = [
       { name: 'Bungalow Construction', href: '/services/bungalow-construction' },
       { name: 'Kitchen Remodeling', href: '/services/kitchen-remodeling' },
       { name: 'Bathroom Design', href: '/services/bathroom-design' },
-      { name: 'Full Interior', href: '/services/full-interior' },
+      { name: 'Full Interior Solutions', href: '/services/full-interior' },
       { name: 'Building AMC', href: '/services/buildings-amc' },
       { name: 'Waterproofing', href: '/services/waterproofing' },
     ],
