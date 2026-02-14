@@ -447,7 +447,7 @@ function Services() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: "• Starting ₹75 Lac"
+                                            children: "• ₹2,600 – ₹5,500+ per sq. ft."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.js",
                                             lineNumber: 208,
@@ -544,7 +544,7 @@ function Services() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: "• ₹3-8 Lac range"
+                                            children: "• ₹3 – ₹12 Lac range"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.js",
                                             lineNumber: 246,
@@ -641,7 +641,7 @@ function Services() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: "• ₹2.5-6 Lac range"
+                                            children: "• ₹1.8 – ₹7.5 Lac range"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.js",
                                             lineNumber: 284,
@@ -738,7 +738,7 @@ function Services() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: "• ₹800/sqft"
+                                            children: "• ₹800 - ₹3,600 per sq.ft."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.js",
                                             lineNumber: 322,
@@ -835,7 +835,7 @@ function Services() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: "• ₹25k/year"
+                                            children: "• ₹25k / year"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.js",
                                             lineNumber: 360,
@@ -932,7 +932,7 @@ function Services() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: "• ₹45/sqft"
+                                            children: "• ₹45 per sq.ft."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.js",
                                             lineNumber: 398,
