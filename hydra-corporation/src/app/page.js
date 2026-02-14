@@ -31,28 +31,28 @@ export default function Home() {
     icon: "🏠",
     title: "Bungalow Construction",
     description: "3BHK / 4BHK turnkey construction from foundation to finish.",
-    price: "Starting ₹75 Lac",
+    price: "₹2,600 – ₹5,500+ per sq. ft.",
     link: "/services/bungalow-construction"
   },
   {
     icon: "🍳",
     title: "Kitchen Remodeling",
     description: "L-shape, Island & Modular kitchens built for durability.",
-    price: "₹3 – 8 Lac",
+    price: "₹3 – ₹12 Lac",
     link: "/services/kitchen-remodeling"
   },
   {
     icon: "🛁",
     title: "Bathroom Design",
     description: "Modern wet rooms & luxury modular solutions.",
-    price: "₹2.5 – 6 Lac",
+    price: "₹1.8 – ₹7.5 Lac",
     link: "/services/bathroom-design"
   },
   {
     icon: "🛋️",
     title: "Full Interior",
     description: "Furniture, false ceiling, painting & lighting.",
-    price: "₹800 / sqft",
+    price: "₹800 - ₹3,600 per sq.ft.",
     link: "/services/full-interior"
   },
   {
@@ -66,7 +66,7 @@ export default function Home() {
     icon: "💧",
     title: "Waterproofing",
     description: "Terrace, bathrooms & foundation leak protection.",
-    price: "₹45 / sqft",
+    price: "₹45 per sq.ft.",
     link: "/services/waterproofing"
   }
 ]
@@ -182,62 +182,61 @@ export default function Home() {
     </div>
 
     {/* Main Title */}
-    <motion.h1
-      key={"title" + index}
-      initial={{ y: 40, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-4xl mb-6"
-    >
-      {slides[index].title}
-    </motion.h1>
+<motion.h1
+  key={"title" + index}
+  initial={{ y: 40, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-tight max-w-4xl mb-4"
+>
+  {slides[index].title}
+</motion.h1>
 
-    {/* Subtitle */}
-    <motion.h2
-      key={"sub" + index}
-      initial={{ y: 30, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.2, duration: 0.8 }}
-      className="text-lg md:text-xl lg:text-2xl text-yellow-400 max-w-3xl mx-auto mb-6 font-medium"
-    >
-      {slides[index].subtitle}
-    </motion.h2>
+{/* Subtitle - Increased contrast with amber/yellow */}
+<motion.h2
+  key={"sub" + index}
+  initial={{ y: 30, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ delay: 0.2, duration: 0.8 }}
+  className="text-xl md:text-2xl text-yellow-500 max-w-3xl mx-auto mb-6 font-bold tracking-wide uppercase"
+>
+  {slides[index].subtitle}
+</motion.h2>
 
-    {/* Description */}
-    <motion.p
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.4 }}
-      className="text-base md:text-lg text-white-900 max-w-2xl mx-auto mb-10 leading-relaxed"
-    >
-      Transparent BOQs. Fixed timelines. On-site supervision.
-      From modular interiors to full bungalow construction — 
-      we build with clarity, quality, and commitment.
-    </motion.p>
+{/* Description - Fixed class and color for readability */}
+<motion.p
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.4 }}
+  className="text-base md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
+>
+  Transparent BOQs. Fixed timelines. On-site supervision. <br className="hidden md:block" />
+  From <span className="text-white font-medium">modular interiors</span> to <span className="text-white font-medium">full bungalow construction</span>.
+</motion.p>
 
-    {/* CTA Buttons */}
-    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 w-full sm:w-auto">
-      <a
-        href="/portfolio"
-        className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
-      >
-        View Our Projects
-      </a>
-      <a
-        href="/contact"
-        className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition"
-      >
-        Get Free Estimate
-      </a>
-    </div>
+{/* CTA Buttons */}
+<div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+  <a
+    href="/portfolio"
+    className="bg-yellow-500 text-black px-10 py-4 rounded-xl font-bold hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(234,179,8,0.4)] transition-all"
+  >
+    View Our Projects
+  </a>
+  <a
+    href="/contact"
+    className="backdrop-blur-sm border-2 border-white/30 text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-black transition-all"
+  >
+    Get Free Estimate
+  </a>
+</div>
 
-    {/* Trust Strip */}
-    <div className="flex flex-wrap justify-center gap-6 p-4 text-white text-sm md:text-base mb-10">
-      <span>✔ Transparent Pricing</span>
-      <span>✔ Quality Materials</span>
-      <span>✔ Dedicated Site Engineer</span>
-      <span>✔ Timeline Commitment</span>
-    </div>
+{/* Trust Strip - Added background for section separation */}
+<div className="flex flex-wrap justify-center gap-6 p-6 bg-black/20 backdrop-blur-md rounded-2xl border border-white/10 text-white/90 text-sm md:text-base mb-12">
+  <span className="flex items-center gap-2 font-medium"><span className="text-yellow-500">✔</span> Transparent Pricing</span>
+  <span className="flex items-center gap-2 font-medium"><span className="text-yellow-500">✔</span> Quality Materials</span>
+  <span className="flex items-center gap-2 font-medium"><span className="text-yellow-500">✔</span> Dedicated Site Engineer</span>
+  <span className="flex items-center gap-2 font-medium"><span className="text-yellow-500">✔</span> Timeline Commitment</span>
+</div>
 
     {/* WhatsApp CTA */}
     <a
