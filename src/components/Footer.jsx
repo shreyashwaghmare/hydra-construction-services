@@ -56,20 +56,20 @@ export default function Footer() {
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Social CTAs */}
           {/* Social CTAs */}
-<div className="flex flex-col sm:flex-row gap-4 items-center">
+<div className="flex flex-wrap justify-center md:justify-start gap-4 items-center max-w-xl mx-auto md:mx-0">
 
   <a 
     href="https://wa.me/919697985597?text=Hi%20Hydra%2C%20need%20quote"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 whitespace-nowrap"
+    className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 whitespace-nowrap text-sm sm:text-base px-5 sm:px-6"
   >
     WhatsApp Quote
   </a>
 
   <a 
     href="/contact"
-    className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-black rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 whitespace-nowrap"
+    className="px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-black rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 whitespace-nowrap text-sm sm:text-base px-5 sm:px-6"
   >
     Free Site Visit
   </a>

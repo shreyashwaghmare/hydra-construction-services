@@ -24,7 +24,6 @@ const navLinks = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null)
   const pathname = usePathname()
 
@@ -61,45 +60,39 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6">
 
             {navLinks.map((link) => (
-              <div
-                key={link.name}
-                className="relative"
-                onMouseEnter={() => link.dropdown && setDropdownOpen(true)}
-                onMouseLeave={() => link.dropdown && setDropdownOpen(false)}
-              >
+              <div key={link.name} className="relative group">
                 <Link
                   href={link.href}
-                  className={`relative px-2 py-2 font-semibold transition-all duration-300
-                  ${
-                    pathname === link.href
-                      ? 'text-yellow-400'
-                      : 'text-white/80 hover:text-yellow-400'
-                  }`}
+                  className="relative px-3 py-2 font-semibold text-white/80 hover:text-yellow-400 transition-all duration-300"
                 >
                   {link.name}
-
-                  {/* Animated underline */}
-                  {pathname === link.href && (
-                    <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-yellow-400 rounded-full" />
-                  )}
                 </Link>
 
                 {/* Dropdown */}
-                {link.dropdown && dropdownOpen && (
-                  <div className="absolute top-full left-0 mt-4 w-64 bg-[#0A1F33]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl py-3">
-                    {link.dropdown.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="block px-6 py-3 text-white/80 hover:text-yellow-400 hover:bg-white/5 transition-all"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
+                {link.dropdown && (
+                  <div
+                    className="absolute left-0 top-full pt-4 
+      opacity-0 invisible translate-y-2
+      group-hover:opacity-100 group-hover:visible group-hover:translate-y-1
+      transition-all duration-300 ease-out"
+                  >
+                    <div className="w-64 bg-[#0A1F33]/95 backdrop-blur-xl 
+        border border-white/10 rounded-2xl shadow-2xl py-3">
+
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block px-6 py-3 text-white/80 hover:text-yellow-400 hover:bg-white/5 transition-all"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+
+                    </div>
                   </div>
                 )}
-              </div>
-            ))}
+              </div>))}
 
             {/* CTA */}
             <Link
@@ -121,7 +114,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-    
+
       {mobileOpen && (
         <div className="md:hidden bg-[#0A1F33]/95 backdrop-blur-xl border-t border-white/10 px-6 py-6 space-y-4">
 
@@ -148,8 +141,8 @@ export default function Navbar() {
                   {/* Dropdown Items */}
                   <div
                     className={`overflow-hidden transition-all duration-300 ${mobileDropdownOpen === link.name
-                        ? 'max-h-96 opacity-100'
-                        : 'max-h-0 opacity-0'
+                      ? 'max-h-96 opacity-100'
+                      : 'max-h-0 opacity-0'
                       }`}
                   >
                     <div className="ml-4 mt-2 space-y-2">
@@ -182,15 +175,15 @@ export default function Navbar() {
             </div>
           ))}
 
-    <Link
-      href="/contact"
-      onClick={() => setMobileOpen(false)}
-      className="block w-full text-center mt-4 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-xl shadow-lg hover:scale-105 transition-all duration-300"
-    >
-      Free Quote
-    </Link>
-  </div>
-)}
+          <Link
+            href="/contact"
+            onClick={() => setMobileOpen(false)}
+            className="block w-full text-center mt-4 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-xl shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            Free Quote
+          </Link>
+        </div>
+      )}
     </nav>
   )
 }
