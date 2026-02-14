@@ -205,7 +205,7 @@ transition-all duration-500 group-hover:shadow-2xl">
             <ul className="space-y-2 text-gray-600 mb-6">
               <li>• 3BHK/4BHK complete builds</li>
               <li>• Foundation to finishout</li>
-              <li>• Starting ₹75 Lac</li>
+              <li>• ₹2,600 – ₹5,500+ per sq. ft.</li>
             </ul>
 
             <div className="flex flex-col gap-3">
@@ -243,7 +243,7 @@ transition-all duration-500 group-hover:shadow-2xl">
               <li>• L-Shape & Island designs</li>
               <li>• Modular cabinets</li>
               <li>• Pune granite specialist</li>
-              <li>• ₹3-8 Lac range</li>
+              <li>• ₹3 – ₹12 Lac range</li>
             </ul>
 
             <div className="flex flex-col gap-3">
@@ -281,7 +281,7 @@ transition-all duration-500 group-hover:shadow-2xl">
               <li>• Wet room solutions</li>
               <li>• Waterproofing included</li>
               <li>• Premium fittings</li>
-              <li>• ₹2.5-6 Lac range</li>
+              <li>• ₹1.8 – ₹7.5 Lac range</li>
             </ul>
 
             <div className="flex flex-col gap-3">
@@ -319,7 +319,7 @@ transition-all duration-500 group-hover:shadow-2xl">
               <li>• False ceiling + painting</li>
               <li>• Custom furniture</li>
               <li>• Wardrobes + TV units</li>
-              <li>• ₹800/sqft</li>
+              <li>• ₹800 - ₹3,600 per sq.ft.</li>
             </ul>
 
             <div className="flex flex-col gap-3">
@@ -357,7 +357,7 @@ transition-all duration-500 group-hover:shadow-2xl">
               <li>• Annual maintenance</li>
               <li>• 24/7 emergency support</li>
               <li>• Society contracts</li>
-              <li>• ₹25k/year</li>
+              <li>• ₹25k / year</li>
             </ul>
 
             <div className="flex flex-col gap-3">
@@ -395,7 +395,7 @@ transition-all duration-500 group-hover:shadow-2xl">
               <li>• Terrace + sinking slabs</li>
               <li>• Bathroom leaks</li>
               <li>• 10-year warranty</li>
-              <li>• ₹45/sqft</li>
+              <li>• ₹45 per sq.ft.</li>
             </ul>
 
             <div className="flex flex-col gap-3">
