@@ -31,6 +31,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null)
+  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(null);
   const pathname = usePathname()
 
   // Active route checker
@@ -55,9 +56,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-5">
         <div
-          className={`flex justify-between items-center transition-all duration-300 ${
-            scrolled ? 'h-[60px]' : 'h-[72px]'
-          }`}
+          className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'h-[60px]' : 'h-[72px]'
+            }`}
         >
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -72,56 +72,72 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <div key={link.name} className="relative group">
-                <Link
-                  href={link.href}
-                  className={`relative px-3 py-2 font-semibold transition-all duration-300 ${
-                    isActive(link.href)
-                      ? 'text-yellow-400'
-                      : 'text-white/80 hover:text-yellow-400'
-                  }`}
-                >
-                  {link.name}
-                  {isActive(link.href) && (
-    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
-  )}
-                </Link>
+            {navLinks.map((link) => {
+              const hasDropdown = !!link.dropdown;
 
-                {/* Dropdown */}
-                {link.dropdown && (
-                  <div
-                    className="absolute left-0 top-full pt-4 
-                    opacity-0 invisible translate-y-2
-                    group-hover:opacity-100 group-hover:visible group-hover:translate-y-1
-                    transition-all duration-300 ease-out"
+              return (
+                <div
+                  key={link.name}
+                  className="relative"
+                  // Hover for desktop
+                  onMouseEnter={() => hasDropdown && setDesktopDropdownOpen(link.name)}
+                  onMouseLeave={() => hasDropdown && setDesktopDropdownOpen(null)}
+                  // Click for touch devices
+                  onClick={() =>
+                    hasDropdown &&
+                    setDesktopDropdownOpen(
+                      desktopDropdownOpen === link.name ? null : link.name
+                    )
+                  }
+                >
+                  <Link
+                    href={link.href}
+                    className={`relative px-3 py-2 font-semibold transition-all duration-300 ${isActive(link.href)
+                        ? 'text-yellow-400'
+                        : 'text-white/80 hover:text-yellow-400'
+                      }`}
                   >
+                    {link.name}
+                    {isActive(link.href) && (
+                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
+                    )}
+                  </Link>
+
+                  {/* Dropdown */}
+                  {hasDropdown && (
                     <div
-                      className="w-64 bg-[#0A1F33]/95 backdrop-blur-xl 
-                      border border-white/10 rounded-2xl shadow-2xl py-3"
+                      className={`absolute left-0 top-full pt-4 transition-all duration-300 ease-out
+              ${desktopDropdownOpen === link.name
+                          ? 'opacity-100 visible translate-y-1'
+                          : 'opacity-0 invisible translate-y-2'
+                        }
+            `}
                     >
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className={` relative block px-6 py-3 transition-all ${
-                            isActive(item.href)
-                              ? 'text-yellow-400 bg-white/5'
-                              : 'text-white/80 hover:text-yellow-400 hover:bg-white/5'
-                          }`}
-                        >
-                          {item.name}
-                          {isActive(item.href) && (
-  <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
-)}
-                        </Link>
-                      ))}
+                      <div className="w-64 bg-[#0A1F33]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl py-3">
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className={`relative block px-6 py-3 transition-all ${isActive(item.href)
+                                ? 'text-yellow-400 bg-white/5'
+                                : 'text-white/80 hover:text-yellow-400 hover:bg-white/5'
+                              }`}
+                            onClick={() => setDesktopDropdownOpen(null)} // close dropdown on link click
+                          >
+                            {item.name}
+                            {isActive(item.href) && (
+                              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
+                            )}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
 
             {/* CTA */}
             <Link
@@ -131,6 +147,7 @@ export default function Navbar() {
               Free Quote
             </Link>
           </div>
+
 
           {/* Mobile Toggle */}
           <button
@@ -155,11 +172,10 @@ export default function Navbar() {
                         mobileDropdownOpen === link.name ? null : link.name
                       )
                     }
-                    className={`w-full flex justify-between items-center py-3 font-semibold transition-all ${
-                      isActive(link.href)
+                    className={`w-full flex justify-between items-center py-3 font-semibold transition-all ${isActive(link.href)
                         ? 'text-yellow-400'
                         : 'text-white/80 hover:text-yellow-400'
-                    }`}
+                      }`}
                   >
                     {link.name}
                     <span className="text-lg">
@@ -168,11 +184,10 @@ export default function Navbar() {
                   </button>
 
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      mobileDropdownOpen === link.name
+                    className={`overflow-hidden transition-all duration-300 ${mobileDropdownOpen === link.name
                         ? 'max-h-96 opacity-100'
                         : 'max-h-0 opacity-0'
-                    }`}
+                      }`}
                   >
                     <div className="ml-4 mt-2 space-y-2">
                       {link.dropdown.map((item) => (
@@ -183,11 +198,10 @@ export default function Navbar() {
                             setMobileOpen(false)
                             setMobileDropdownOpen(null)
                           }}
-                          className={`block text-sm transition-all ${
-                            isActive(item.href)
+                          className={`block text-sm transition-all ${isActive(item.href)
                               ? 'text-yellow-400'
                               : 'text-white/70 hover:text-yellow-400'
-                          }`}
+                            }`}
                         >
                           {item.name}
                         </Link>
@@ -199,16 +213,15 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`block py-3 font-semibold transition-all ${
-                    isActive(link.href)
+                  className={`block py-3 font-semibold transition-all ${isActive(link.href)
                       ? 'text-yellow-400'
                       : 'text-white/80 hover:text-yellow-400'
-                  }`}
+                    }`}
                 >
                   {link.name}
                   {isActive(link.href) && (
-    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
-  )}
+                    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
+                  )}
                 </Link>
               )}
             </div>
