@@ -35,7 +35,7 @@ export default function Contact() {
     bg-clip-text text-transparent
     mb-4 sm:mb-6
   ">
-                        Contact <span className="bg-gradient-to-r from-amber-500 to-yellow-500 bg-clip-text text-transparent">
+                        Contact <span className="bg-gradient-to-r from-amber-400/90 to-orange-500 bg-clip-text text-transparent">
                             Hydra Corporation
                         </span> – Pune & Ahilyanagar
                     </h1>

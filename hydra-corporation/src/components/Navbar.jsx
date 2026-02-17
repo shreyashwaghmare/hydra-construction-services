@@ -1,31 +1,43 @@
 'use client'
+
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation' // Add this import
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import Link from "next/link";
+import Link from 'next/link'
+
 const navLinks = [
   { name: 'Home', href: '/' },
   {
     name: 'Services',
     href: '/services',
     dropdown: [
+      { name: 'All Services', href: '/services' },
       { name: 'Bungalow Construction', href: '/services/bungalow-construction' },
       { name: 'Kitchen Remodeling', href: '/services/kitchen-remodeling' },
       { name: 'Bathroom Design', href: '/services/bathroom-design' },
       { name: 'Full Interior Solutions', href: '/services/full-interior' },
       { name: 'Building AMC', href: '/services/buildings-amc' },
       { name: 'Waterproofing', href: '/services/waterproofing' },
+      { name: 'Land Development', href: '/services/ahilyanagar-land-developer' },
+      { name: 'Exterior Designing', href: '/services/best-interior-designer-pune' },
     ],
   },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null)
   const pathname = usePathname()
+
+  // Active route checker
+  const isActive = (href) => {
+    if (href === '/') return pathname === '/'
+    return pathname.startsWith(href)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,8 +54,11 @@ export default function Navbar() {
       bg-[#071521]/95 backdrop-blur-xl border border-white/10 shadow-2xl`}
     >
       <div className="max-w-7xl mx-auto px-5">
-        <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'h-[60px]' : 'h-[72px]'}`}>
-
+        <div
+          className={`flex justify-between items-center transition-all duration-300 ${
+            scrolled ? 'h-[60px]' : 'h-[72px]'
+          }`}
+        >
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -58,41 +73,55 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
-
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
                 <Link
                   href={link.href}
-                  className="relative px-3 py-2 font-semibold text-white/80 hover:text-yellow-400 transition-all duration-300"
+                  className={`relative px-3 py-2 font-semibold transition-all duration-300 ${
+                    isActive(link.href)
+                      ? 'text-yellow-400'
+                      : 'text-white/80 hover:text-yellow-400'
+                  }`}
                 >
                   {link.name}
+                  {isActive(link.href) && (
+    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
+  )}
                 </Link>
 
                 {/* Dropdown */}
                 {link.dropdown && (
                   <div
                     className="absolute left-0 top-full pt-4 
-      opacity-0 invisible translate-y-2
-      group-hover:opacity-100 group-hover:visible group-hover:translate-y-1
-      transition-all duration-300 ease-out"
+                    opacity-0 invisible translate-y-2
+                    group-hover:opacity-100 group-hover:visible group-hover:translate-y-1
+                    transition-all duration-300 ease-out"
                   >
-                    <div className="w-64 bg-[#0A1F33]/95 backdrop-blur-xl 
-        border border-white/10 rounded-2xl shadow-2xl py-3">
-
+                    <div
+                      className="w-64 bg-[#0A1F33]/95 backdrop-blur-xl 
+                      border border-white/10 rounded-2xl shadow-2xl py-3"
+                    >
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block px-6 py-3 text-white/80 hover:text-yellow-400 hover:bg-white/5 transition-all"
+                          className={` relative block px-6 py-3 transition-all ${
+                            isActive(item.href)
+                              ? 'text-yellow-400 bg-white/5'
+                              : 'text-white/80 hover:text-yellow-400 hover:bg-white/5'
+                          }`}
                         >
                           {item.name}
+                          {isActive(item.href) && (
+  <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
+)}
                         </Link>
                       ))}
-
                     </div>
                   </div>
                 )}
-              </div>))}
+              </div>
+            ))}
 
             {/* CTA */}
             <Link
@@ -114,14 +143,10 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-
       {mobileOpen && (
         <div className="md:hidden bg-[#0A1F33]/95 backdrop-blur-xl border-t border-white/10 px-6 py-6 space-y-4">
-
           {navLinks.map((link) => (
             <div key={link.name}>
-
-              {/* If link has dropdown */}
               {link.dropdown ? (
                 <>
                   <button
@@ -130,7 +155,11 @@ export default function Navbar() {
                         mobileDropdownOpen === link.name ? null : link.name
                       )
                     }
-                    className="w-full flex justify-between items-center py-3 font-semibold text-white/80 hover:text-yellow-400 transition-all"
+                    className={`w-full flex justify-between items-center py-3 font-semibold transition-all ${
+                      isActive(link.href)
+                        ? 'text-yellow-400'
+                        : 'text-white/80 hover:text-yellow-400'
+                    }`}
                   >
                     {link.name}
                     <span className="text-lg">
@@ -138,12 +167,12 @@ export default function Navbar() {
                     </span>
                   </button>
 
-                  {/* Dropdown Items */}
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${mobileDropdownOpen === link.name
-                      ? 'max-h-96 opacity-100'
-                      : 'max-h-0 opacity-0'
-                      }`}
+                    className={`overflow-hidden transition-all duration-300 ${
+                      mobileDropdownOpen === link.name
+                        ? 'max-h-96 opacity-100'
+                        : 'max-h-0 opacity-0'
+                    }`}
                   >
                     <div className="ml-4 mt-2 space-y-2">
                       {link.dropdown.map((item) => (
@@ -154,7 +183,11 @@ export default function Navbar() {
                             setMobileOpen(false)
                             setMobileDropdownOpen(null)
                           }}
-                          className="block text-sm text-white/70 hover:text-yellow-400 transition-all"
+                          className={`block text-sm transition-all ${
+                            isActive(item.href)
+                              ? 'text-yellow-400'
+                              : 'text-white/70 hover:text-yellow-400'
+                          }`}
                         >
                           {item.name}
                         </Link>
@@ -166,12 +199,18 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block py-3 font-semibold text-white/80 hover:text-yellow-400 transition-all"
+                  className={`block py-3 font-semibold transition-all ${
+                    isActive(link.href)
+                      ? 'text-yellow-400'
+                      : 'text-white/80 hover:text-yellow-400'
+                  }`}
                 >
                   {link.name}
+                  {isActive(link.href) && (
+    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-yellow-400 rounded-full" />
+  )}
                 </Link>
               )}
-
             </div>
           ))}
 
