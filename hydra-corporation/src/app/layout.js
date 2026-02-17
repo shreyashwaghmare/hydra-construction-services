@@ -109,7 +109,7 @@ export default function RootLayout({ children }) {
   return (
     
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased ">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
