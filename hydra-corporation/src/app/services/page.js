@@ -2,6 +2,7 @@
 import { useState,useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+import AnimatedCounter from '@/components/AnimateCounter'
 const testimonials = [
   {
     id: 1,
@@ -142,11 +143,11 @@ export default function Services() {
 </p>
                 <div className="grid md:grid-cols-3 gap-6 max-w-2xl bg-white/5 border border-white/20 shadow-2xl hover:bg-white/10 transition-all duration-300 p-6 rounded-3xl">
                   <div className="text-center">
-                    <div className="text-3xl font-black text-yellow-400">4.9★</div>
+                    <div className="text-3xl font-black text-yellow-400"><AnimatedCounter target={4.9} suffix="★" /></div>
                     <div className="text-white/90 text-sm">Google Rating</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-black text-white">15+</div>
+                    <div className="text-3xl font-black text-white"><AnimatedCounter target={15} suffix="+" /></div>
                     <div className="text-white/90 text-sm">Years Experience</div>
                   </div>
                   <div className="text-center">

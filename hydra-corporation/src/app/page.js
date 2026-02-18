@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
-
+import AnimatedCounter from "@/components/AnimateCounter";
 export default function Home() {
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -529,7 +529,7 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400/20 to-teal-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt delay-200"></div>
               <div className="relative">
                 <div className="w-20 h-20 bg-emerald-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">🔧</div>
-                <h3 className="text-3xl font-black text-emerald-400 mb-4 text-center">15+</h3>
+                <h3 className="text-3xl font-black text-emerald-400 mb-4 text-center"><AnimatedCounter target={15} suffix="+" /></h3>
                 <p className="text-gray-300 text-lg text-center">Years Pune Experience</p>
               </div>
             </div>
@@ -539,7 +539,7 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400/20 to-indigo-500/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt delay-400"></div>
               <div className="relative">
                 <div className="w-20 h-20 bg-blue-400 rounded-3xl flex items-center justify-center text-2xl font-bold mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">🏠</div>
-                <h3 className="text-3xl font-black text-blue-400 mb-4 text-center">50+</h3>
+                <h3 className="text-3xl font-black text-blue-400 mb-4 text-center"><AnimatedCounter target={50} suffix="+" /></h3>
                 <p className="text-gray-300 text-lg text-center">Projects Delivered</p>
               </div>
             </div>
@@ -579,8 +579,8 @@ export default function Home() {
         </div>
       </section>
       {/*Process of supervision*/}
-      <section className="py-28 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-28 bg-slate-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 box-border">
 
           {/* Heading */}
           <motion.div
@@ -676,7 +676,7 @@ export default function Home() {
         </div>
       </section>
       <section className="py-14 bg-slate-50 ">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 box-border">
 
           {/* Heading */}
           <motion.div
@@ -689,13 +689,13 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F2A44]">
               We Work With Trusted Industry Brands
             </h2>
-            <p className="mt-4 text-slate-600 text-lg">
+            <p className="mt-4 text-slate-600 text-lg md:text-xl">
               Quality construction begins with quality materials.
             </p>
           </motion.div>
 
           {/* Brand Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 items-center text-center">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10">
 
             {[
               { src: "/images/AsianPaints.svg", animation: fadeLeft },
@@ -703,7 +703,13 @@ export default function Home() {
               { src: "/images/jaquar.svg", animation: fadeUpp },
               { src: "/images/astral-pipes.webp", animation: fadeUpp },
               { src: "/images/centuryply.png", animation: fadeRight },
-              { src: "/images/Tata.png", animation: fadeRight }
+              { src: "/images/Tata.png", animation: fadeRight },
+              { src: "/images/berger-paints-logo.png", animation: fadeLeft },
+              { src: "/images/Kohler.svg", animation: fadeLeft },
+              { src: "/images/Havells-Logo.svg", animation: fadeUpp },
+              { src: "/images/Anchor_Logo.svg", animation: fadeUpp },
+              { src: "/images/ACC-cement.svg", animation: fadeRight },
+              { src: "/images/Pidilite-logo.png", animation: fadeRight }
             ].map((brand, index) => (
               <motion.div
                 key={index}
@@ -749,7 +755,7 @@ export default function Home() {
           {/* Table */}
           <div className="w-full overflow-x-auto">
 
-            <table className="min-w-[800px] w-full border border-slate-200 rounded-2xl overflow-hidden text-left">
+            <table className=" w-full min-w-[700px] md:min-w-[800px] table-auto border border-slate-200 rounded-2xl overflow-hidden text-left">
 
               <thead className="bg-slate-100">
                 <tr>
@@ -843,70 +849,70 @@ export default function Home() {
           Don't just take our word for it
         </p>
         <div className="max-w-3xl mx-auto relative px-4">
-  <AnimatePresence initial={false} mode="wait">
-    <motion.div
-      key={testimonials[current].id}
-      initial={{ opacity: 0, x: 40 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -40 }}
-      transition={{ duration: 0.4 }}
-      className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl text-center
+          <AnimatePresence initial={false} mode="wait">
+            <motion.div
+              key={testimonials[current].id}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -40 }}
+              transition={{ duration: 0.4 }}
+              className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl text-center
       bg-gradient-to-br from-[#0F2A44] to-gray-900 text-white"
-    >
-      <div className="text-3xl sm:text-4xl mb-3 opacity-30">“</div>
+            >
+              <div className="text-3xl sm:text-4xl mb-3 opacity-30">“</div>
 
-      <p className="text-base sm:text-lg mb-5 leading-relaxed font-medium">
-        "{testimonials[current].text}"
-      </p>
+              <p className="text-base sm:text-lg mb-5 leading-relaxed font-medium">
+                "{testimonials[current].text}"
+              </p>
 
-      <div className="flex items-center justify-center mt-4">
-        <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center text-white font-bold text-lg sm:text-xl mr-3">
-          {testimonials[current].initials}
+              <div className="flex items-center justify-center mt-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl flex items-center justify-center text-white font-bold text-lg sm:text-xl mr-3">
+                  {testimonials[current].initials}
+                </div>
+                <div className="text-left">
+                  <p className="font-bold text-lg sm:text-xl">
+                    {testimonials[current].name}
+                  </p>
+                  <p className="text-sm text-white/70">
+                    {testimonials[current].location}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Desktop Arrows */}
+          <button
+            onClick={prev}
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 rounded-full shadow p-2 hover:bg-white transition"
+          >
+            <ChevronLeftIcon className="w-5 h-5 text-gray-700" />
+          </button>
+
+          <button
+            onClick={next}
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 rounded-full shadow p-2 hover:bg-white transition"
+          >
+            <ChevronRightIcon className="w-5 h-5 text-gray-700" />
+          </button>
+
+          {/* Mobile Arrows (Below Card) */}
+          <div className="flex justify-center gap-6 mt-6 sm:hidden">
+            <button
+              onClick={prev}
+              className="bg-white/90 rounded-full shadow p-2"
+            >
+              <ChevronLeftIcon className="w-5 h-5 text-gray-700" />
+            </button>
+
+            <button
+              onClick={next}
+              className="bg-white/90 rounded-full shadow p-2"
+            >
+              <ChevronRightIcon className="w-5 h-5 text-gray-700" />
+            </button>
+          </div>
         </div>
-        <div className="text-left">
-          <p className="font-bold text-lg sm:text-xl">
-            {testimonials[current].name}
-          </p>
-          <p className="text-sm text-white/70">
-            {testimonials[current].location}
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  </AnimatePresence>
-
-  {/* Desktop Arrows */}
-  <button
-    onClick={prev}
-    className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 rounded-full shadow p-2 hover:bg-white transition"
-  >
-    <ChevronLeftIcon className="w-5 h-5 text-gray-700" />
-  </button>
-
-  <button
-    onClick={next}
-    className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 rounded-full shadow p-2 hover:bg-white transition"
-  >
-    <ChevronRightIcon className="w-5 h-5 text-gray-700" />
-  </button>
-
-  {/* Mobile Arrows (Below Card) */}
-  <div className="flex justify-center gap-6 mt-6 sm:hidden">
-    <button
-      onClick={prev}
-      className="bg-white/90 rounded-full shadow p-2"
-    >
-      <ChevronLeftIcon className="w-5 h-5 text-gray-700" />
-    </button>
-
-    <button
-      onClick={next}
-      className="bg-white/90 rounded-full shadow p-2"
-    >
-      <ChevronRightIcon className="w-5 h-5 text-gray-700" />
-    </button>
-  </div>
-</div>
         {/* AREAS TAGS */}
         <div className="mt-20 text-center">
           <p className="text-sm md:text-base text-gray-800">

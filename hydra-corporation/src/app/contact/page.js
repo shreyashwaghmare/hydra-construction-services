@@ -35,7 +35,7 @@ export default function Contact() {
     bg-clip-text text-transparent
     mb-4 sm:mb-6
   ">
-                        Contact <span className="bg-gradient-to-r from-amber-400/90 to-orange-500 bg-clip-text text-transparent">
+                        Contact <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 bg-clip-text text-transparent">
                             Hydra Corporation
                         </span> – Pune & Ahilyanagar
                     </h1>
@@ -91,7 +91,7 @@ export default function Contact() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-white p-8 lg:p-12 rounded-3xl shadow-2xl border border-gray-100">
+                    <div className="bg-white p-4 sm:p-6 lg:p-12 rounded-3xl shadow-2xl border border-gray-100">
                         <h2 className="text-3xl font-black text-gray-900 mb-2">Get Free Quote</h2>
                         <p className="text-xl text-gray-600 mb-8">Fill details below. We'll visit your site within 24hrs.</p>
 
@@ -167,27 +167,32 @@ export default function Contact() {
                                 {loading ? 'Sending...' : 'Send Quote Request →'}
                             </button>
                         </form>
+                        {message && (
+                            <p className={`text-center mt-4 text-lg font-semibold ${message.startsWith('✅') ? 'text-green-600' : 'text-red-600'}`}>
+  {message}
+</p>
+                        )}
                     </div>
                 </div>
 
                 {/* Quick Links */}
                 {/* Quick Links - TABLET PERFECT */}
-                <div className="mt-24 grid md:grid-cols-3 gap-8 text-center overflow-hidden">
-                    <a href="https://wa.me/919697985597" className="group">
+                <div className="mt-24 pt-4 grid md:grid-cols-3 gap-8 text-center overflow-hidden">
+                    <a href="https://wa.me/919697985597" className="group" aria-label="WhatsApp Hydra Corporation">
                         <div className="w-20 h-20 bg-green-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
                             💬
                         </div>
                         <p className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors truncate">WhatsApp</p>
                     </a>
 
-                    <a href="tel:+919697985597" className="group">
+                    <a href="tel:+919697985597" className="group" aria-label="Call Hydra Corporation">
                         <div className="w-20 h-20 bg-blue-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
                             📞
                         </div>
                         <p className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors truncate">Call Now</p>
                     </a>
 
-                    <a href="mailto:hydracorporation.in@gmail.com" className="group">
+                    <a href="mailto:hydracorporation.in@gmail.com" className="group" aria-label="Email Hydra Corporation">
                         <div className="w-20 h-20 bg-purple-500 rounded-3xl mx-auto flex items-center justify-center text-3xl text-white shadow-2xl group-hover:scale-110 transition-all duration-300 mb-4">
                             ✉️
                         </div>
